@@ -1,3 +1,5 @@
+import esp3230 from "../assets/esp32-30.webp";
+import esp3238 from "../assets/esp32-38.jpg";
 const products = [
 
   // ===========================
@@ -11,7 +13,7 @@ const products = [
     name: "ESP32 DEV KIT V1 30 chân",
     price: 95000,
     stock: 3,
-    image: "",
+    image: esp3230,
   },
 
   {
@@ -21,7 +23,7 @@ const products = [
     name: "ESP32 DEV KIT V1 38 chân",
     price: 115000,
     stock: 4,
-    image: "",
+    image: esp3238,
   },
 
   {
