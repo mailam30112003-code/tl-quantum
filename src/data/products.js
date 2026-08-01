@@ -2,6 +2,20 @@ import esp3230 from "../assets/esp32-30.webp";
 import esp3238 from "../assets/esp32-38.jpg";
 import esp32micro from "../assets/esp32-micro-usb.jpg";
 import arduinoNano from "../assets/arduino-nano-v3.jpg";
+import arduinoUno from "../assets/arduino-uno-r3-ch340.webp";
+import stm32f103 from "../assets/stm32f103c8t6.webp";
+import stm32f411 from "../assets/stm32f411ceu6.jpg";
+import raspberryPico from "../assets/raspberry-pi-pico.avif";
+import loraRa02 from "../assets/lora-ra02.jpg";
+import hc05 from "../assets/hc05.jpg";
+import rfidRc522 from "../assets/rfid-rc522.webp";
+import cp2102 from "../assets/cp2102.jpg";
+import stlinkv2 from "../assets/st-link-v2.webp";
+import breadboard from "../assets/breadboard.jpg";
+import jumper10 from "../assets/jumper-wire-10cm.png";
+import jumper20 from "../assets/jumper-wire-20cm.jpg";
+import jumper30 from "../assets/jumper-wire-30cm.jpg";
+import oled096 from "../assets/oled-096.jpg";
 const products = [
 
   // ===========================
@@ -52,177 +66,173 @@ const products = [
     image: arduinoNano,
   },
 
-  {
-    id: 5,
-    sku: "ARD-002",
-    category: "Arduino",
-    name: "Arduino Uno R3 CH340",
-    price: 85000,
-    stock: 10,
-    image: "",
-  },
+{
+  id: 5,
+  sku: "ARD-002",
+  category: "Arduino",
+  name: "Arduino Uno R3 CH340",
+  price: 85000,
+  stock: 10,
+  image: arduinoUno,
+},
 
-  // ===========================
-  // STM32
-  // ===========================
+{
+  id: 6,
+  sku: "STM32-001",
+  category: "STM32",
+  name: "STM32F103C8T6",
+  price: 52000,
+  stock: 15,
+  image: stm32f103,
+},
 
-  {
-    id: 6,
-    sku: "STM32-001",
-    category: "STM32",
-    name: "STM32F103C8T6",
-    price: 52000,
-    stock: 15,
-    image: "",
-  },
+{
+  id: 7,
+  sku: "STM32-002",
+  category: "STM32",
+  name: "STM32F411CEU6",
+  price: 145000,
+  stock: 5,
+  image: stm32f411,
+},
 
-  {
-    id: 7,
-    sku: "STM32-002",
-    category: "STM32",
-    name: "STM32F411CEU6",
-    price: 145000,
-    stock: 5,
-    image: "",
-  },
-
-  // ===========================
-  // Raspberry Pi
-  // ===========================
-
-  {
-    id: 8,
-    sku: "RPI-001",
-    category: "Raspberry Pi",
-    name: "Raspberry Pi Pico",
-    price: 120000,
-    stock: 5,
-    image: "",
-  },
+{
+  id: 8,
+  sku: "RPI-001",
+  category: "Raspberry Pi",
+  name: "Raspberry Pi Pico",
+  price: 120000,
+  stock: 5,
+  image: raspberryPico,
+},
 
   // ===========================
   // LoRa
   // ===========================
 
-  {
-    id: 9,
-    sku: "LORA-001",
-    category: "LoRa",
-    name: "LoRa SX1278 RA-02",
-    price: 149000,
-    stock: 5,
-    image: "",
-  },
-
   // ===========================
-  // Bluetooth
-  // ===========================
+// LoRa
+// ===========================
 
-  {
-    id: 10,
-    sku: "BT-001",
-    category: "Bluetooth",
-    name: "HC-05 Bluetooth Module",
-    price: 103000,
-    stock: 10,
-    image: "",
-  },
+{
+  id: 9,
+  sku: "LORA-001",
+  category: "LoRa",
+  name: "LoRa SX1278 RA-02",
+  price: 149000,
+  stock: 5,
+  image: loraRa02,
+},
 
-  // ===========================
-  // RFID
-  // ===========================
+// ===========================
+// Bluetooth
+// ===========================
 
-  {
-    id: 11,
-    sku: "RFID-001",
-    category: "RFID",
-    name: "RFID RC522",
-    price: 25000,
-    stock: 10,
-    image: "",
-  },
+{
+  id: 10,
+  sku: "BT-001",
+  category: "Bluetooth",
+  name: "HC-05 Bluetooth Module",
+  price: 103000,
+  stock: 10,
+  image: hc05,
+},
 
-  // ===========================
-  // USB - UART
-  // ===========================
+// ===========================
+// RFID
+// ===========================
 
-  {
-    id: 12,
-    sku: "UART-001",
-    category: "Module",
-    name: "USB to TTL CP2102",
-    price: 47000,
-    stock: 10,
-    image: "",
-  },
+{
+  id: 11,
+  sku: "RFID-001",
+  category: "RFID",
+  name: "RFID RC522",
+  price: 25000,
+  stock: 10,
+  image: rfidRc522,
+},
 
-  {
-    id: 13,
-    sku: "STLINK-001",
-    category: "Module",
-    name: "ST-Link V2",
-    price: 39000,
-    stock: 5,
-    image: "",
-  },
+// ===========================
+// USB - UART
+// ===========================
 
-  // ===========================
-  // Breadboard & Jumper
-  // ===========================
+{
+  id: 12,
+  sku: "UART-001",
+  category: "Module",
+  name: "USB to TTL CP2102",
+  price: 47000,
+  stock: 10,
+  image: cp2102,
+},
 
-  {
-    id: 14,
-    sku: "BB-001",
-    category: "Phụ kiện",
-    name: "Breadboard Test Board",
-    price: 25000,
-    stock: 20,
-    image: "",
-  },
+{
+  id: 13,
+  sku: "STLINK-001",
+  category: "Module",
+  name: "ST-Link V2",
+  price: 39000,
+  stock: 5,
+  image: stlinkv2,
+},
 
-  {
-    id: 15,
-    sku: "WIRE-001",
-    category: "Phụ kiện",
-    name: "Dây cắm Testboard 10cm",
-    price: 12000,
-    stock: 40,
-    image: "",
-  },
+// ===========================
+// Breadboard & Jumper
+// ===========================
 
-  {
-    id: 16,
-    sku: "WIRE-002",
-    category: "Phụ kiện",
-    name: "Dây cắm Testboard 20cm",
-    price: 16000,
-    stock: 40,
-    image: "",
-  },
+{
+  id: 14,
+  sku: "BB-001",
+  category: "Phụ kiện",
+  name: "Breadboard Test Board",
+  price: 25000,
+  stock: 20,
+  image: breadboard,
+},
 
-  {
-    id: 17,
-    sku: "WIRE-003",
-    category: "Phụ kiện",
-    name: "Dây cắm Testboard 30cm",
-    price: 20000,
-    stock: 40,
-    image: "",
-  },
+{
+  id: 15,
+  sku: "WIRE-001",
+  category: "Phụ kiện",
+  name: "Dây cắm Testboard 10cm",
+  price: 12000,
+  stock: 40,
+  image: jumper10,
+},
 
-  // ===========================
-  // Hiển thị
-  // ===========================
+{
+  id: 16,
+  sku: "WIRE-002",
+  category: "Phụ kiện",
+  name: "Dây cắm Testboard 20cm",
+  price: 16000,
+  stock: 40,
+  image: jumper20,
+},
 
-  {
-    id: 18,
-    sku: "OLED-001",
-    category: "Hiển thị",
-    name: "OLED 0.96 I2C / SPI",
-    price: 55000,
-    stock: 10,
-    image: "",
-  },
+{
+  id: 17,
+  sku: "WIRE-003",
+  category: "Phụ kiện",
+  name: "Dây cắm Testboard 30cm",
+  price: 20000,
+  stock: 40,
+  image: jumper30,
+},
+
+// ===========================
+// Hiển thị
+// ===========================
+
+{
+  id: 18,
+  sku: "OLED-001",
+  category: "Hiển thị",
+  name: "OLED 0.96 I2C / SPI",
+  price: 55000,
+  stock: 10,
+  image: oled096,
+},
 
   {
     id: 19,
