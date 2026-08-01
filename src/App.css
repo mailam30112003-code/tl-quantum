@@ -1014,3 +1014,54 @@ padding:13px;
 }
 
 }
+.cart{
+    cursor:pointer;
+}
+
+.cart-popup{
+
+    position:absolute;
+
+    top:95px;
+
+    right:35px;
+
+    width:340px;
+
+    background:#fff;
+
+    border-radius:12px;
+
+    box-shadow:0 5px 25px rgba(0,0,0,.15);
+
+    padding:15px;
+
+    z-index:9999;
+
+}
+
+.cart-item{
+
+    display:flex;
+
+    gap:12px;
+
+    margin-bottom:12px;
+
+    align-items:center;
+
+}
+
+.cart-item img{
+
+    width:60px;
+
+    height:60px;
+
+    object-fit:contain;
+
+    border:1px solid #eee;
+
+    border-radius:8px;
+
+}
