@@ -316,8 +316,8 @@ text-align:center;
 .menu{
 display:grid;
 grid-template-columns:repeat(3,1fr);
-gap:0;
 padding:0;
+gap:0;
 }
 
 .menu span{
@@ -328,48 +328,83 @@ font-size:12px;
 }
 
 .container{
+
+display:flex;
+
+flex-direction:column;
+
 padding:10px;
+
+}
+
+/* Đổi thứ tự */
+
+.main{
+
+order:1;
+
 }
 
 .sidebar{
+
+order:2;
+
 width:100%;
+
+margin-top:20px;
+
 }
 
-.sidebar-title{
-font-size:17px;
-}
+.banner{
 
-.category{
-padding:14px;
+margin-bottom:20px;
+
 }
 
 .section-title{
+
 font-size:18px;
-text-align:left;
+
+margin-bottom:15px;
+
 }
 
 .section-title span{
+
 display:block;
-float:none !important;
-margin-top:8px;
+
+float:none!important;
+
+margin-top:6px;
+
 }
 
 .products{
+
 grid-template-columns:repeat(2,1fr);
+
 gap:10px;
+
 }
 
 .product-image{
+
 height:140px;
+
 }
 
 .card-content h3{
+
 font-size:13px;
-min-height:34px;
+
+min-height:38px;
+
 }
 
 .price{
+
 font-size:16px;
+
 }
 
 }
