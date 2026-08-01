@@ -986,71 +986,31 @@ padding:13px;
 
 @media (max-width:480px){
 
-.logo img{
-
-width:52px;
-
-}
-
-.logo-text h1{
-
-font-size:19px;
-
-}
-
-.logo-text p{
-
-font-size:11px;
-
-}
-
-.menu{
-
-grid-template-columns:repeat(2,1fr);
-
-}
-
 .products{
-
-grid-template-columns:1fr;
-
+    grid-template-columns:repeat(2,1fr);
+    gap:10px;
 }
 
 .product-image{
+    height:120px;
+}
 
-height:170px;
-
+.card-content{
+    padding:8px;
 }
 
 .card-content h3{
-
-font-size:14px;
-
+    font-size:12px;
+    min-height:32px;
 }
 
 .price{
-
-font-size:18px;
-
+    font-size:15px;
 }
 
 .buy-btn{
-
-padding:12px;
-font-size:14px;
-
-}
-
-.search{
-
-font-size:13px;
-
-}
-
-.sidebar-title{
-
-font-size:16px;
-
+    padding:9px;
+    font-size:12px;
 }
 
 }
