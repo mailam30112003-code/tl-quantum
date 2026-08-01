@@ -19,6 +19,7 @@ body{
   padding:10px 35px;
   display:flex;
   justify-content:space-between;
+  align-items:center;
   font-size:13px;
 }
 
@@ -28,6 +29,7 @@ body{
   display:flex;
   align-items:center;
   justify-content:space-between;
+  gap:20px;
 }
 
 .logo{
@@ -59,14 +61,20 @@ body{
   width:420px;
   height:42px;
   border:1px solid #ddd;
-  border-radius:6px;
+  border-radius:6px 0 0 6px;
   padding:0 14px;
   font-size:14px;
+  outline:none;
+}
+
+.search:focus{
+  border-color:#1950d1;
 }
 
 .cart{
   font-size:15px;
   color:#444;
+  white-space:nowrap;
 }
 
 .menu{
@@ -77,6 +85,10 @@ body{
   padding:15px 35px;
   font-size:13px;
   font-weight:600;
+}
+
+.menu span{
+  cursor:pointer;
 }
 
 .container{
@@ -90,6 +102,7 @@ body{
   background:white;
   border-radius:10px;
   overflow:hidden;
+  flex-shrink:0;
 }
 
 .sidebar-title{
@@ -107,6 +120,7 @@ body{
   text-align:center;
   font-size:14px;
   cursor:pointer;
+  transition:.25s;
 }
 
 .category:hover{
@@ -115,6 +129,7 @@ body{
 
 .main{
   flex:1;
+  min-width:0;
 }
 
 .banner{
@@ -128,9 +143,9 @@ body{
   height:auto;
   display:block;
 }
+
 .section-title{
-  text-align:center;
-  font-size:20px;
+  font-size:22px;
   font-weight:700;
   margin:25px 0;
 }
@@ -146,10 +161,15 @@ body{
   border-radius:10px;
   overflow:hidden;
   box-shadow:0 2px 8px rgba(0,0,0,.05);
+  transition:.25s;
+}
+
+.card:hover{
+  transform:translateY(-3px);
 }
 
 .product-image{
-  height:130px;
+  height:170px;
   background:#ececec;
 }
 
@@ -160,6 +180,7 @@ body{
 .card-content h3{
   font-size:14px;
   margin-bottom:8px;
+  min-height:38px;
 }
 
 .price{
@@ -178,11 +199,213 @@ body{
   border-radius:6px;
   cursor:pointer;
   font-size:13px;
+  transition:.25s;
 }
 
 .buy-btn:hover{
   background:#0d47c7;
 }
-.header .search{
-  border-radius:6px 0 0 6px;
+
+/* ===========================
+      Laptop nhỏ
+=========================== */
+
+@media (max-width:1200px){
+
+.products{
+grid-template-columns:repeat(3,1fr);
+}
+
+.search{
+width:320px;
+}
+
+}
+
+/* ===========================
+        Tablet
+=========================== */
+
+@media (max-width:992px){
+
+.header{
+flex-wrap:wrap;
+justify-content:center;
+}
+
+.logo{
+width:100%;
+justify-content:center;
+}
+
+.search{
+width:100%;
+max-width:600px;
+}
+
+.container{
+flex-direction:column;
+}
+
+.sidebar{
+width:100%;
+}
+
+.products{
+grid-template-columns:repeat(2,1fr);
+}
+
+.menu{
+flex-wrap:wrap;
+justify-content:center;
+gap:20px;
+}
+
+}
+
+/* ===========================
+        Mobile
+=========================== */
+
+@media (max-width:768px){
+
+.topbar{
+padding:10px;
+flex-direction:column;
+gap:5px;
+text-align:center;
+}
+
+.header{
+padding:15px;
+flex-direction:column;
+gap:15px;
+}
+
+.logo{
+justify-content:center;
+}
+
+.logo img{
+width:60px;
+}
+
+.logo-text h1{
+font-size:22px;
+}
+
+.logo-text p{
+font-size:13px;
+}
+
+.header>div:nth-child(2){
+width:100%;
+display:flex;
+}
+
+.search{
+width:100%;
+flex:1;
+}
+
+.cart{
+width:100%;
+text-align:center;
+}
+
+.menu{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:0;
+padding:0;
+}
+
+.menu span{
+padding:12px;
+text-align:center;
+border:1px solid rgba(255,255,255,.2);
+font-size:12px;
+}
+
+.container{
+padding:10px;
+}
+
+.sidebar{
+width:100%;
+}
+
+.sidebar-title{
+font-size:17px;
+}
+
+.category{
+padding:14px;
+}
+
+.section-title{
+font-size:18px;
+text-align:left;
+}
+
+.section-title span{
+display:block;
+float:none !important;
+margin-top:8px;
+}
+
+.products{
+grid-template-columns:repeat(2,1fr);
+gap:10px;
+}
+
+.product-image{
+height:140px;
+}
+
+.card-content h3{
+font-size:13px;
+min-height:34px;
+}
+
+.price{
+font-size:16px;
+}
+
+}
+
+/* ===========================
+      Điện thoại nhỏ
+=========================== */
+
+@media (max-width:480px){
+
+.products{
+grid-template-columns:1fr;
+}
+
+.logo img{
+width:55px;
+}
+
+.logo-text h1{
+font-size:18px;
+}
+
+.logo-text p{
+font-size:11px;
+}
+
+.search{
+font-size:13px;
+}
+
+.buy-btn{
+padding:12px;
+}
+
+.product-image{
+height:180px;
+}
+
 }
