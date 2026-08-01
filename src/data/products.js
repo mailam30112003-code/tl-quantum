@@ -1,5 +1,7 @@
 import esp3230 from "../assets/esp32-30.webp";
 import esp3238 from "../assets/esp32-38.jpg";
+import esp32micro from "../assets/esp32-micro-usb.jpg";
+import arduinoNano from "../assets/arduino-nano-v3.jpg";
 const products = [
 
   // ===========================
@@ -33,7 +35,7 @@ const products = [
     name: "ESP32-D DevKit Micro USB",
     price: 189000,
     stock: 5,
-    image: "",
+    image: esp32micro,
   },
 
   // ===========================
@@ -47,7 +49,7 @@ const products = [
     name: "Arduino Nano V3",
     price: 70000,
     stock: 10,
-    image: "",
+    image: arduinoNano,
   },
 
   {
