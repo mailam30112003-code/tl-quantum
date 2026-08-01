@@ -1,4 +1,4 @@
-import { useMemo, useState, useEffect } from "react";
+import { useState, useMemo, useEffect } from "react";
 import "./App.css";
 import logo from "./assets/logo.jpg";
 import banner from "./assets/banner.png";
@@ -7,7 +7,7 @@ import products from "./data/products";
 function App() {
 
   /* ===========================
-      STATE
+        STATE
   =========================== */
 
   const [selectedCategory, setSelectedCategory] =
@@ -23,7 +23,7 @@ function App() {
     useState(window.innerWidth <= 768);
 
   /* ===========================
-      WINDOW RESIZE
+        WINDOW RESIZE
   =========================== */
 
   useEffect(() => {
@@ -32,10 +32,8 @@ function App() {
 
       setIsMobile(window.innerWidth <= 768);
 
-      if(window.innerWidth > 768){
-
+      if (window.innerWidth > 768) {
         setMenuOpen(false);
-
       }
 
     };
@@ -54,7 +52,7 @@ function App() {
   }, []);
 
   /* ===========================
-      CATEGORY
+        CATEGORY
   =========================== */
 
   const categories = [
@@ -106,7 +104,7 @@ function App() {
   ];
 
   /* ===========================
-      SEARCH
+        SEARCH
   =========================== */
 
   const normalize = (text) =>
@@ -115,372 +113,432 @@ function App() {
       .replace(/[\s-_]+/g, "");
 
   /* ===========================
-      FILTER
+        FILTER
   =========================== */
 
-  const filteredProducts =
-    useMemo(() => {
+  const filteredProducts = useMemo(() => {
 
-      return products.filter((p) => {
+    return products.filter((p) => {
 
-        let categoryMatch = false;
+      let categoryMatch = false;
 
-        if (
-          selectedCategory ===
-          "Tất cả sản phẩm"
-        ) {
+      if (selectedCategory === "Tất cả sản phẩm") {
 
-          categoryMatch = true;
+        categoryMatch = true;
 
-        }
+      }
 
-        else if (
-          selectedCategory ===
-          "Vi điều khiển"
-        ) {
+      else if (selectedCategory === "Vi điều khiển") {
 
-          categoryMatch = [
+        categoryMatch = [
 
-            "ESP32",
+          "ESP32",
 
-            "Arduino",
+          "Arduino",
 
-            "STM32",
+          "STM32",
 
-            "Raspberry Pi",
+          "Raspberry Pi",
 
-          ].includes(p.category);
+        ].includes(p.category);
 
-        }
+      }
 
-        else {
+      else {
 
-          categoryMatch =
-            p.category ===
-            selectedCategory;
+        categoryMatch =
+          p.category === selectedCategory;
 
-        }
+      }
 
-        if (!categoryMatch)
-          return false;
+      if (!categoryMatch)
+        return false;
 
-        if (
-          search.trim() === ""
-        )
-          return true;
+      if (search.trim() === "")
+        return true;
 
-        return normalize(
-          p.name
-        ).includes(
-          normalize(search)
-        );
+      return normalize(p.name)
+        .includes(normalize(search));
 
-      });
+    });
 
-    }, [
-      selectedCategory,
-      search,
-    ]);
-    return (
-<>
-  <div className="topbar">
-    <span>🚚 Giao hàng toàn quốc</span>
-    <span>📞 Hotline: 0845 089 876</span>
-  </div>
+  }, [
+    selectedCategory,
+    search,
+  ]);
+  /* ===========================
+        RENDER
+  =========================== */
 
-  <header className="header">
+  return (
+    <>
 
-    <div className="logo">
+      {/* Top Bar */}
 
-      <img src={logo} alt="TL Quantum" />
+      <div className="topbar">
 
-      <div className="logo-text">
-        <h1>TL Quantum</h1>
-        <p>Giải pháp linh kiện điện tử</p>
+        <span>🚚 Giao hàng toàn quốc</span>
+
+        <span>📞 Hotline: 0845 089 876</span>
+
       </div>
 
-    </div>
+      {/* Header */}
 
-    <div>
+      <header className="header">
 
-      <input
-        className="search"
-        placeholder="Tìm ESP32, STM32, Arduino..."
-        value={search}
-        onChange={(e)=>setSearch(e.target.value)}
-      />
+        {/* Logo */}
 
-      <button>
-        🔍
-      </button>
+        <div className="logo">
 
-    </div>
+          <img
+            src={logo}
+            alt="TL Quantum"
+          />
 
-    <div className="cart">
-      🛒 Giỏ hàng
-    </div>
+          <div className="logo-text">
 
-  </header>
+            <h1>TL Quantum</h1>
 
-  <nav className="menu">
+            <p>
+              Giải pháp linh kiện điện tử
+            </p>
 
-    <span>TRANG CHỦ</span>
+          </div>
 
-    <span>SẢN PHẨM</span>
+        </div>
 
-    <span>DỰ ÁN</span>
-
-    <span>BLOG</span>
-
-    <span>HƯỚNG DẪN</span>
-
-    <span>LIÊN HỆ</span>
-
-  </nav>
-
-  {/* Mobile Category */}
-
-  {isMobile && (
-
-    <div
-      style={{
-        padding:"12px",
-        background:"#fff",
-        borderBottom:"1px solid #eee",
-      }}
-    >
-
-      <button
-        onClick={()=>setMenuOpen(!menuOpen)}
-        style={{
-          width:"100%",
-          background:"#1950d1",
-          color:"#fff",
-          border:"none",
-          borderRadius:"8px",
-          padding:"12px",
-          fontSize:"16px",
-          fontWeight:"bold",
-        }}
-      >
-        ☰ Danh mục sản phẩm
-      </button>
-
-      {menuOpen && (
+        {/* Search */}
 
         <div
           style={{
-            marginTop:"10px",
-            border:"1px solid #eee",
-            borderRadius:"8px",
-            overflow:"hidden",
-            background:"#fff",
+            display: "flex",
+            alignItems: "center",
+            flex: 1,
+            maxWidth: 520,
           }}
         >
 
-          {categories.map((item,index)=>(
+          <input
+            className="search"
+            placeholder="Tìm ESP32, STM32, Arduino..."
+            value={search}
+            onChange={(e) =>
+              setSearch(e.target.value)
+            }
+          />
+
+          <button
+            style={{
+              width: 52,
+              height: 42,
+              border: "none",
+              background: "#1950d1",
+              color: "#fff",
+              cursor: "pointer",
+              borderRadius: "0 6px 6px 0",
+              fontSize: 18,
+            }}
+          >
+            🔍
+          </button>
+
+        </div>
+
+        {/* Cart */}
+
+        <div className="cart">
+
+          🛒 Giỏ hàng
+
+        </div>
+
+      </header>
+
+      {/* Menu */}
+
+      <nav className="menu">
+
+        <span>TRANG CHỦ</span>
+
+        <span>SẢN PHẨM</span>
+
+        <span>DỰ ÁN</span>
+
+        <span>BLOG</span>
+
+        <span>HƯỚNG DẪN</span>
+
+        <span>LIÊN HỆ</span>
+
+      </nav>
+
+      {/* Mobile Category */}
+
+      {isMobile && (
+
+        <div
+          style={{
+            padding: 12,
+            background: "#fff",
+            borderBottom: "1px solid #eee",
+          }}
+        >
+
+          <button
+            onClick={() =>
+              setMenuOpen(!menuOpen)
+            }
+            style={{
+              width: "100%",
+              padding: 12,
+              background: "#1950d1",
+              color: "#fff",
+              border: "none",
+              borderRadius: 8,
+              fontWeight: "bold",
+              cursor: "pointer",
+            }}
+          >
+
+            ☰ Danh mục sản phẩm
+
+          </button>
+
+          {menuOpen && (
 
             <div
-              key={index}
-              className="category"
-              onClick={()=>{
-                setSelectedCategory(item);
-                setMenuOpen(false);
-              }}
               style={{
-                background:
-                  selectedCategory===item
-                  ?"#1950d1"
-                  :"",
-
-                color:
-                  selectedCategory===item
-                  ?"white"
-                  :"",
+                marginTop: 10,
+                background: "#fff",
+                borderRadius: 8,
+                overflow: "hidden",
+                border: "1px solid #eee",
               }}
             >
 
-              {item}
+              {categories.map((item) => (
+
+                <div
+                  key={item}
+                  className="category"
+                  onClick={() => {
+
+                    setSelectedCategory(item);
+
+                    setMenuOpen(false);
+
+                  }}
+                  style={{
+                    background:
+                      selectedCategory === item
+                        ? "#1950d1"
+                        : "",
+
+                    color:
+                      selectedCategory === item
+                        ? "#fff"
+                        : "",
+                  }}
+                >
+
+                  {item}
+
+                </div>
+
+              ))}
 
             </div>
 
-          ))}
+          )}
 
         </div>
 
       )}
 
-    </div>
+      {/* Layout */}
 
-  )}
+      <div className="container">
+                {/* Sidebar Desktop */}
 
-  <div className="container">
-    <div className="container">
+        {!isMobile && (
 
-  {/* Sidebar chỉ hiện trên Desktop */}
+          <aside className="sidebar">
 
-  {!isMobile && (
+            <div className="sidebar-title">
 
-    <aside className="sidebar">
-
-      <div className="sidebar-title">
-        DANH MỤC SẢN PHẨM
-      </div>
-
-      {categories.map((item,index)=>(
-
-        <div
-          key={index}
-          className="category"
-          onClick={()=>{
-            setSelectedCategory(item);
-          }}
-          style={{
-            background:
-              selectedCategory===item
-              ?"#1950d1"
-              :"",
-
-            color:
-              selectedCategory===item
-              ?"white"
-              :"",
-
-            fontWeight:
-              selectedCategory===item
-              ?"bold"
-              :"normal",
-          }}
-        >
-
-          {item}
-
-        </div>
-
-      ))}
-
-    </aside>
-
-  )}
-
-  {/* Main */}
-
-  <main className="main">
-
-    <div className="banner">
-
-      <img
-        src={banner}
-        alt="Banner"
-      />
-
-    </div>
-
-    <div className="section-title">
-
-      <div>
-
-        {search
-          ? `Kết quả: "${search}"`
-          : selectedCategory}
-
-      </div>
-
-      <span>
-
-        {filteredProducts.length} sản phẩm
-
-      </span>
-
-    </div>
-
-    <div className="products">
-
-      {filteredProducts.map((p)=>(
-
-        <div
-          key={p.id}
-          className="card"
-        >
-
-          <div className="product-image">
-
-            {p.image && (
-
-              <img
-                src={p.image}
-                alt={p.name}
-              />
-
-            )}
-
-          </div>
-
-          <div className="card-content">
-
-            <h3>
-
-              {p.name}
-
-            </h3>
-
-            <div className="price">
-
-              {Number(p.price).toLocaleString("vi-VN")}đ
+              DANH MỤC SẢN PHẨM
 
             </div>
 
-            <p
-              style={{
-                fontSize:12,
-                color:"#666",
-                marginBottom:8,
-              }}
-            >
+            {categories.map((item) => (
 
-              Danh mục: {p.category}
+              <div
+                key={item}
+                className="category"
+                onClick={() =>
+                  setSelectedCategory(item)
+                }
+                style={{
+                  background:
+                    selectedCategory === item
+                      ? "#1950d1"
+                      : "",
 
-            </p>
+                  color:
+                    selectedCategory === item
+                      ? "#fff"
+                      : "",
 
-            <p
-              style={{
-                fontSize:12,
-                color:
-                  p.stock>0
-                  ?"green"
-                  :"red",
-                marginBottom:10,
-                fontWeight:"bold",
-              }}
-            >
+                  fontWeight:
+                    selectedCategory === item
+                      ? "bold"
+                      : "normal",
+                }}
+              >
 
-              {p.stock>0
-                ?`Còn ${p.stock} sản phẩm`
-                :"Hết hàng"}
+                {item}
 
-            </p>
+              </div>
 
-            <button className="buy-btn">
+            ))}
 
-              Thêm vào giỏ
+          </aside>
 
-            </button>
+        )}
+
+        {/* Main */}
+
+        <main className="main">
+
+          {/* Banner */}
+
+          <div className="banner">
+
+            <img
+              src={banner}
+              alt="TL Quantum Banner"
+            />
 
           </div>
 
-        </div>
+          {/* Title */}
 
-      ))}
+          <div className="section-title">
 
-    </div>
+            <div>
 
-  </main>
+              {search
+                ? `Kết quả tìm kiếm: "${search}"`
+                : selectedCategory}
 
-</div>
-      {/* Bottom Navigation chỉ hiện trên Mobile */}
+            </div>
+
+            <span
+              style={{
+                fontSize: 14,
+                color: "#777",
+                fontWeight: "normal",
+              }}
+            >
+
+              {filteredProducts.length} sản phẩm
+
+            </span>
+
+          </div>
+
+          {/* Product Grid */}
+
+          <div className="products">
+
+            {filteredProducts.map((p) => (
+
+              <div
+                key={p.id}
+                className="card"
+              >
+
+                <div className="product-image">
+
+                  {p.image && (
+
+                    <img
+                      src={p.image}
+                      alt={p.name}
+                    />
+
+                  )}
+
+                </div>
+
+                <div className="card-content">
+
+                  <h3>
+
+                    {p.name}
+
+                  </h3>
+
+                  <div className="price">
+
+                    {Number(
+                      p.price
+                    ).toLocaleString("vi-VN")}đ
+
+                  </div>
+
+                  <p
+                    style={{
+                      fontSize: 12,
+                      color: "#666",
+                      marginBottom: 8,
+                    }}
+                  >
+
+                    Danh mục: {p.category}
+
+                  </p>
+
+                  <p
+                    style={{
+                      fontSize: 12,
+                      color:
+                        p.stock > 0
+                          ? "green"
+                          : "red",
+                      marginBottom: 10,
+                      fontWeight: "bold",
+                    }}
+                  >
+
+                    {p.stock > 0
+                      ? `Còn ${p.stock} sản phẩm`
+                      : "Hết hàng"}
+
+                  </p>
+
+                  <button className="buy-btn">
+
+                    Thêm vào giỏ
+
+                  </button>
+
+                </div>
+
+              </div>
+
+            ))}
+                      </div>
+        </main>
+      </div>
+
+      {/* Bottom Navigation Mobile */}
 
       {isMobile && (
+
         <div
+          className="bottom-nav"
           style={{
             position: "fixed",
             bottom: 0,
@@ -493,57 +551,82 @@ function App() {
             alignItems: "center",
             borderTop: "1px solid #ddd",
             boxShadow: "0 -2px 10px rgba(0,0,0,.08)",
-            zIndex: 9999,
+            zIndex: 999,
           }}
         >
+
           <div
             style={{
               textAlign: "center",
-              fontSize: 12,
               cursor: "pointer",
             }}
           >
-            <div style={{ fontSize: 22 }}>🏠</div>
-            Trang chủ
+            <div style={{ fontSize: 22 }}>
+              🏠
+            </div>
+
+            <small>Trang chủ</small>
+
           </div>
 
           <div
             style={{
               textAlign: "center",
-              fontSize: 12,
               cursor: "pointer",
             }}
-            onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+            onClick={() =>
+              window.scrollTo({
+                top: 0,
+                behavior: "smooth",
+              })
+            }
           >
-            <div style={{ fontSize: 22 }}>🔍</div>
-            Tìm kiếm
+
+            <div style={{ fontSize: 22 }}>
+              🔍
+            </div>
+
+            <small>Tìm kiếm</small>
+
           </div>
 
           <div
             style={{
               textAlign: "center",
-              fontSize: 12,
               cursor: "pointer",
             }}
           >
-            <div style={{ fontSize: 22 }}>🛒</div>
-            Giỏ hàng
+
+            <div style={{ fontSize: 22 }}>
+              🛒
+            </div>
+
+            <small>Giỏ hàng</small>
+
           </div>
 
           <div
             style={{
               textAlign: "center",
-              fontSize: 12,
               cursor: "pointer",
             }}
           >
-            <div style={{ fontSize: 22 }}>👤</div>
-            Tài khoản
+
+            <div style={{ fontSize: 22 }}>
+              👤
+            </div>
+
+            <small>Tài khoản</small>
+
           </div>
+
         </div>
+
       )}
+
     </>
   );
+
 }
 
 export default App;
