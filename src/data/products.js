@@ -16,6 +16,40 @@ import jumper10 from "../assets/jumper-wire-10cm.png";
 import jumper20 from "../assets/jumper-wire-20cm.jpg";
 import jumper30 from "../assets/jumper-wire-30cm.jpg";
 import oled096 from "../assets/oled-096.jpg";
+import oled3color from "../assets/oled-3color.jpg";
+import lcd1602 from "../assets/lcd1602-i2c.jpg";
+import rtcds3231 from "../assets/rtc-ds3231.jpg";
+import hcsr04 from "../assets/hc-sr04.jpg";
+import tcrt5000 from "../assets/tcrt5000.webp";
+import mpu6050 from "../assets/mpu6050.jpg";
+import ds18b20 from "../assets/ds18b20.jpg";
+import relay1ch from "../assets/relay-1ch.jpg";
+import relay2ch from "../assets/relay-2ch.jpg";
+import relay4ch from "../assets/relay-4ch.jpg";
+import servoSg90 from "../assets/servo-sg90.jpg";
+
+import servoMg90s from "../assets/servo-mg90s.webp";
+import dht11 from "../assets/dht11.webp";
+import dht22 from "../assets/dht22.webp";
+import l298n from "../assets/l298n.jpg";
+import lm2596 from "../assets/lm2596.jpg";
+import tp4056 from "../assets/tp4056-typec.jpg";
+
+import solderingIron60w from "../assets/soldering-iron-60w.jpg";
+import solderingTip from "../assets/soldering-tip.jpg";
+import solderWire from "../assets/solder-wire.jpg";
+import rosin from "../assets/rosin.webp";
+import desolderPump from "../assets/desolder-pump.jpg";
+import cuttingPlier from "../assets/cutting-plier.jpg";
+import screwdriverSet from "../assets/mini-screwdriver-set.jpg";
+import awg20Wire from "../assets/awg20-wire.jpg";
+
+import lm358p from "../assets/lm358p.jpg";
+import uln2803 from "../assets/uln2803apg.jpg";
+
+import a1015 from "../assets/a1015.webp";
+import c1815 from "../assets/c1815.jpg";
+import pn2n3904 from "../assets/2n3904.png";
 const products = [
 
   // ===========================
@@ -234,331 +268,334 @@ const products = [
   image: oled096,
 },
 
-  {
-    id: 19,
-    sku: "OLED-002",
-    category: "Hiển thị",
-    name: "OLED 3 màu 0.96 I2C",
-    price: 57000,
-    stock: 12,
-    image: "",
-  },
-
-  {
-    id: 20,
-    sku: "LCD-001",
-    category: "Hiển thị",
-    name: "LCD1602 I2C",
-    price: 65000,
-    stock: 15,
-    image: "",
-  },
-
-  {
-    id: 21,
-    sku: "RTC-001",
-    category: "Hiển thị",
-    name: "RTC DS3231",
-    price: 69000,
-    stock: 10,
-    image: "",
-  },
-    // ===========================
-  // CẢM BIẾN
   // ===========================
+// Hiển thị
+// ===========================
 
+{
+  id: 19,
+  sku: "OLED-002",
+  category: "Hiển thị",
+  name: "OLED 2 màu 0.96 I2C",
+  price: 57000,
+  stock: 12,
+  image: oled3color,
+},
+
+{
+  id: 20,
+  sku: "LCD-001",
+  category: "Hiển thị",
+  name: "LCD1602 I2C",
+  price: 65000,
+  stock: 15,
+  image: lcd1602,
+},
+
+{
+  id: 21,
+  sku: "RTC-001",
+  category: "Hiển thị",
+  name: "RTC DS3231",
+  price: 69000,
+  stock: 10,
+  image: rtcds3231,
+},
+
+// ===========================
+// CẢM BIẾN
+// ===========================
+
+{
+  id: 22,
+  sku: "SEN-001",
+  category: "Cảm biến",
+  name: "HC-SR04 Cảm biến siêu âm",
+  price: 22000,
+  stock: 20,
+  image: hcsr04,
+},
+
+{
+  id: 23,
+  sku: "SEN-002",
+  category: "Cảm biến",
+  name: "TCRT5000 Cảm biến dò line",
+  price: 11000,
+  stock: 10,
+  image: tcrt5000,
+},
+
+{
+  id: 24,
+  sku: "SEN-003",
+  category: "Cảm biến",
+  name: "MPU6050 Gia tốc + Con quay",
+  price: 58000,
+  stock: 10,
+  image: mpu6050,
+},
+{
+  id: 25,
+  sku: "SEN-004",
+  category: "Cảm biến",
+  name: "DS18B20 Cảm biến nhiệt độ",
+  price: 30000,
+  stock: 10,
+  image: ds18b20,
+},
+
+{
+  id: 26,
+  sku: "SEN-005",
+  category: "Cảm biến",
+  name: "DHT11 Có dây",
+  price: 25000,
+  stock: 15,
+  image: dht11,
+},
+
+{
+  id: 27,
+  sku: "SEN-006",
+  category: "Cảm biến",
+  name: "DHT22 AM2302",
+  price: 49000,
+  stock: 10,
+  image: dht22,
+},
+
+// ===========================
+// SERVO & MOTOR
+// ===========================
+
+{
+  id: 28,
+  sku: "SERVO-001",
+  category: "Motor",
+  name: "Servo SG90 9G",
+  price: 40000,
+  stock: 10,
+  image: servoSg90,
+},
+
+{
+  id: 29,
+  sku: "SERVO-002",
+  category: "Motor",
+  name: "Servo MG90S Kim loại",
+  price: 50000,
+  stock: 5,
+  image: servoMg90s,
+},
+
+// ===========================
+// RELAY
+// ===========================
+
+{
+  id: 30,
+  sku: "RELAY-001",
+  category: "Relay",
+  name: "Relay 1 Kênh 5V",
+  price: 13000,
+  stock: 10,
+  image: relay1ch,
+},
+
+{
+  id: 31,
+  sku: "RELAY-002",
+  category: "Relay",
+  name: "Relay 2 Kênh 5V",
+  price: 26000,
+  stock: 10,
+  image: relay2ch,
+},
+
+{
+  id: 32,
+  sku: "RELAY-003",
+  category: "Relay",
+  name: "Relay 4 Kênh 5V",
+  price: 49000,
+  stock: 5,
+  image: relay4ch,
+},
+
+// ===========================
+// MODULE
+// ===========================
+{
+  id: 33,
+  sku: "MOD-001",
+  category: "Module",
+  name: "L298N Driver Motor",
+  price: 45000,
+  stock: 10,
+  image: l298n,
+},
+
+{
+  id: 34,
+  sku: "MOD-002",
+  category: "Nguồn",
+  name: "LM2596 DC-DC Buck",
+  price: 20000,
+  stock: 10,
+  image: lm2596,
+},
+
+{
+  id: 35,
+  sku: "MOD-003",
+  category: "Nguồn",
+  name: "TP4056 Type-C Có bảo vệ",
+  price: 12000,
+  stock: 10,
+  image: tp4056,
+},
+
+// ===========================
+// DỤNG CỤ
+// ===========================
+
+{
+  id: 36,
+  sku: "TOOL-001",
+  category: "Dụng cụ",
+  name: "Mỏ hàn 60W",
+  price: 72000,
+  stock: 5,
+  image: solderingIron60w,
+},
+
+{
+  id: 37,
+  sku: "TOOL-002",
+  category: "Dụng cụ",
+  name: "Mũi hàn thay thế",
+  price: 15000,
+  stock: 10,
+  image: solderingTip,
+},
+
+{
+  id: 38,
+  sku: "TOOL-003",
+  category: "Dụng cụ",
+  name: "Thiếc hàn 1.0mm",
+  price: 65000,
+  stock: 10,
+  image: solderWire,
+},
+
+{
+  id: 39,
+  sku: "TOOL-004",
+  category: "Dụng cụ",
+  name: "Nhựa thông hàn mạch",
+  price: 10000,
+  stock: 10,
+  image: rosin,
+},
+
+{
+  id: 40,
+  sku: "TOOL-005",
+  category: "Dụng cụ",
+  name: "Chì hút thiếc lò xo",
+  price: 35000,
+  stock: 5,
+  image: desolderPump,
+},
   {
-    id: 22,
-    sku: "SEN-001",
-    category: "Cảm biến",
-    name: "HC-SR04 Cảm biến siêu âm",
-    price: 22000,
-    stock: 20,
-    image: "",
-  },
+  id: 41,
+  sku: "TOOL-006",
+  category: "Dụng cụ",
+  name: "Kìm cắt chân linh kiện",
+  price: 25000,
+  stock: 10,
+  image: cuttingPlier,
+},
 
-  {
-    id: 23,
-    sku: "SEN-002",
-    category: "Cảm biến",
-    name: "TCRT5000 Cảm biến dò line",
-    price: 11000,
-    stock: 10,
-    image: "",
-  },
+{
+  id: 42,
+  sku: "TOOL-007",
+  category: "Dụng cụ",
+  name: "Bộ tua vít mini đa năng",
+  price: 99000,
+  stock: 5,
+  image: screwdriverSet,
+},
 
-  {
-    id: 24,
-    sku: "SEN-003",
-    category: "Cảm biến",
-    name: "MPU6050 Gia tốc + Con quay",
-    price: 58000,
-    stock: 10,
-    image: "",
-  },
+{
+  id: 43,
+  sku: "WIRE-004",
+  category: "Phụ kiện",
+  name: "Dây điện AWG20 Đỏ + Đen",
+  price: 20000,
+  stock: 10,
+  image: awg20Wire,
+},
 
-  {
-    id: 25,
-    sku: "SEN-004",
-    category: "Cảm biến",
-    name: "DS18B20 Cảm biến nhiệt độ",
-    price: 30000,
-    stock: 10,
-    image: "",
-  },
+// ===========================
+// IC
+// ===========================
 
-  {
-    id: 26,
-    sku: "SEN-005",
-    category: "Cảm biến",
-    name: "DHT11 Có dây",
-    price: 25000,
-    stock: 15,
-    image: "",
-  },
+{
+  id: 44,
+  sku: "IC-001",
+  category: "IC",
+  name: "LM358P",
+  price: 5000,
+  stock: 10,
+  image: lm358p,
+},
 
-  {
-    id: 27,
-    sku: "SEN-006",
-    category: "Cảm biến",
-    name: "DHT22 AM2302",
-    price: 49000,
-    stock: 10,
-    image: "",
-  },
+{
+  id: 45,
+  sku: "IC-002",
+  category: "IC",
+  name: "ULN2803APG",
+  price: 7000,
+  stock: 10,
+  image: uln2803,
+},
 
-  // ===========================
-  // SERVO & MOTOR
-  // ===========================
+// ===========================
+// TRANSISTOR
+// ===========================
 
-  {
-    id: 28,
-    sku: "SERVO-001",
-    category: "Motor",
-    name: "Servo SG90 9G",
-    price: 40000,
-    stock: 10,
-    image: "",
-  },
+{
+  id: 46,
+  sku: "TR-001",
+  category: "Transistor",
+  name: "A1015 (10 con)",
+  price: 5000,
+  stock: 10,
+  image: a1015,
+},
 
-  {
-    id: 29,
-    sku: "SERVO-002",
-    category: "Motor",
-    name: "Servo MG90S Kim loại",
-    price: 50000,
-    stock: 5,
-    image: "",
-  },
+{
+  id: 47,
+  sku: "TR-002",
+  category: "Transistor",
+  name: "C1815 (10 con)",
+  price: 5000,
+  stock: 10,
+  image: c1815,
+},
 
-  // ===========================
-  // RELAY
-  // ===========================
-
-  {
-    id: 30,
-    sku: "RELAY-001",
-    category: "Relay",
-    name: "Relay 1 Kênh 5V",
-    price: 13000,
-    stock: 10,
-    image: "",
-  },
-
-  {
-    id: 31,
-    sku: "RELAY-002",
-    category: "Relay",
-    name: "Relay 2 Kênh 5V",
-    price: 26000,
-    stock: 10,
-    image: "",
-  },
-
-  {
-    id: 32,
-    sku: "RELAY-003",
-    category: "Relay",
-    name: "Relay 4 Kênh 5V",
-    price: 49000,
-    stock: 5,
-    image: "",
-  },
-
-  // ===========================
-  // MODULE
-  // ===========================
-
-  {
-    id: 33,
-    sku: "MOD-001",
-    category: "Module",
-    name: "L298N Driver Motor",
-    price: 45000,
-    stock: 10,
-    image: "",
-  },
-
-  {
-    id: 34,
-    sku: "MOD-002",
-    category: "Nguồn",
-    name: "LM2596 DC-DC Buck",
-    price: 20000,
-    stock: 10,
-    image: "",
-  },
-
-  {
-    id: 35,
-    sku: "MOD-003",
-    category: "Nguồn",
-    name: "TP4056 Type-C Có bảo vệ",
-    price: 12000,
-    stock: 10,
-    image: "",
-  },
-
-  // ===========================
-  // DỤNG CỤ
-  // ===========================
-
-  {
-    id: 36,
-    sku: "TOOL-001",
-    category: "Dụng cụ",
-    name: "Mỏ hàn 60W",
-    price: 72000,
-    stock: 5,
-    image: "",
-  },
-
-  {
-    id: 37,
-    sku: "TOOL-002",
-    category: "Dụng cụ",
-    name: "Mũi hàn thay thế",
-    price: 15000,
-    stock: 10,
-    image: "",
-  },
-
-  {
-    id: 38,
-    sku: "TOOL-003",
-    category: "Dụng cụ",
-    name: "Thiếc hàn 1.0mm",
-    price: 65000,
-    stock: 10,
-    image: "",
-  },
-
-  {
-    id: 39,
-    sku: "TOOL-004",
-    category: "Dụng cụ",
-    name: "Nhựa thông hàn mạch",
-    price: 10000,
-    stock: 10,
-    image: "",
-  },
-
-  {
-    id: 40,
-    sku: "TOOL-005",
-    category: "Dụng cụ",
-    name: "Chì hút thiếc lò xo",
-    price: 35000,
-    stock: 5,
-    image: "",
-  },
-
-  {
-    id: 41,
-    sku: "TOOL-006",
-    category: "Dụng cụ",
-    name: "Kìm cắt chân linh kiện",
-    price: 25000,
-    stock: 10,
-    image: "",
-  },
-
-  {
-    id: 42,
-    sku: "TOOL-007",
-    category: "Dụng cụ",
-    name: "Bộ tua vít mini đa năng",
-    price: 99000,
-    stock: 5,
-    image: "",
-  },
-
-  {
-    id: 43,
-    sku: "WIRE-004",
-    category: "Phụ kiện",
-    name: "Dây điện AWG20 Đỏ + Đen",
-    price: 20000,
-    stock: 10,
-    image: "",
-  },
-    // ===========================
-  // IC
-  // ===========================
-
-  {
-    id: 44,
-    sku: "IC-001",
-    category: "IC",
-    name: "LM358P",
-    price: 5000,
-    stock: 10,
-    image: "",
-  },
-
-  {
-    id: 45,
-    sku: "IC-002",
-    category: "IC",
-    name: "ULN2803APG",
-    price: 7000,
-    stock: 10,
-    image: "",
-  },
-
-  // ===========================
-  // TRANSISTOR
-  // ===========================
-
-  {
-    id: 46,
-    sku: "TR-001",
-    category: "Transistor",
-    name: "A1015 (10 con)",
-    price: 5000,
-    stock: 10,
-    image: "",
-  },
-
-  {
-    id: 47,
-    sku: "TR-002",
-    category: "Transistor",
-    name: "C1815 (10 con)",
-    price: 5000,
-    stock: 10,
-    image: "",
-  },
-
-  {
-    id: 48,
-    sku: "TR-003",
-    category: "Transistor",
-    name: "2N3904 (10 con)",
-    price: 5000,
-    stock: 10,
-    image: "",
-  },
+{
+  id: 48,
+  sku: "TR-003",
+  category: "Transistor",
+  name: "2N3904 (10 con)",
+  price: 5000,
+  stock: 10,
+  image: pn2n3904,
+},
 
   {
     id: 49,
