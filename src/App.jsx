@@ -21,6 +21,7 @@ function App() {
 
   const [isMobile, setIsMobile] =
     useState(window.innerWidth <= 768);
+  const [cart, setCart] = useState([]);
 
   /* ===========================
         WINDOW RESIZE
@@ -166,6 +167,47 @@ function App() {
     selectedCategory,
     search,
   ]);
+  const addToCart = (product) => {
+
+  const exist = cart.find(
+    item => item.id === product.id
+  );
+
+  if (exist) {
+
+    setCart(
+
+      cart.map(item =>
+
+        item.id === product.id
+
+          ? {
+              ...item,
+              quantity: item.quantity + 1,
+            }
+
+          : item
+
+      )
+
+    );
+
+  } else {
+
+    setCart([
+
+      ...cart,
+
+      {
+        ...product,
+        quantity: 1,
+      },
+
+    ]);
+
+  }
+
+};
   /* ===========================
         RENDER
   =========================== */
@@ -249,7 +291,7 @@ function App() {
 
         <div className="cart">
 
-          🛒 Giỏ hàng
+          🛒 Giỏ hàng ({cart.length})
 
         </div>
 
@@ -518,7 +560,10 @@ function App() {
 
                   </p>
 
-                  <button className="buy-btn">
+                  <button 
+                    className="buy-btn"
+                    onClick={() => addToCart(p)}
+                    >
 
                     Thêm vào giỏ
 
