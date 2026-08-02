@@ -37,117 +37,209 @@ function Cart({ cart, setCart }) {
 
   return (
     <div className="cart-page">
+
       <div className="cart-container">
-        <h1 className="cart-title">🛒 Giỏ hàng</h1>
+
+        <div className="cart-header">
+
+          <button
+            className="back-btn"
+            onClick={() => navigate("/")}
+          >
+            ← Tiếp tục mua
+          </button>
+
+          <h1>🛒 Giỏ hàng</h1>
+
+        </div>
 
         {cart.length === 0 ? (
+
           <div className="cart-empty">
-            <h2>Giỏ hàng đang trống</h2>
+
+            <h2>🛒 Giỏ hàng đang trống</h2>
+
+            <p>
+              Hãy thêm sản phẩm vào giỏ hàng của bạn.
+            </p>
 
             <button
               className="continue-btn"
               onClick={() => navigate("/")}
             >
-              Tiếp tục mua hàng
+              Mua sắm ngay
             </button>
+
           </div>
+
         ) : (
-          <>
+
+          <div className="cart-layout">
+
             <div className="cart-list">
+
               {cart.map((item) => (
-                <div className="cart-card" key={item.id}>
-                  <div className="cart-image">
-                    <img
-                      src={item.image}
-                      alt={item.name}
-                    />
-                  </div>
 
-                  <div className="cart-info">
-                    <h3>{item.name}</h3>
+                <div
+                  className="cart-card"
+                  key={item.id}
+                >
 
-                    <p>SKU: {item.sku}</p>
+                  <div className="cart-left">
 
-                    <div className="cart-price">
-                      {item.price.toLocaleString("vi-VN")}đ
+                    <div className="cart-image">
+
+                      {item.image ? (
+
+                        <img
+                          src={item.image}
+                          alt={item.name}
+                        />
+
+                      ) : (
+
+                        <div className="no-image">
+                          📦
+                        </div>
+
+                      )}
+
                     </div>
+
+                    <div className="cart-info">
+
+                      <h3>{item.name}</h3>
+
+                      <p>
+                        SKU : {item.sku}
+                      </p>
+
+                      <div className="cart-price">
+
+                        {item.price.toLocaleString(
+                          "vi-VN"
+                        )}đ
+
+                      </div>
+
+                    </div>
+
                   </div>
 
-                  <div className="cart-action">
+                  <div className="cart-right">
+
                     <div className="quantity-box">
+
                       <button
-                        onClick={() => decrease(item.id)}
+                        onClick={() =>
+                          decrease(item.id)
+                        }
                       >
                         −
                       </button>
 
-                      <span>{item.quantity}</span>
+                      <span>
+                        {item.quantity}
+                      </span>
 
                       <button
-                        onClick={() => increase(item.id)}
+                        onClick={() =>
+                          increase(item.id)
+                        }
                       >
                         +
                       </button>
+
                     </div>
 
                     <div className="line-total">
-                      {(item.price * item.quantity).toLocaleString("vi-VN")}đ
+
+                      {(item.price *
+                        item.quantity).toLocaleString(
+                        "vi-VN"
+                      )}
+                      đ
+
                     </div>
 
                     <button
                       className="delete-btn"
-                      onClick={() => removeItem(item.id)}
+                      onClick={() =>
+                        removeItem(item.id)
+                      }
                     >
-                      🗑
+                      🗑 Xóa
                     </button>
-                  </div>
-                </div>
-              ))}
-            </div>
 
-            <div className="cart-summary">
+                  </div>
+
+                </div>
+
+              ))}
+
+            </div>
+                        <div className="cart-summary">
+
+              <h2>Tóm tắt đơn hàng</h2>
+
               <div className="summary-row">
+
                 <span>Tạm tính</span>
 
                 <b>
                   {total.toLocaleString("vi-VN")}đ
                 </b>
+
               </div>
 
               <div className="summary-row">
+
                 <span>Phí vận chuyển</span>
 
                 <b>30.000đ</b>
+
+              </div>
+
+              <div className="summary-row">
+
+                <span>Voucher</span>
+
+                <button className="voucher-btn">
+                  Chọn mã giảm giá
+                </button>
+
               </div>
 
               <hr />
 
               <div className="summary-total">
+
                 <span>Tổng thanh toán</span>
 
                 <b>
                   {(total + 30000).toLocaleString("vi-VN")}đ
                 </b>
+
               </div>
 
-              <div className="cart-buttons">
-                <button
-                  className="continue-btn"
-                  onClick={() => navigate("/")}
-                >
-                  ← Tiếp tục mua
-                </button>
+              <button className="checkout-btn">
 
-                <button className="checkout-btn">
-                  Thanh toán
-                </button>
-              </div>
+                Thanh toán ngay
+
+              </button>
+
             </div>
-          </>
+
+          </div>
+
         )}
+
       </div>
+
     </div>
+
   );
+
 }
 
 export default Cart;
