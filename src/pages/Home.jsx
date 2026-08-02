@@ -28,6 +28,8 @@ function Home({ cart, setCart }) {
  
   const [showCart, setShowCart] = useState(false);
   const [addedId, setAddedId] = useState(null);
+  const [showPopup, setShowPopup] = useState(false);
+  const [popupProduct, setPopupProduct] = useState(null);
 
   /* ===========================
         WINDOW RESIZE
@@ -166,6 +168,8 @@ function Home({ cart, setCart }) {
   ]);
   const addToCart = (product) => {
     setAddedId(product.id);
+    setPopupProduct(product);
+    setShowPopup(true);
 
 setTimeout(() => {
   setAddedId(null);
@@ -678,6 +682,58 @@ setTimeout(() => {
         </div>
 
       )}
+      {showPopup && (
+
+        <div className="popup-overlay">
+
+        <div className="popup-box">
+
+        <h2>✅ Thêm vào giỏ hàng thành công</h2>
+
+        <img
+        src={popupProduct?.image}
+        alt=""
+        className="popup-image"
+        />
+
+        <h3>{popupProduct?.name}</h3>
+
+        <p>
+
+        {popupProduct?.price.toLocaleString("vi-VN")}đ
+
+        </p>
+
+        <div className="popup-buttons">
+
+        <button
+        onClick={() =>
+        setShowPopup(false)
+        }
+        >
+
+        Tiếp tục mua
+
+        </button>
+
+        <button
+        onClick={()=>{
+        setShowPopup(false);
+        navigate("/cart");
+        }}
+        >
+
+        Xem giỏ hàng
+
+        </button>
+
+        </div>
+
+        </div>
+
+        </div>
+
+        )}
 
     </>
   );
