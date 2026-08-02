@@ -196,7 +196,7 @@ function Cart({ cart, setCart }) {
 
                 <span>Phí vận chuyển</span>
 
-                git add .
+                <b>0đ</b>
 
               </div>
 
@@ -217,7 +217,7 @@ function Cart({ cart, setCart }) {
                 <span>Tổng thanh toán</span>
 
                 <b>
-                  {(total + 0).toLocaleString("vi-VN")}đ
+                 {total.toLocaleString("vi-VN")}đ
                 </b>
 
               </div>
