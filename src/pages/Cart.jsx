@@ -196,7 +196,7 @@ function Cart({ cart, setCart }) {
 
                 <span>Phí vận chuyển</span>
 
-                <b>0.000đ</b>
+                
 
               </div>
 
