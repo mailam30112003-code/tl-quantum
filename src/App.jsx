@@ -3,6 +3,7 @@ import { useState } from "react";
 
 import Home from "./pages/Home";
 import Cart from "./pages/Cart";
+import Checkout from "./pages/Checkout";
 
 function App() {
   const [cart, setCart] = useState([]);
@@ -19,6 +20,15 @@ function App() {
             />
           }
         />
+        <Route
+          path="/checkout"
+          element={
+              <Checkout
+                  cart={cart}
+                  setCart={setCart}
+              />
+          }
+      />
 
         <Route
           path="/cart"

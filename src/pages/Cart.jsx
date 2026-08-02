@@ -222,10 +222,11 @@ function Cart({ cart, setCart }) {
 
               </div>
 
-              <button className="checkout-btn">
-
+              <button
+                className="checkout-btn"
+                onClick={() => navigate("/checkout")}
+              >
                 Thanh toán ngay
-
               </button>
 
             </div>

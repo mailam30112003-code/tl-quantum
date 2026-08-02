@@ -1,0 +1,404 @@
+/* ===========================
+        CHECKOUT PAGE
+=========================== */
+
+.checkout-page{
+    background:#f5f7fb;
+    min-height:100vh;
+    padding:30px 20px;
+}
+
+.checkout-container{
+    max-width:1350px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:1.3fr 420px;
+    gap:30px;
+    align-items:start;
+}
+
+/* ===========================
+        LEFT
+=========================== */
+
+.checkout-left{
+    background:#fff;
+    border-radius:16px;
+    padding:30px;
+    box-shadow:0 5px 20px rgba(0,0,0,.08);
+}
+
+.checkout-left h2{
+    color:#1950d1;
+    margin-bottom:25px;
+    font-size:28px;
+}
+
+.checkout-left input,
+.checkout-left textarea{
+
+    width:100%;
+    padding:14px 16px;
+    margin-bottom:18px;
+
+    border:1px solid #ddd;
+    border-radius:10px;
+
+    font-size:15px;
+
+    transition:.25s;
+    box-sizing:border-box;
+
+}
+
+.checkout-left textarea{
+
+    resize:none;
+
+}
+
+.checkout-left input:focus,
+.checkout-left textarea:focus{
+
+    outline:none;
+
+    border-color:#1950d1;
+
+    box-shadow:0 0 0 3px rgba(25,80,209,.12);
+
+}
+
+/* ===========================
+        RIGHT
+=========================== */
+
+.checkout-right{
+
+    background:#fff;
+
+    border-radius:16px;
+
+    padding:25px;
+
+    box-shadow:0 5px 20px rgba(0,0,0,.08);
+
+    position:sticky;
+
+    top:20px;
+
+}
+
+.checkout-right h2{
+
+    color:#1950d1;
+
+    margin-bottom:25px;
+
+}
+
+/* ===========================
+        PRODUCT
+=========================== */
+
+.checkout-item{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+    margin-bottom:18px;
+
+}
+
+.checkout-item img{
+
+    width:70px;
+
+    height:70px;
+
+    object-fit:contain;
+
+    border:1px solid #eee;
+
+    border-radius:10px;
+
+    background:#fff;
+
+    padding:6px;
+
+}
+
+.checkout-info{
+
+    flex:1;
+
+}
+
+.checkout-info h4{
+
+    margin-bottom:6px;
+
+    font-size:15px;
+
+}
+
+.checkout-info p{
+
+    color:#666;
+
+    font-size:13px;
+
+}
+
+.checkout-price{
+
+    color:#1950d1;
+
+    font-weight:bold;
+
+    font-size:18px;
+
+}
+/* ===========================
+        TOTAL
+=========================== */
+
+.checkout-total,
+.checkout-final{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin:18px 0;
+
+}
+
+.checkout-total{
+
+    font-size:16px;
+
+}
+
+.checkout-final{
+
+    margin-top:25px;
+
+    padding-top:20px;
+
+    border-top:2px dashed #ddd;
+
+    font-size:22px;
+
+    font-weight:bold;
+
+}
+
+.checkout-final b{
+
+    color:#e53935;
+
+    font-size:28px;
+
+}
+
+/* ===========================
+        BUTTON
+=========================== */
+
+.place-order-btn{
+
+    width:100%;
+
+    margin-top:25px;
+
+    padding:15px;
+
+    border:none;
+
+    border-radius:10px;
+
+    background:#1950d1;
+
+    color:#fff;
+
+    font-size:18px;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+    transition:.25s;
+
+}
+
+.place-order-btn:hover{
+
+    background:#0d47c7;
+
+    transform:translateY(-2px);
+
+}
+
+.back-cart-btn{
+
+    width:100%;
+
+    margin-top:12px;
+
+    padding:14px;
+
+    border:none;
+
+    border-radius:10px;
+
+    background:#eceff5;
+
+    color:#333;
+
+    font-size:16px;
+
+    cursor:pointer;
+
+    transition:.25s;
+
+}
+
+.back-cart-btn:hover{
+
+    background:#dfe4ea;
+
+}
+
+/* ===========================
+        MOBILE
+=========================== */
+
+@media(max-width:992px){
+
+.checkout-container{
+
+grid-template-columns:1fr;
+
+}
+
+.checkout-right{
+
+position:static;
+
+}
+
+}
+
+@media(max-width:768px){
+
+.checkout-page{
+
+padding:15px;
+
+}
+
+.checkout-left,
+.checkout-right{
+
+padding:20px;
+
+}
+
+.checkout-left h2,
+.checkout-right h2{
+
+font-size:24px;
+
+text-align:center;
+
+}
+
+.checkout-item{
+
+flex-direction:column;
+
+text-align:center;
+
+}
+
+.checkout-item img{
+
+width:90px;
+
+height:90px;
+
+}
+
+.checkout-price{
+
+margin-top:10px;
+
+}
+
+.checkout-final{
+
+font-size:18px;
+
+}
+
+.checkout-final b{
+
+font-size:24px;
+
+}
+
+.place-order-btn{
+
+font-size:17px;
+
+}
+
+}
+
+/* ===========================
+        ANIMATION
+=========================== */
+
+.checkout-left,
+.checkout-right{
+
+animation:fadeUp .35s ease;
+
+}
+
+@keyframes fadeUp{
+
+from{
+
+opacity:0;
+
+transform:translateY(20px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
+
+.place-order-btn:active{
+
+transform:scale(.97);
+
+}
+
+.back-cart-btn:active{
+
+transform:scale(.97);
+
+}
