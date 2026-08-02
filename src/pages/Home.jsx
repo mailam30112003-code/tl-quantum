@@ -311,19 +311,31 @@ setTimeout(() => {
 
       <nav className="menu">
 
-        <span>TRANG CHỦ</span>
+        <span onClick={() => navigate("/")}>
+            TRANG CHỦ
+        </span>
 
-        <span>SẢN PHẨM</span>
+        <span onClick={() => navigate("/products")}>
+            SẢN PHẨM
+        </span>
 
-        <span>DỰ ÁN</span>
+        <span onClick={() => navigate("/projects")}>
+            DỰ ÁN
+        </span>
 
-        <span>BLOG</span>
+        <span onClick={() => navigate("/blog")}>
+            BLOG
+        </span>
 
-        <span>HƯỚNG DẪN</span>
+        <span onClick={() => navigate("/guide")}>
+            HƯỚNG DẪN
+        </span>
 
-        <span>LIÊN HỆ</span>
+        <span onClick={() => navigate("/contact")}>
+            LIÊN HỆ
+        </span>
 
-      </nav>
+        </nav>
 
       {/* Mobile Category */}
 

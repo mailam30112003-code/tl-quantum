@@ -1,0 +1,304 @@
+/* ===========================
+        PROJECTS PAGE
+=========================== */
+
+.projects-page{
+
+    min-height:100vh;
+
+    background:#f5f7fb;
+
+    padding:40px 25px;
+
+}
+
+.projects-page h1{
+
+    text-align:center;
+
+    color:#1950d1;
+
+    font-size:38px;
+
+    margin-bottom:40px;
+
+}
+
+/* ===========================
+        GRID
+=========================== */
+
+.projects-grid{
+
+    max-width:1300px;
+
+    margin:auto;
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(330px,1fr));
+
+    gap:30px;
+
+}
+
+/* ===========================
+        CARD
+=========================== */
+
+.project-card{
+
+    background:#fff;
+
+    border-radius:18px;
+
+    padding:30px;
+
+    text-align:center;
+
+    box-shadow:0 8px 25px rgba(0,0,0,.08);
+
+    transition:.3s;
+
+}
+
+.project-card:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:0 18px 40px rgba(0,0,0,.15);
+
+}
+
+/* ===========================
+        IMAGE
+=========================== */
+
+.project-image{
+
+    width:120px;
+
+    height:120px;
+
+    margin:auto;
+
+    margin-bottom:20px;
+
+    border-radius:50%;
+
+    background:#edf3ff;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:60px;
+
+}
+
+/* ===========================
+        TITLE
+=========================== */
+
+.project-card h2{
+
+    color:#1950d1;
+
+    margin-bottom:15px;
+
+    font-size:24px;
+
+}
+
+.project-card p{
+
+    color:#666;
+
+    line-height:1.7;
+
+    margin-bottom:20px;
+
+}
+/* ===========================
+        TAGS
+=========================== */
+
+.project-tags{
+
+    display:flex;
+
+    justify-content:center;
+
+    flex-wrap:wrap;
+
+    gap:10px;
+
+    margin-bottom:25px;
+
+}
+
+.project-tags span{
+
+    background:#edf3ff;
+
+    color:#1950d1;
+
+    padding:8px 14px;
+
+    border-radius:30px;
+
+    font-size:14px;
+
+    font-weight:bold;
+
+    transition:.25s;
+
+}
+
+.project-tags span:hover{
+
+    background:#1950d1;
+
+    color:#fff;
+
+}
+
+/* ===========================
+        BUTTON
+=========================== */
+
+.project-card button{
+
+    width:100%;
+
+    border:none;
+
+    background:#1950d1;
+
+    color:#fff;
+
+    padding:14px;
+
+    border-radius:10px;
+
+    cursor:pointer;
+
+    font-size:16px;
+
+    font-weight:bold;
+
+    transition:.3s;
+
+}
+
+.project-card button:hover{
+
+    background:#0d47c7;
+
+    transform:translateY(-2px);
+
+}
+
+.project-card button:active{
+
+    transform:scale(.97);
+
+}
+
+/* ===========================
+        RESPONSIVE
+=========================== */
+
+@media(max-width:768px){
+
+.projects-page{
+
+padding:20px 15px;
+
+}
+
+.projects-page h1{
+
+font-size:30px;
+
+margin-bottom:25px;
+
+}
+
+.projects-grid{
+
+grid-template-columns:1fr;
+
+gap:20px;
+
+}
+
+.project-card{
+
+padding:22px;
+
+}
+
+.project-image{
+
+width:90px;
+
+height:90px;
+
+font-size:45px;
+
+}
+
+.project-card h2{
+
+font-size:22px;
+
+}
+
+.project-card p{
+
+font-size:15px;
+
+}
+
+.project-tags span{
+
+font-size:13px;
+
+padding:6px 12px;
+
+}
+
+}
+
+/* ===========================
+        ANIMATION
+=========================== */
+
+.project-card{
+
+animation:fadeUp .4s ease;
+
+}
+
+@keyframes fadeUp{
+
+from{
+
+opacity:0;
+
+transform:translateY(20px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
