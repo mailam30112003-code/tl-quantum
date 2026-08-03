@@ -11,26 +11,31 @@ import hc05 from "../assets/hc05.jpg";
 import rfidRc522 from "../assets/rfid-rc522.webp";
 import cp2102 from "../assets/cp2102.jpg";
 import stlinkv2 from "../assets/st-link-v2.webp";
+
 import breadboard from "../assets/breadboard.jpg";
 import jumper10 from "../assets/jumper-wire-10cm.png";
 import jumper20 from "../assets/jumper-wire-20cm.jpg";
 import jumper30 from "../assets/jumper-wire-30cm.jpg";
+
 import oled096 from "../assets/oled-096.jpg";
 import oled3color from "../assets/oled-3color.jpg";
 import lcd1602 from "../assets/lcd1602-i2c.jpg";
 import rtcds3231 from "../assets/rtc-ds3231.jpg";
+
 import hcsr04 from "../assets/hc-sr04.jpg";
 import tcrt5000 from "../assets/tcrt5000.webp";
 import mpu6050 from "../assets/mpu6050.jpg";
 import ds18b20 from "../assets/ds18b20.jpg";
+import dht11 from "../assets/dht11.webp";
+import dht22 from "../assets/dht22.webp";
+
 import relay1ch from "../assets/relay-1ch.jpg";
 import relay2ch from "../assets/relay-2ch.jpg";
 import relay4ch from "../assets/relay-4ch.jpg";
-import servoSg90 from "../assets/servo-sg90.jpg";
 
+import servoSg90 from "../assets/servo-sg90.jpg";
 import servoMg90s from "../assets/servo-mg90s.webp";
-import dht11 from "../assets/dht11.webp";
-import dht22 from "../assets/dht22.webp";
+
 import l298n from "../assets/l298n.jpg";
 import lm2596 from "../assets/lm2596.jpg";
 import tp4056 from "../assets/tp4056-typec.jpg";
@@ -50,6 +55,87 @@ import uln2803 from "../assets/uln2803apg.jpg";
 import a1015 from "../assets/a1015.webp";
 import c1815 from "../assets/c1815.jpg";
 import pn2n3904 from "../assets/2n3904.png";
+import pn2n3906 from "../assets/2n3906.jpg";
+import pn2n2907 from "../assets/2n2907.jpg";
+import c945 from "../assets/c945.jpg";
+import a1013 from "../assets/a1013.webp";
+import a733 from "../assets/a733.png";
+import c2383 from "../assets/c2383.webp";
+import pn2n2222 from "../assets/2n2222.gif";
+import pn2n5401 from "../assets/2n5401.png";
+import bc547b from "../assets/bc547b.jpg";
+import bc548b from "../assets/bc548b.gif";
+import bc549b from "../assets/bc549b.jpg";
+import bc559b from "../assets/bc559b.jpg";
+
+import b772 from "../assets/b772.webp";
+import d882 from "../assets/d882.jpg";
+import d718b688 from "../assets/d718-b688.jpg";
+
+import diode6a10 from "../assets/6a10.webp";
+import diode10a10 from "../assets/10a10.jpg";
+import diode1n4007 from "../assets/1n4007.webp";
+import diode1n4148 from "../assets/1n4148.jpg";
+
+import electrolyticCap from "../assets/electrolytic-capacitor.jpg";
+import ceramicCap from "../assets/ceramic-capacitor.jpg";
+
+import led3mm from "../assets/led-3mm-combo.jpg";
+import led5mm from "../assets/led-5mm-combo.webp";
+
+import pushButton43 from "../assets/push-button-6x6-4.3.webp";
+import pushButton8 from "../assets/push-button-6x6-8.webp";
+
+import dc002 from "../assets/dc-002.webp";
+import dcCable from "../assets/dc-cable-5.5x2.1.jpg";
+
+import maleHeader40 from "../assets/male-header-40p.jpg";
+import femaleHeader40 from "../assets/female-header-40p.webp";
+
+import adapter12v2a from "../assets/adapter-12v-2a.jpg";
+
+import nodemcu from "../assets/nodemcu-v3-esp8266.jpg";
+import xl6009 from "../assets/xl6009.jpg";
+import power5v2a from "../assets/power-5v-2a.jpg";
+import bms3s20a from "../assets/bms-3s-20a.jpg";
+import battery9v from "../assets/battery-9v.jpg";
+
+import heatShrinkTube from "../assets/heat-shrink-tube.jpg";
+import heatShrink328 from "../assets/heat-shrink-kit-328.jpg";
+import heatShrink530 from "../assets/heat-shrink-kit-530.jpg";
+
+import solderPaste100g from "../assets/solder-paste-100g.jpg";
+
+import breadboardMb102 from "../assets/breadboard-mb102.jpg";
+import pcbPerfboard from "../assets/pcb-perfboard.jpg";
+
+import cap10u16v from "../assets/electrolytic-10uf-16v.jpg";
+import cap10u25v from "../assets/electrolytic-10uf-25v.jpg";
+import cap22u25v from "../assets/electrolytic-22uf-25v.jpg";
+
+import cap47u16v from "../assets/electrolytic-47uf-16v.jpg";
+import cap47u25v from "../assets/electrolytic-47uf-25v.jpg";
+import cap47u35v from "../assets/electrolytic-47uf-35v.jpg";
+
+import cap100u16v from "../assets/electrolytic-100uf-16v.jpg";
+import cap100u25v from "../assets/electrolytic-100uf-25v.webp";   // WEBP
+import cap100u35v from "../assets/electrolytic-100uf-35v.jpg";
+
+import cap220u16v from "../assets/electrolytic-220uf-16v.webp";   // WEBP
+import cap220u25v from "../assets/electrolytic-220uf-25v.jpg";
+import cap330u25v from "../assets/electrolytic-330uf-25v.jpg";
+
+import cap470u16v from "../assets/electrolytic-470uf-16v.webp";
+import cap470u25v from "../assets/electrolytic-470uf-25v.jpg";
+
+import cap1000u16v from "../assets/electrolytic-1000uf-16v.jpg";
+import cap1000u25v from "../assets/electrolytic-1000uf-25v.jpg";
+import cap1000u50v from "../assets/electrolytic-1000uf-50v.jpg";
+
+import cap2200u50v from "../assets/electrolytic-2200uf-50v.jpg";
+import resistor14w from "../assets/resistor-1-4w.jpg";
+import resistor3w from "../assets/resistor-3w.jpg";
+import resistorCeramic5w from "../assets/resistor-ceramic-5w.jpg";
 const products = [
 
   // ===========================
@@ -598,1035 +684,1036 @@ const products = [
 },
 
   {
-    id: 49,
-    sku: "TR-004",
-    category: "Transistor",
-    name: "2N3906 (10 con)",
-    price: 5000,
-    stock: 10,
-    image: "",
-  },
-
-  {
-    id: 50,
-    sku: "TR-005",
-    category: "Transistor",
-    name: "2N2907 (10 con)",
-    price: 5000,
-    stock: 10,
-    image: "",
-  },
-
-  {
-    id: 51,
-    sku: "TR-006",
-    category: "Transistor",
-    name: "C945 (10 con)",
-    price: 5000,
-    stock: 10,
-    image: "",
-  },
-
-  {
-    id: 52,
-    sku: "TR-007",
-    category: "Transistor",
-    name: "A1013 (10 con)",
-    price: 7000,
-    stock: 10,
-    image: "",
-  },
-
-  {
-    id: 53,
-    sku: "TR-008",
-    category: "Transistor",
-    name: "A733 (10 con)",
-    price: 5000,
-    stock: 10,
-    image: "",
-  },
-
-  {
-    id: 54,
-    sku: "TR-009",
-    category: "Transistor",
-    name: "C2383 (10 con)",
-    price: 7000,
-    stock: 10,
-    image: "",
-  },
-
-  {
-    id: 55,
-    sku: "TR-010",
-    category: "Transistor",
-    name: "2N2222 (10 con)",
-    price: 5000,
-    stock: 10,
-    image: "",
-  },
-
-  {
-    id: 56,
-    sku: "TR-011",
-    category: "Transistor",
-    name: "2N5401 (10 con)",
-    price: 5000,
-    stock: 10,
-    image: "",
-  },
-
-  {
-    id: 57,
-    sku: "TR-012",
-    category: "Transistor",
-    name: "BC547B (10 con)",
-    price: 6000,
-    stock: 10,
-    image: "",
-  },
-
-  {
-    id: 58,
-    sku: "TR-013",
-    category: "Transistor",
-    name: "BC548B (10 con)",
-    price: 6000,
-    stock: 10,
-    image: "",
-  },
-
-  {
-    id: 59,
-    sku: "TR-014",
-    category: "Transistor",
-    name: "BC549B (10 con)",
-    price: 6000,
-    stock: 10,
-    image: "",
-  },
-
-  {
-    id: 60,
-    sku: "TR-015",
-    category: "Transistor",
-    name: "BC559B (10 con)",
-    price: 6000,
-    stock: 10,
-    image: "",
-  },
-
-  {
-    id: 61,
-    sku: "TR-016",
-    category: "Transistor",
-    name: "B772 TO-126",
-    price: 5000,
-    stock: 10,
-    image: "",
-  },
-
-  {
-    id: 62,
-    sku: "TR-017",
-    category: "Transistor",
-    name: "D882 TO-126",
-    price: 5000,
-    stock: 10,
-    image: "",
-  },
-
-  {
-    id: 63,
-    sku: "TR-018",
-    category: "Transistor",
-    name: "Cặp D718 + B688",
-    price: 22000,
-    stock: 10,
-    image: "",
-  },
-
-  // ===========================
-  // DIODE
-  // ===========================
-
-  {
-    id: 64,
-    sku: "DIODE-001",
-    category: "Diode",
-    name: "Diode 6A10",
-    price: 3000,
-    stock: 20,
-    image: "",
-  },
-
-  {
-    id: 65,
-    sku: "DIODE-002",
-    category: "Diode",
-    name: "Diode 10A10",
-    price: 4000,
-    stock: 10,
-    image: "",
-  },
-
-  // ===========================
-  // TỤ ĐIỆN
-  // ===========================
-
-  {
-    id: 66,
-    sku: "CAP-001",
-    category: "Tụ điện",
-    name: "Tụ hóa các loại",
-    price: 1000,
-    stock: 300,
-    image: "",
-  },
-
-  {
-    id: 67,
-    sku: "CAP-002",
-    category: "Tụ điện",
-    name: "Tụ gốm 50V các loại (20 con)",
-    price: 3000,
-    stock: 200,
-    image: "",
-  },
-
-  // ===========================
-  // LED
-  // ===========================
-
-  {
-    id: 68,
-    sku: "LED-001",
-    category: "LED",
-    name: "LED 3mm Combo 6 màu",
-    price: 12000,
-    stock: 10,
-    image: "",
-  },
-
-  {
-    id: 69,
-    sku: "LED-002",
-    category: "LED",
-    name: "LED 5mm Combo 6 màu",
-    price: 12000,
-    stock: 10,
-    image: "",
-  },
-
-
-  {
-    id: 70,
-    sku: "ESP8266-001",
-    category: "ESP32",
-    name: "NodeMCU V3 ESP8266",
-    price: 65000,
-    stock: 10,
-    image: "",
-  },
-
-  {
-    id: 71,
-    sku: "MOD-004",
-    category: "Nguồn",
-    name: "XL6009 DC-DC Boost Converter",
-    price: 25000,
-    stock: 10,
-    image: "",
-  },
-
-  {
-    id: 72,
-    sku: "SW-001",
-    category: "Phụ kiện",
-    name: "Nút nhấn 6x6x4.3mm",
-    price: 1000,
-    stock: 100,
-    image: "",
-  },
-
-  {
-    id: 73,
-    sku: "SW-002",
-    category: "Phụ kiện",
-    name: "Nút nhấn 6x6x8mm",
-    price: 1000,
-    stock: 100,
-    image: "",
-  },
-
-  {
-    id: 74,
-    sku: "JACK-001",
-    category: "Phụ kiện",
-    name: "Jack nguồn DC DC-002",
-    price: 3000,
-    stock: 50,
-    image: "",
-  },
-
-  {
-    id: 75,
-    sku: "HEADER-001",
-    category: "Phụ kiện",
-    name: "Header đực 40 chân",
-    price: 3000,
-    stock: 100,
-    image: "",
-  },
-
-  {
-    id: 76,
-    sku: "HEADER-002",
-    category: "Phụ kiện",
-    name: "Header cái 40 chân",
-    price: 4000,
-    stock: 100,
-    image: "",
-  },
-
-  {
-    id: 77,
-    sku: "DC-001",
-    category: "Phụ kiện",
-    name: "Dây Jack DC 5.5x2.1mm",
-    price: 12000,
-    stock: 30,
-    image: "",
-  },
-
-  {
-    id: 78,
-    sku: "DIODE-003",
-    category: "Diode",
-    name: "Diode 1N4007",
-    price: 1000,
-    stock: 200,
-    image: "",
-  },
-
-  {
-    id: 79,
-    sku: "DIODE-004",
-    category: "Diode",
-    name: "Diode 1N4148",
-    price: 500,
-    stock: 300,
-    image: "",
-  },
-
-  {
-    id: 80,
-    sku: "POWER-001",
-    category: "Nguồn",
-    name: "Adapter 12V 2A",
-    price: 75000,
-    stock: 10,
-    image: "",
-  },
-
-  {
-    id: 81,
-    sku: "POWER-002",
-    category: "Nguồn",
-    name: "Nguồn 5V 2A",
-    price: 45000,
-    stock: 10,
-    image: "",
-  },
-
-  {
-    id: 82,
-    sku: "BMS-001",
-    category: "Nguồn",
-    name: "Mạch bảo vệ pin 3S 20A",
-    price: 25000,
-    stock: 10,
-    image: "",
-  },
-
-  {
-    id: 83,
-    sku: "BAT-001",
-    category: "Nguồn",
-    name: "Pin vuông 9V",
-    price: 25000,
-    stock: 20,
-    image: "",
-  },
-
-  {
-    id: 84,
-    sku: "HEAT-001",
-    category: "Phụ kiện",
-    name: "Ống gen co nhiệt",
-    price: 15000,
-    stock: 20,
-    image: "",
-  },
-
-  {
-    id: 85,
-    sku: "HEAT-002",
-    category: "Phụ kiện",
-    name: "Bộ gen co nhiệt 328 chi tiết",
-    price: 45000,
-    stock: 10,
-    image: "",
-  },
-
-  {
-    id: 86,
-    sku: "HEAT-003",
-    category: "Phụ kiện",
-    name: "Bộ gen co nhiệt 530 chi tiết",
-    price: 70000,
-    stock: 10,
-    image: "",
-  },
-
-  {
-    id: 87,
-    sku: "SOLDER-001",
-    category: "Dụng cụ",
-    name: "Mỡ hàn Paste 100g",
-    price: 30000,
-    stock: 10,
-    image: "",
-  },
-
-  {
-    id: 88,
-    sku: "BB-002",
-    category: "Phụ kiện",
-    name: "Breadboard MB-102",
-    price: 35000,
-    stock: 20,
-    image: "",
-  },
-
-  {
-    id: 89,
-    sku: "PCB-001",
-    category: "Phụ kiện",
-    name: "Bo mạch đục lỗ PCB",
-    price: 10000,
-    stock: 30,
-    image: "",
-  },
-    {
-    id: 90,
-    sku: "CAP-003",
-    category: "Tụ điện",
-    name: "Tụ hóa 10uF 16V",
-    price: 1000,
-    stock: 100,
-    image: "",
-  },
-
-  {
-    id: 91,
-    sku: "CAP-004",
-    category: "Tụ điện",
-    name: "Tụ hóa 10uF 25V",
-    price: 1000,
-    stock: 100,
-    image: "",
-  },
-
-  {
-    id: 92,
-    sku: "CAP-005",
-    category: "Tụ điện",
-    name: "Tụ hóa 22uF 25V",
-    price: 1000,
-    stock: 100,
-    image: "",
-  },
-
-  {
-    id: 93,
-    sku: "CAP-006",
-    category: "Tụ điện",
-    name: "Tụ hóa 47uF 16V",
-    price: 1000,
-    stock: 100,
-    image: "",
-  },
-
-  {
-    id: 94,
-    sku: "CAP-007",
-    category: "Tụ điện",
-    name: "Tụ hóa 47uF 25V",
-    price: 1000,
-    stock: 100,
-    image: "",
-  },
-
-  {
-    id: 95,
-    sku: "CAP-008",
-    category: "Tụ điện",
-    name: "Tụ hóa 47uF 35V",
-    price: 1000,
-    stock: 100,
-    image: "",
-  },
-
-  {
-    id: 96,
-    sku: "CAP-009",
-    category: "Tụ điện",
-    name: "Tụ hóa 100uF 16V",
-    price: 1500,
-    stock: 100,
-    image: "",
-  },
-
-  {
-    id: 97,
-    sku: "CAP-010",
-    category: "Tụ điện",
-    name: "Tụ hóa 100uF 25V",
-    price: 1500,
-    stock: 100,
-    image: "",
-  },
-
-  {
-    id: 98,
-    sku: "CAP-011",
-    category: "Tụ điện",
-    name: "Tụ hóa 100uF 35V",
-    price: 2000,
-    stock: 100,
-    image: "",
-  },
-
-  {
-    id: 99,
-    sku: "CAP-012",
-    category: "Tụ điện",
-    name: "Tụ hóa 220uF 16V",
-    price: 2000,
-    stock: 100,
-    image: "",
-  },
-
-  {
-    id: 100,
-    sku: "CAP-013",
-    category: "Tụ điện",
-    name: "Tụ hóa 220uF 25V",
-    price: 2000,
-    stock: 100,
-    image: "",
-  },
-
-  {
-    id: 101,
-    sku: "CAP-014",
-    category: "Tụ điện",
-    name: "Tụ hóa 330uF 25V",
-    price: 3000,
-    stock: 100,
-    image: "",
-  },
-
-  {
-    id: 102,
-    sku: "CAP-015",
-    category: "Tụ điện",
-    name: "Tụ hóa 470uF 16V",
-    price: 3000,
-    stock: 100,
-    image: "",
-  },
-
-  {
-    id: 103,
-    sku: "CAP-016",
-    category: "Tụ điện",
-    name: "Tụ hóa 470uF 25V",
-    price: 3000,
-    stock: 100,
-    image: "",
-  },
-
-  {
-    id: 104,
-    sku: "CAP-017",
-    category: "Tụ điện",
-    name: "Tụ hóa 1000uF 16V",
-    price: 5000,
-    stock: 100,
-    image: "",
-  },
-
-  {
-    id: 105,
-    sku: "CAP-018",
-    category: "Tụ điện",
-    name: "Tụ hóa 1000uF 25V",
-    price: 6000,
-    stock: 100,
-    image: "",
-  },
-
-  {
-    id: 106,
-    sku: "CAP-019",
-    category: "Tụ điện",
-    name: "Tụ hóa 1000uF 50V",
-    price: 10000,
-    stock: 50,
-    image: "",
-  },
-
-  {
-    id: 107,
-    sku: "CAP-020",
-    category: "Tụ điện",
-    name: "Tụ hóa 2200uF 50V",
-    price: 18000,
-    stock: 30,
-    image: "",
-  },
-
-  {
-    id: 108,
-    sku: "CAP-021",
-    category: "Tụ điện",
-    name: "Tụ gốm 22pF",
-    price: 500,
-    stock: 200,
-    image: "",
-  },
-
-  {
-    id: 109,
-    sku: "CAP-022",
-    category: "Tụ điện",
-    name: "Tụ gốm 47pF",
-    price: 500,
-    stock: 200,
-    image: "",
-  },
-
-  {
-    id: 110,
-    sku: "CAP-023",
-    category: "Tụ điện",
-    name: "Tụ gốm 100pF",
-    price: 500,
-    stock: 200,
-    image: "",
-  },
-
-  {
-    id: 111,
-    sku: "CAP-024",
-    category: "Tụ điện",
-    name: "Tụ gốm 220pF",
-    price: 500,
-    stock: 200,
-    image: "",
-  },
-
-  {
-    id: 112,
-    sku: "CAP-025",
-    category: "Tụ điện",
-    name: "Tụ gốm 470pF",
-    price: 500,
-    stock: 200,
-    image: "",
-  },
-
-  {
-    id: 113,
-    sku: "CAP-026",
-    category: "Tụ điện",
-    name: "Tụ gốm 1nF",
-    price: 500,
-    stock: 200,
-    image: "",
-  },
-
-  {
-    id: 114,
-    sku: "CAP-027",
-    category: "Tụ điện",
-    name: "Tụ gốm 2.2nF",
-    price: 500,
-    stock: 200,
-    image: "",
-  },
-
-  {
-    id: 115,
-    sku: "CAP-028",
-    category: "Tụ điện",
-    name: "Tụ gốm 4.7nF",
-    price: 500,
-    stock: 200,
-    image: "",
-  },
-
-  {
-    id: 116,
-    sku: "CAP-029",
-    category: "Tụ điện",
-    name: "Tụ gốm 10nF",
-    price: 500,
-    stock: 200,
-    image: "",
-  },
-
-  {
-    id: 117,
-    sku: "CAP-030",
-    category: "Tụ điện",
-    name: "Tụ gốm 22nF",
-    price: 500,
-    stock: 200,
-    image: "",
-  },
-
-  {
-    id: 118,
-    sku: "CAP-031",
-    category: "Tụ điện",
-    name: "Tụ gốm 47nF",
-    price: 500,
-    stock: 200,
-    image: "",
-  },
-
-  {
-    id: 119,
-    sku: "CAP-032",
-    category: "Tụ điện",
-    name: "Tụ gốm 100nF (104)",
-    price: 500,
-    stock: 300,
-    image: "",
-  },
-
-  {
-    id: 120,
-    sku: "CAP-033",
-    category: "Tụ điện",
-    name: "Tụ gốm 220nF (224)",
-    price: 500,
-    stock: 200,
-    image: "",
-  },
-    {
-    id: 121,
-    sku: "RES-005",
-    category: "Điện trở",
-    name: "Điện trở 1/4W 100Ω",
-    price: 1000,
-    stock: 200,
-    image: "",
-  },
-
-  {
-    id: 122,
-    sku: "RES-006",
-    category: "Điện trở",
-    name: "Điện trở 1/4W 220Ω",
-    price: 1000,
-    stock: 200,
-    image: "",
-  },
-
-  {
-    id: 123,
-    sku: "RES-007",
-    category: "Điện trở",
-    name: "Điện trở 1/4W 330Ω",
-    price: 1000,
-    stock: 200,
-    image: "",
-  },
-
-  {
-    id: 124,
-    sku: "RES-008",
-    category: "Điện trở",
-    name: "Điện trở 1/4W 470Ω",
-    price: 1000,
-    stock: 200,
-    image: "",
-  },
-
-  {
-    id: 125,
-    sku: "RES-009",
-    category: "Điện trở",
-    name: "Điện trở 1/4W 680Ω",
-    price: 1000,
-    stock: 200,
-    image: "",
-  },
-
-  {
-    id: 126,
-    sku: "RES-010",
-    category: "Điện trở",
-    name: "Điện trở 1/4W 1KΩ",
-    price: 1000,
-    stock: 300,
-    image: "",
-  },
-
-  {
-    id: 127,
-    sku: "RES-011",
-    category: "Điện trở",
-    name: "Điện trở 1/4W 2.2KΩ",
-    price: 1000,
-    stock: 300,
-    image: "",
-  },
-
-  {
-    id: 128,
-    sku: "RES-012",
-    category: "Điện trở",
-    name: "Điện trở 1/4W 3.3KΩ",
-    price: 1000,
-    stock: 300,
-    image: "",
-  },
-
-  {
-    id: 129,
-    sku: "RES-013",
-    category: "Điện trở",
-    name: "Điện trở 1/4W 4.7KΩ",
-    price: 1000,
-    stock: 300,
-    image: "",
-  },
-
-  {
-    id: 130,
-    sku: "RES-014",
-    category: "Điện trở",
-    name: "Điện trở 1/4W 10KΩ",
-    price: 1000,
-    stock: 500,
-    image: "",
-  },
-
-  {
-    id: 131,
-    sku: "RES-015",
-    category: "Điện trở",
-    name: "Điện trở 1/4W 22KΩ",
-    price: 1000,
-    stock: 200,
-    image: "",
-  },
-
-  {
-    id: 132,
-    sku: "RES-016",
-    category: "Điện trở",
-    name: "Điện trở 1/4W 47KΩ",
-    price: 1000,
-    stock: 200,
-    image: "",
-  },
-
-  {
-    id: 133,
-    sku: "RES-017",
-    category: "Điện trở",
-    name: "Điện trở 1/4W 100KΩ",
-    price: 1000,
-    stock: 300,
-    image: "",
-  },
-
-  {
-    id: 134,
-    sku: "RES-018",
-    category: "Điện trở",
-    name: "Điện trở 1/4W 220KΩ",
-    price: 1000,
-    stock: 200,
-    image: "",
-  },
-
-  {
-    id: 135,
-    sku: "RES-019",
-    category: "Điện trở",
-    name: "Điện trở 1/4W 330KΩ",
-    price: 1000,
-    stock: 200,
-    image: "",
-  },
-
-  {
-    id: 136,
-    sku: "RES-020",
-    category: "Điện trở",
-    name: "Điện trở 1/4W 470KΩ",
-    price: 1000,
-    stock: 200,
-    image: "",
-  },
-
-  {
-    id: 137,
-    sku: "RES-021",
-    category: "Điện trở",
-    name: "Điện trở 1/4W 1MΩ",
-    price: 1000,
-    stock: 200,
-    image: "",
-  },
-
-  {
-    id: 138,
-    sku: "RES-022",
-    category: "Điện trở",
-    name: "Điện trở 3W 1Ω",
-    price: 3000,
-    stock: 100,
-    image: "",
-  },
-
-  {
-    id: 139,
-    sku: "RES-023",
-    category: "Điện trở",
-    name: "Điện trở 3W 10Ω",
-    price: 3000,
-    stock: 100,
-    image: "",
-  },
-
-  {
-    id: 140,
-    sku: "RES-024",
-    category: "Điện trở",
-    name: "Điện trở 3W 100Ω",
-    price: 3000,
-    stock: 100,
-    image: "",
-  },
-
-  {
-    id: 141,
-    sku: "RES-025",
-    category: "Điện trở",
-    name: "Điện trở 3W 220Ω",
-    price: 3000,
-    stock: 100,
-    image: "",
-  },
-
-  {
-    id: 142,
-    sku: "RES-026",
-    category: "Điện trở",
-    name: "Điện trở 3W 470Ω",
-    price: 3000,
-    stock: 100,
-    image: "",
-  },
-
-  {
-    id: 143,
-    sku: "RES-027",
-    category: "Điện trở",
-    name: "Điện trở 3W 1KΩ",
-    price: 3000,
-    stock: 100,
-    image: "",
-  },
-
-  {
-    id: 144,
-    sku: "RES-028",
-    category: "Điện trở",
-    name: "Điện trở 3W 10KΩ",
-    price: 3000,
-    stock: 100,
-    image: "",
-  },
-
-  {
-    id: 145,
-    sku: "RES-029",
-    category: "Điện trở",
-    name: "Điện trở sứ 5W 1Ω",
-    price: 5000,
-    stock: 100,
-    image: "",
-  },
-
-  {
-    id: 146,
-    sku: "RES-030",
-    category: "Điện trở",
-    name: "Điện trở sứ 5W 10Ω",
-    price: 5000,
-    stock: 100,
-    image: "",
-  },
-
-  {
-    id: 147,
-    sku: "RES-031",
-    category: "Điện trở",
-    name: "Điện trở sứ 5W 100Ω",
-    price: 5000,
-    stock: 100,
-    image: "",
-  },
-
-  {
-    id: 148,
-    sku: "RES-032",
-    category: "Điện trở",
-    name: "Điện trở sứ 5W 220Ω",
-    price: 5000,
-    stock: 100,
-    image: "",
-  },
-
-  {
-    id: 149,
-    sku: "RES-033",
-    category: "Điện trở",
-    name: "Điện trở sứ 5W 470Ω",
-    price: 5000,
-    stock: 100,
-    image: "",
-  },
-
-  {
-    id: 150,
-    sku: "RES-034",
-    category: "Điện trở",
-    name: "Điện trở sứ 5W 1KΩ",
-    price: 5000,
-    stock: 100,
-    image: "",
-  },
+  id: 49,
+  sku: "TR-004",
+  category: "Transistor",
+  name: "2N3906 (10 con)",
+  price: 5000,
+  stock: 10,
+  image: pn2n3906,
+},
+
+{
+  id: 50,
+  sku: "TR-005",
+  category: "Transistor",
+  name: "2N2907 (10 con)",
+  price: 5000,
+  stock: 10,
+  image: pn2n2907,
+},
+
+{
+  id: 51,
+  sku: "TR-006",
+  category: "Transistor",
+  name: "C945 (10 con)",
+  price: 5000,
+  stock: 10,
+  image: c945,
+},
+
+{
+  id: 52,
+  sku: "TR-007",
+  category: "Transistor",
+  name: "A1013 (10 con)",
+  price: 7000,
+  stock: 10,
+  image: a1013,
+},
+
+{
+  id: 53,
+  sku: "TR-008",
+  category: "Transistor",
+  name: "A733 (10 con)",
+  price: 5000,
+  stock: 10,
+  image: a733,
+},
+
+{
+  id: 54,
+  sku: "TR-009",
+  category: "Transistor",
+  name: "C2383 (10 con)",
+  price: 7000,
+  stock: 10,
+  image: c2383,
+},
+
+{
+  id: 55,
+  sku: "TR-010",
+  category: "Transistor",
+  name: "2N2222 (10 con)",
+  price: 5000,
+  stock: 10,
+  image: pn2n2222,
+},
+
+{
+  id: 56,
+  sku: "TR-011",
+  category: "Transistor",
+  name: "2N5401 (10 con)",
+  price: 5000,
+  stock: 10,
+  image: pn2n5401,
+},
+
+{
+  id: 57,
+  sku: "TR-012",
+  category: "Transistor",
+  name: "BC547B (10 con)",
+  price: 6000,
+  stock: 10,
+  image: bc547b,
+},
+
+{
+  id: 58,
+  sku: "TR-013",
+  category: "Transistor",
+  name: "BC548B (10 con)",
+  price: 6000,
+  stock: 10,
+  image: bc548b,
+},
+
+{
+  id: 59,
+  sku: "TR-014",
+  category: "Transistor",
+  name: "BC549B (10 con)",
+  price: 6000,
+  stock: 10,
+  image: bc549b,
+},
+
+  {
+  id: 60,
+  sku: "TR-015",
+  category: "Transistor",
+  name: "BC559B (10 con)",
+  price: 6000,
+  stock: 10,
+  image: bc559b,
+},
+
+{
+  id: 61,
+  sku: "TR-016",
+  category: "Transistor",
+  name: "B772 TO-126",
+  price: 5000,
+  stock: 10,
+  image: b772,
+},
+
+{
+  id: 62,
+  sku: "TR-017",
+  category: "Transistor",
+  name: "D882 TO-126",
+  price: 5000,
+  stock: 10,
+  image: d882,
+},
+
+{
+  id: 63,
+  sku: "TR-018",
+  category: "Transistor",
+  name: "Cặp D718 + B688",
+  price: 22000,
+  stock: 10,
+  image: d718b688,
+},
+
+// ===========================
+// DIODE
+// ===========================
+
+{
+  id: 64,
+  sku: "DIODE-001",
+  category: "Diode",
+  name: "Diode 6A10",
+  price: 3000,
+  stock: 20,
+  image: diode6a10,
+},
+
+{
+  id: 65,
+  sku: "DIODE-002",
+  category: "Diode",
+  name: "Diode 10A10",
+  price: 4000,
+  stock: 10,
+  image: diode10a10,
+},
+
+// ===========================
+// TỤ ĐIỆN
+// ===========================
+
+{
+  id: 66,
+  sku: "CAP-001",
+  category: "Tụ điện",
+  name: "Tụ hóa các loại",
+  price: 1000,
+  stock: 300,
+  image: electrolyticCap,
+},
+
+{
+  id: 67,
+  sku: "CAP-002",
+  category: "Tụ điện",
+  name: "Tụ gốm 50V các loại (20 con)",
+  price: 3000,
+  stock: 200,
+  image: ceramicCap,
+},
+
+// ===========================
+// LED
+// ===========================
+
+{
+  id: 68,
+  sku: "LED-001",
+  category: "LED",
+  name: "LED 3mm Combo 6 màu",
+  price: 12000,
+  stock: 10,
+  image: led3mm,
+},
+
+{
+  id: 69,
+  sku: "LED-002",
+  category: "LED",
+  name: "LED 5mm Combo 6 màu",
+  price: 12000,
+  stock: 10,
+  image: led5mm,
+},
+
+{
+  id: 70,
+  sku: "ESP8266-001",
+  category: "ESP32",
+  name: "NodeMCU V3 ESP8266",
+  price: 65000,
+  stock: 10,
+  image: nodemcu,
+},
+
+{
+  id: 71,
+  sku: "MOD-004",
+  category: "Nguồn",
+  name: "XL6009 DC-DC Boost Converter",
+  price: 25000,
+  stock: 10,
+  image: xl6009,
+},
+
+{
+  id: 72,
+  sku: "SW-001",
+  category: "Phụ kiện",
+  name: "Nút nhấn 6x6x4.3mm",
+  price: 1000,
+  stock: 100,
+  image: pushButton43,
+},
+
+{
+  id: 73,
+  sku: "SW-002",
+  category: "Phụ kiện",
+  name: "Nút nhấn 6x6x8mm",
+  price: 1000,
+  stock: 100,
+  image: pushButton8,
+},
+
+{
+  id: 74,
+  sku: "JACK-001",
+  category: "Phụ kiện",
+  name: "Jack nguồn DC DC-002",
+  price: 3000,
+  stock: 50,
+  image: dc002,
+},
+
+{
+  id: 75,
+  sku: "HEADER-001",
+  category: "Phụ kiện",
+  name: "Header đực 40 chân",
+  price: 3000,
+  stock: 100,
+  image: maleHeader40,
+},
+
+{
+  id: 76,
+  sku: "HEADER-002",
+  category: "Phụ kiện",
+  name: "Header cái 40 chân",
+  price: 4000,
+  stock: 100,
+  image: femaleHeader40,
+},
+
+{
+  id: 77,
+  sku: "DC-001",
+  category: "Phụ kiện",
+  name: "Dây Jack DC 5.5x2.1mm",
+  price: 12000,
+  stock: 30,
+  image: dcCable,
+},
+
+{
+  id: 78,
+  sku: "DIODE-003",
+  category: "Diode",
+  name: "Diode 1N4007",
+  price: 1000,
+  stock: 200,
+  image: diode1n4007,
+},
+
+{
+  id: 79,
+  sku: "DIODE-004",
+  category: "Diode",
+  name: "Diode 1N4148",
+  price: 500,
+  stock: 300,
+  image: diode1n4148,
+},
+
+{
+  id: 80,
+  sku: "POWER-001",
+  category: "Nguồn",
+  name: "Adapter 12V 2A",
+  price: 75000,
+  stock: 10,
+  image: adapter12v2a,
+},
+
+ {
+  id: 81,
+  sku: "POWER-002",
+  category: "Nguồn",
+  name: "Nguồn 5V 2A",
+  price: 45000,
+  stock: 10,
+  image: power5v2a,
+},
+
+{
+  id: 82,
+  sku: "BMS-001",
+  category: "Nguồn",
+  name: "Mạch bảo vệ pin 3S 20A",
+  price: 25000,
+  stock: 10,
+  image: bms3s20a,
+},
+
+{
+  id: 83,
+  sku: "BAT-001",
+  category: "Nguồn",
+  name: "Pin vuông 9V",
+  price: 25000,
+  stock: 20,
+  image: battery9v,
+},
+
+{
+  id: 84,
+  sku: "HEAT-001",
+  category: "Phụ kiện",
+  name: "Ống gen co nhiệt",
+  price: 15000,
+  stock: 20,
+  image: heatShrinkTube,
+},
+
+{
+  id: 85,
+  sku: "HEAT-002",
+  category: "Phụ kiện",
+  name: "Bộ gen co nhiệt 328 chi tiết",
+  price: 45000,
+  stock: 10,
+  image: heatShrink328,
+},
+
+{
+  id: 86,
+  sku: "HEAT-003",
+  category: "Phụ kiện",
+  name: "Bộ gen co nhiệt 530 chi tiết",
+  price: 70000,
+  stock: 10,
+  image: heatShrink530,
+},
+
+{
+  id: 87,
+  sku: "SOLDER-001",
+  category: "Dụng cụ",
+  name: "Mỡ hàn Paste 100g",
+  price: 30000,
+  stock: 10,
+  image: solderPaste100g,
+},
+
+{
+  id: 88,
+  sku: "BB-002",
+  category: "Phụ kiện",
+  name: "Breadboard MB-102",
+  price: 35000,
+  stock: 20,
+  image: breadboardMb102,
+},
+
+{
+  id: 89,
+  sku: "PCB-001",
+  category: "Phụ kiện",
+  name: "Bo mạch đục lỗ PCB",
+  price: 10000,
+  stock: 30,
+  image: pcbPerfboard,
+},
+
+{
+  id: 90,
+  sku: "CAP-003",
+  category: "Tụ điện",
+  name: "Tụ hóa 10uF 16V",
+  price: 1000,
+  stock: 100,
+  image: cap10u16v,
+},
+
+{
+  id: 91,
+  sku: "CAP-004",
+  category: "Tụ điện",
+  name: "Tụ hóa 10uF 25V",
+  price: 1000,
+  stock: 100,
+  image: cap10u25v,
+},
+
+{
+  id: 92,
+  sku: "CAP-005",
+  category: "Tụ điện",
+  name: "Tụ hóa 22uF 25V",
+  price: 1000,
+  stock: 100,
+  image: cap22u25v,
+},
+
+{
+  id: 93,
+  sku: "CAP-006",
+  category: "Tụ điện",
+  name: "Tụ hóa 47uF 16V",
+  price: 1000,
+  stock: 100,
+  image: cap47u16v,
+},
+
+{
+  id: 94,
+  sku: "CAP-007",
+  category: "Tụ điện",
+  name: "Tụ hóa 47uF 25V",
+  price: 1000,
+  stock: 100,
+  image: cap47u25v,
+},
+
+{
+  id: 95,
+  sku: "CAP-008",
+  category: "Tụ điện",
+  name: "Tụ hóa 47uF 35V",
+  price: 1000,
+  stock: 100,
+  image: cap47u35v,
+},
+
+{
+  id: 96,
+  sku: "CAP-009",
+  category: "Tụ điện",
+  name: "Tụ hóa 100uF 16V",
+  price: 1500,
+  stock: 100,
+  image: cap100u16v,
+},
+
+{
+  id: 97,
+  sku: "CAP-010",
+  category: "Tụ điện",
+  name: "Tụ hóa 100uF 25V",
+  price: 1500,
+  stock: 100,
+  image: cap100u25v,
+},
+
+{
+  id: 98,
+  sku: "CAP-011",
+  category: "Tụ điện",
+  name: "Tụ hóa 100uF 35V",
+  price: 2000,
+  stock: 100,
+  image: cap100u35v,
+},
+
+{
+  id: 99,
+  sku: "CAP-012",
+  category: "Tụ điện",
+  name: "Tụ hóa 220uF 16V",
+  price: 2000,
+  stock: 100,
+  image: cap220u16v,
+},
+
+{
+  id: 100,
+  sku: "CAP-013",
+  category: "Tụ điện",
+  name: "Tụ hóa 220uF 25V",
+  price: 2000,
+  stock: 100,
+  image: cap220u25v,
+},
+
+  {
+  id: 101,
+  sku: "CAP-014",
+  category: "Tụ điện",
+  name: "Tụ hóa 330uF 25V",
+  price: 3000,
+  stock: 100,
+  image: cap330u25v,
+},
+
+{
+  id: 102,
+  sku: "CAP-015",
+  category: "Tụ điện",
+  name: "Tụ hóa 470uF 16V",
+  price: 3000,
+  stock: 100,
+  image: cap470u16v,
+},
+
+{
+  id: 103,
+  sku: "CAP-016",
+  category: "Tụ điện",
+  name: "Tụ hóa 470uF 25V",
+  price: 3000,
+  stock: 100,
+  image: cap470u25v,
+},
+
+{
+  id: 104,
+  sku: "CAP-017",
+  category: "Tụ điện",
+  name: "Tụ hóa 1000uF 16V",
+  price: 5000,
+  stock: 100,
+  image: cap1000u16v,
+},
+
+{
+  id: 105,
+  sku: "CAP-018",
+  category: "Tụ điện",
+  name: "Tụ hóa 1000uF 25V",
+  price: 6000,
+  stock: 100,
+  image: cap1000u25v,
+},
+
+{
+  id: 106,
+  sku: "CAP-019",
+  category: "Tụ điện",
+  name: "Tụ hóa 1000uF 50V",
+  price: 10000,
+  stock: 50,
+  image: cap1000u50v,
+},
+
+{
+  id: 107,
+  sku: "CAP-020",
+  category: "Tụ điện",
+  name: "Tụ hóa 2200uF 50V",
+  price: 18000,
+  stock: 30,
+  image: cap2200u50v,
+},
+
+ {
+  id: 108,
+  sku: "CAP-021",
+  category: "Tụ điện",
+  name: "Tụ gốm 22pF",
+  price: 500,
+  stock: 200,
+  image: ceramicCap,
+},
+
+{
+  id: 109,
+  sku: "CAP-022",
+  category: "Tụ điện",
+  name: "Tụ gốm 47pF",
+  price: 500,
+  stock: 200,
+  image: ceramicCap,
+},
+
+{
+  id: 110,
+  sku: "CAP-023",
+  category: "Tụ điện",
+  name: "Tụ gốm 100pF",
+  price: 500,
+  stock: 200,
+  image: ceramicCap,
+},
+
+{
+  id: 111,
+  sku: "CAP-024",
+  category: "Tụ điện",
+  name: "Tụ gốm 220pF",
+  price: 500,
+  stock: 200,
+  image: ceramicCap,
+},
+
+{
+  id: 112,
+  sku: "CAP-025",
+  category: "Tụ điện",
+  name: "Tụ gốm 470pF",
+  price: 500,
+  stock: 200,
+  image: ceramicCap,
+},
+
+{
+  id: 113,
+  sku: "CAP-026",
+  category: "Tụ điện",
+  name: "Tụ gốm 1nF",
+  price: 500,
+  stock: 200,
+  image: ceramicCap,
+},
+
+{
+  id: 114,
+  sku: "CAP-027",
+  category: "Tụ điện",
+  name: "Tụ gốm 2.2nF",
+  price: 500,
+  stock: 200,
+  image: ceramicCap,
+},
+
+{
+  id: 115,
+  sku: "CAP-028",
+  category: "Tụ điện",
+  name: "Tụ gốm 4.7nF",
+  price: 500,
+  stock: 200,
+  image: ceramicCap,
+},
+
+{
+  id: 116,
+  sku: "CAP-029",
+  category: "Tụ điện",
+  name: "Tụ gốm 10nF",
+  price: 500,
+  stock: 200,
+  image: ceramicCap,
+},
+
+{
+  id: 117,
+  sku: "CAP-030",
+  category: "Tụ điện",
+  name: "Tụ gốm 22nF",
+  price: 500,
+  stock: 200,
+  image: ceramicCap,
+},
+
+{
+  id: 118,
+  sku: "CAP-031",
+  category: "Tụ điện",
+  name: "Tụ gốm 47nF",
+  price: 500,
+  stock: 200,
+  image: ceramicCap,
+},
+
+{
+  id: 119,
+  sku: "CAP-032",
+  category: "Tụ điện",
+  name: "Tụ gốm 100nF (104)",
+  price: 500,
+  stock: 300,
+  image: ceramicCap,
+},
+
+{
+  id: 120,
+  sku: "CAP-033",
+  category: "Tụ điện",
+  name: "Tụ gốm 220nF (224)",
+  price: 500,
+  stock: 200,
+  image: ceramicCap,
+},
+
+   {
+  id: 121,
+  sku: "RES-005",
+  category: "Điện trở",
+  name: "Điện trở 1/4W 100Ω",
+  price: 1000,
+  stock: 200,
+  image: resistor14w,
+},
+
+{
+  id: 122,
+  sku: "RES-006",
+  category: "Điện trở",
+  name: "Điện trở 1/4W 220Ω",
+  price: 1000,
+  stock: 200,
+  image: resistor14w,
+},
+
+{
+  id: 123,
+  sku: "RES-007",
+  category: "Điện trở",
+  name: "Điện trở 1/4W 330Ω",
+  price: 1000,
+  stock: 200,
+  image: resistor14w,
+},
+
+{
+  id: 124,
+  sku: "RES-008",
+  category: "Điện trở",
+  name: "Điện trở 1/4W 470Ω",
+  price: 1000,
+  stock: 200,
+  image: resistor14w,
+},
+
+{
+  id: 125,
+  sku: "RES-009",
+  category: "Điện trở",
+  name: "Điện trở 1/4W 680Ω",
+  price: 1000,
+  stock: 200,
+  image: resistor14w,
+},
+
+{
+  id: 126,
+  sku: "RES-010",
+  category: "Điện trở",
+  name: "Điện trở 1/4W 1KΩ",
+  price: 1000,
+  stock: 300,
+  image: resistor14w,
+},
+
+{
+  id: 127,
+  sku: "RES-011",
+  category: "Điện trở",
+  name: "Điện trở 1/4W 2.2KΩ",
+  price: 1000,
+  stock: 300,
+  image: resistor14w,
+},
+
+{
+  id: 128,
+  sku: "RES-012",
+  category: "Điện trở",
+  name: "Điện trở 1/4W 3.3KΩ",
+  price: 1000,
+  stock: 300,
+  image: resistor14w,
+},
+
+{
+  id: 129,
+  sku: "RES-013",
+  category: "Điện trở",
+  name: "Điện trở 1/4W 4.7KΩ",
+  price: 1000,
+  stock: 300,
+  image: resistor14w,
+},
+
+{
+  id: 130,
+  sku: "RES-014",
+  category: "Điện trở",
+  name: "Điện trở 1/4W 10KΩ",
+  price: 1000,
+  stock: 500,
+  image: resistor14w,
+},
+
+{
+  id: 131,
+  sku: "RES-015",
+  category: "Điện trở",
+  name: "Điện trở 1/4W 22KΩ",
+  price: 1000,
+  stock: 200,
+  image: resistor14w,
+},
+
+{
+  id: 132,
+  sku: "RES-016",
+  category: "Điện trở",
+  name: "Điện trở 1/4W 47KΩ",
+  price: 1000,
+  stock: 200,
+  image: resistor14w,
+},
+
+{
+  id: 133,
+  sku: "RES-017",
+  category: "Điện trở",
+  name: "Điện trở 1/4W 100KΩ",
+  price: 1000,
+  stock: 300,
+  image: resistor14w,
+},
+
+{
+  id: 134,
+  sku: "RES-018",
+  category: "Điện trở",
+  name: "Điện trở 1/4W 220KΩ",
+  price: 1000,
+  stock: 200,
+  image: resistor14w,
+},
+
+{
+  id: 135,
+  sku: "RES-019",
+  category: "Điện trở",
+  name: "Điện trở 1/4W 330KΩ",
+  price: 1000,
+  stock: 200,
+  image: resistor14w,
+},
+
+{
+  id: 136,
+  sku: "RES-020",
+  category: "Điện trở",
+  name: "Điện trở 1/4W 470KΩ",
+  price: 1000,
+  stock: 200,
+  image: resistor14w,
+},
+
+{
+  id: 137,
+  sku: "RES-021",
+  category: "Điện trở",
+  name: "Điện trở 1/4W 1MΩ",
+  price: 1000,
+  stock: 200,
+  image: resistor14w,
+},
+
+  {
+  id: 138,
+  sku: "RES-022",
+  category: "Điện trở",
+  name: "Điện trở 3W 1Ω",
+  price: 3000,
+  stock: 100,
+  image: resistor3w,
+},
+
+{
+  id: 139,
+  sku: "RES-023",
+  category: "Điện trở",
+  name: "Điện trở 3W 10Ω",
+  price: 3000,
+  stock: 100,
+  image: resistor3w,
+},
+
+{
+  id: 140,
+  sku: "RES-024",
+  category: "Điện trở",
+  name: "Điện trở 3W 100Ω",
+  price: 3000,
+  stock: 100,
+  image: resistor3w,
+},
+
+{
+  id: 141,
+  sku: "RES-025",
+  category: "Điện trở",
+  name: "Điện trở 3W 220Ω",
+  price: 3000,
+  stock: 100,
+  image: resistor3w,
+},
+
+{
+  id: 142,
+  sku: "RES-026",
+  category: "Điện trở",
+  name: "Điện trở 3W 470Ω",
+  price: 3000,
+  stock: 100,
+  image: resistor3w,
+},
+
+{
+  id: 143,
+  sku: "RES-027",
+  category: "Điện trở",
+  name: "Điện trở 3W 1KΩ",
+  price: 3000,
+  stock: 100,
+  image: resistor3w,
+},
+
+{
+  id: 144,
+  sku: "RES-028",
+  category: "Điện trở",
+  name: "Điện trở 3W 10KΩ",
+  price: 3000,
+  stock: 100,
+  image: resistor3w,
+},
+
+  {
+  id: 145,
+  sku: "RES-029",
+  category: "Điện trở",
+  name: "Điện trở sứ 5W 1Ω",
+  price: 5000,
+  stock: 100,
+  image: resistorCeramic5w,
+},
+
+{
+  id: 146,
+  sku: "RES-030",
+  category: "Điện trở",
+  name: "Điện trở sứ 5W 10Ω",
+  price: 5000,
+  stock: 100,
+  image: resistorCeramic5w,
+},
+
+{
+  id: 147,
+  sku: "RES-031",
+  category: "Điện trở",
+  name: "Điện trở sứ 5W 100Ω",
+  price: 5000,
+  stock: 100,
+  image: resistorCeramic5w,
+},
+
+{
+  id: 148,
+  sku: "RES-032",
+  category: "Điện trở",
+  name: "Điện trở sứ 5W 220Ω",
+  price: 5000,
+  stock: 100,
+  image: resistorCeramic5w,
+},
+
+{
+  id: 149,
+  sku: "RES-033",
+  category: "Điện trở",
+  name: "Điện trở sứ 5W 470Ω",
+  price: 5000,
+  stock: 100,
+  image: resistorCeramic5w,
+},
+
+{
+  id: 150,
+  sku: "RES-034",
+  category: "Điện trở",
+  name: "Điện trở sứ 5W 1KΩ",
+  price: 5000,
+  stock: 100,
+  image: resistorCeramic5w,
+},
     {
     id: 151,
     sku: "VR-001",
