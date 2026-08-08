@@ -349,7 +349,7 @@ const products = [
   sku: "OLED-001",
   category: "Hiển thị",
   name: "OLED 0.96 I2C / SPI",
-  price: 75000,
+  price: 55000,
   stock: 10,
   image: oled096,
 },
