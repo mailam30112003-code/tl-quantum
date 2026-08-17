@@ -1714,8 +1714,218 @@ const products = [
   stock: 100,
   image: resistorCeramic5w,
 },
-   {
+{
+  id: 150,
+  sku: "RF-002",
+  category: "Module",
+  name: "HC-12 SI4438 U6",
+  price: 88000,
+  stock: 3,
+  image: "",
+},
+
+{
   id: 151,
+  sku: "RF-003",
+  category: "Module",
+  name: "HC-12 SI4438 P6",
+  price: 89000,
+  stock: 3,
+  image: "",
+},
+
+{
+  id: 152,
+  sku: "POWER-003",
+  category: "Nguồn",
+  name: "Mạch sạc/xả 5V 2A Type-C chưa hàn",
+  price: 15000,
+  stock: 3,
+  image: "",
+},
+
+{
+  id: 153,
+  sku: "LED-003",
+  category: "LED",
+  name: "Module đèn giao thông LED 5V",
+  price: 7500,
+  stock: 5,
+  image: "",
+},
+
+{
+  id: 154,
+  sku: "GPS-001",
+  category: "Cảm biến",
+  name: "GPS GY-NEO-6M",
+  price: 155000,
+  stock: 5,
+  image: "",
+},
+
+{
+  id: 155,
+  sku: "MOD-015",
+  category: "Module",
+  name: "Module Micro SD SPI / TF",
+  price: 9000,
+  stock: 5,
+  image: "",
+},
+
+{
+  id: 156,
+  sku: "AUDIO-001",
+  category: "Module",
+  name: "MAX9814 Microphone AGC",
+  price: 53000,
+  stock: 10,
+  image: "",
+},
+
+{
+  id: 157,
+  sku: "AUDIO-002",
+  category: "Module",
+  name: "MAX98357 I2S Audio Amp chưa hàn",
+  price: 73000,
+  stock: 3,
+  image: "",
+},
+
+{
+  id: 158,
+  sku: "LORA-002",
+  category: "LoRa",
+  name: "SX1278/SX1276 LoRa 433MHz",
+  price: 195000,
+  stock: 6,
+  image: "",
+},
+
+{
+  id: 159,
+  sku: "ESP32-004",
+  category: "ESP32",
+  name: "ESP32-CAM + Đế",
+  price: 220000,
+  stock: 5,
+  image: "",
+},
+
+{
+  id: 160,
+  sku: "SEN-007",
+  category: "Cảm biến",
+  name: "MAX30100 Cảm biến nhịp tim SpO2",
+  price: 50000,
+  stock: 5,
+  image: "",
+},
+
+{
+  id: 161,
+  sku: "SEN-008",
+  category: "Cảm biến",
+  name: "MAX30102 Cảm biến nhịp tim SpO2",
+  price: 55000,
+  stock: 5,
+  image: "",
+},
+
+{
+  id: 162,
+  sku: "AUDIO-003",
+  category: "Module",
+  name: "INMP441 Microphone MEMS",
+  price: 58000,
+  stock: 5,
+  image: "",
+},
+
+{
+  id: 163,
+  sku: "AUDIO-004",
+  category: "Module",
+  name: "MAX98357 I2S BGA chưa hàn",
+  price: 33000,
+  stock: 3,
+  image: "",
+},
+
+{
+  id: 164,
+  sku: "MOD-016",
+  category: "Module",
+  name: "RTL8720DN WiFi + Bluetooth BLE",
+  price: 165000,
+  stock: 5,
+  image: "",
+},
+
+{
+  id: 165,
+  sku: "POWER-004",
+  category: "Nguồn",
+  name: "Mạch sạc/xả 5V 2A Type-C đã hàn",
+  price: 15000,
+  stock: 3,
+  image: "",
+},
+
+{
+  id: 166,
+  sku: "SEN-009",
+  category: "Cảm biến",
+  name: "GY-BME280-5V",
+  price: 230000,
+  stock: 5,
+  image: "",
+},
+
+{
+  id: 167,
+  sku: "MOD-017",
+  category: "Module",
+  name: "Còi Buzzer 5V",
+  price: 3000,
+  stock: 10,
+  image: "",
+},
+
+{
+  id: 168,
+  sku: "BB-003",
+  category: "Phụ kiện",
+  name: "Breadboard MB-102",
+  price: 18000,
+  stock: 10,
+  image: "",
+},
+
+{
+  id: 169,
+  sku: "BT-002",
+  category: "Bluetooth",
+  name: "HC-05 V3.0 Bluetooth",
+  price: 103000,
+  stock: 10,
+  image: "",
+},
+
+{
+  id: 170,
+  sku: "RES-034",
+  category: "Điện trở",
+  name: "Điện trở sứ 5W 1KΩ",
+  price: 5000,
+  stock: 100,
+  image: resistorCeramic5w,
+},
+
+{
+  id: 171,
   sku: "VR-001",
   category: "Module",
   name: "Biến trở tinh chỉnh 3296W 100Ω",
@@ -1726,7 +1936,7 @@ const products = [
 },
 
 {
-  id: 152,
+  id: 172,
   sku: "VR-002",
   category: "Module",
   name: "Biến trở tinh chỉnh 3296W 1KΩ",
@@ -1737,7 +1947,7 @@ const products = [
 },
 
 {
-  id: 153,
+  id: 173,
   sku: "VR-003",
   category: "Module",
   name: "Biến trở tinh chỉnh 3296W 10KΩ",
@@ -1748,7 +1958,7 @@ const products = [
 },
 
 {
-  id: 154,
+  id: 174,
   sku: "VR-004",
   category: "Module",
   name: "Biến trở tinh chỉnh 3296W 100KΩ",
@@ -1759,7 +1969,7 @@ const products = [
 },
 
 {
-  id: 155,
+  id: 175,
   sku: "VR-005",
   category: "Module",
   name: "Biến trở B10K",
@@ -1770,7 +1980,7 @@ const products = [
 },
 
 {
-  id: 156,
+  id: 176,
   sku: "VR-006",
   category: "Module",
   name: "Biến trở B100K",
@@ -1781,7 +1991,7 @@ const products = [
 },
 
 {
-  id: 157,
+  id: 177,
   sku: "XTAL-001",
   category: "Module",
   name: "Thạch anh 4MHz",
@@ -1792,7 +2002,7 @@ const products = [
 },
 
 {
-  id: 158,
+  id: 178,
   sku: "XTAL-002",
   category: "Module",
   name: "Thạch anh 8MHz",
@@ -1803,7 +2013,7 @@ const products = [
 },
 
 {
-  id: 159,
+  id: 179,
   sku: "XTAL-003",
   category: "Module",
   name: "Thạch anh 11.0592MHz",
@@ -1813,8 +2023,8 @@ const products = [
   image: "",
 },
 
- {
-  id: 160,
+{
+  id: 180,
   sku: "XTAL-004",
   category: "Module",
   name: "Thạch anh 12MHz",
@@ -1825,7 +2035,7 @@ const products = [
 },
 
 {
-  id: 161,
+  id: 181,
   sku: "XTAL-005",
   category: "Module",
   name: "Thạch anh 16MHz",
@@ -1836,7 +2046,7 @@ const products = [
 },
 
 {
-  id: 162,
+  id: 182,
   sku: "XTAL-006",
   category: "Module",
   name: "Thạch anh 20MHz",
@@ -1847,7 +2057,7 @@ const products = [
 },
 
 {
-  id: 163,
+  id: 183,
   sku: "JACK-002",
   category: "Phụ kiện",
   name: "Jack DC cái 5.5x2.1mm",
@@ -1858,7 +2068,7 @@ const products = [
 },
 
 {
-  id: 164,
+  id: 184,
   sku: "JACK-003",
   category: "Phụ kiện",
   name: "Jack DC đực 5.5x2.1mm",
@@ -1869,7 +2079,7 @@ const products = [
 },
 
 {
-  id: 165,
+  id: 185,
   sku: "TB-001",
   category: "Phụ kiện",
   name: "Terminal Block KF301-2P",
@@ -1880,7 +2090,7 @@ const products = [
 },
 
 {
-  id: 166,
+  id: 186,
   sku: "TB-002",
   category: "Phụ kiện",
   name: "Terminal Block KF301-3P",
@@ -1891,7 +2101,7 @@ const products = [
 },
 
 {
-  id: 167,
+  id: 187,
   sku: "SW-004",
   category: "Phụ kiện",
   name: "Công tắc gạt MTS-102",
@@ -1902,7 +2112,7 @@ const products = [
 },
 
 {
-  id: 168,
+  id: 188,
   sku: "SW-005",
   category: "Phụ kiện",
   name: "Công tắc gạt MTS-103",
@@ -1913,7 +2123,7 @@ const products = [
 },
 
 {
-  id: 169,
+  id: 189,
   sku: "FUSE-001",
   category: "Phụ kiện",
   name: "Cầu chì 5x20mm 1A",
@@ -1924,7 +2134,7 @@ const products = [
 },
 
 {
-  id: 170,
+  id: 190,
   sku: "FUSE-002",
   category: "Phụ kiện",
   name: "Cầu chì 5x20mm 2A",
@@ -1935,7 +2145,7 @@ const products = [
 },
 
 {
-  id: 171,
+  id: 191,
   sku: "FUSE-003",
   category: "Phụ kiện",
   name: "Đế cầu chì 5x20mm",
@@ -1946,7 +2156,7 @@ const products = [
 },
 
 {
-  id: 172,
+  id: 192,
   sku: "IC-003",
   category: "IC",
   name: "IC 7805",
@@ -1957,7 +2167,7 @@ const products = [
 },
 
 {
-  id: 173,
+  id: 193,
   sku: "IC-004",
   category: "IC",
   name: "IC 7812",
@@ -1968,7 +2178,7 @@ const products = [
 },
 
 {
-  id: 174,
+  id: 194,
   sku: "IC-005",
   category: "IC",
   name: "AMS1117-3.3",
@@ -1979,7 +2189,7 @@ const products = [
 },
 
 {
-  id: 175,
+  id: 195,
   sku: "IC-006",
   category: "IC",
   name: "AMS1117-5.0",
@@ -1990,7 +2200,7 @@ const products = [
 },
 
 {
-  id: 176,
+  id: 196,
   sku: "IC-007",
   category: "IC",
   name: "LM317T",
@@ -2001,7 +2211,7 @@ const products = [
 },
 
 {
-  id: 177,
+  id: 197,
   sku: "IC-008",
   category: "IC",
   name: "LM2576-5.0",
@@ -2012,7 +2222,7 @@ const products = [
 },
 
 {
-  id: 178,
+  id: 198,
   sku: "IC-009",
   category: "IC",
   name: "NE555 Timer",
@@ -2023,7 +2233,7 @@ const products = [
 },
 
 {
-  id: 179,
+  id: 199,
   sku: "IC-010",
   category: "IC",
   name: "PC817 Optocoupler",
@@ -2034,7 +2244,7 @@ const products = [
 },
 
 {
-  id: 180,
+  id: 200,
   sku: "IC-011",
   category: "IC",
   name: "L293D Driver",
@@ -2045,7 +2255,7 @@ const products = [
 },
 
 {
-  id: 181,
+  id: 201,
   sku: "IC-012",
   category: "IC",
   name: "ULN2003A",
@@ -2056,7 +2266,7 @@ const products = [
 },
 
 {
-  id: 182,
+  id: 202,
   sku: "IC-013",
   category: "IC",
   name: "74HC595",
@@ -2067,7 +2277,7 @@ const products = [
 },
 
 {
-  id: 183,
+  id: 203,
   sku: "IC-014",
   category: "IC",
   name: "74HC165",
@@ -2078,7 +2288,7 @@ const products = [
 },
 
 {
-  id: 184,
+  id: 204,
   sku: "IC-015",
   category: "IC",
   name: "CD4017",
@@ -2089,7 +2299,7 @@ const products = [
 },
 
 {
-  id: 185,
+  id: 205,
   sku: "IC-016",
   category: "IC",
   name: "CD4026",
@@ -2100,7 +2310,7 @@ const products = [
 },
 
 {
-  id: 186,
+  id: 206,
   sku: "IC-017",
   category: "IC",
   name: "CD4047",
@@ -2111,7 +2321,7 @@ const products = [
 },
 
 {
-  id: 187,
+  id: 207,
   sku: "IC-018",
   category: "IC",
   name: "LM393",
@@ -2122,7 +2332,7 @@ const products = [
 },
 
 {
-  id: 188,
+  id: 208,
   sku: "IC-019",
   category: "IC",
   name: "LM324",
@@ -2133,7 +2343,7 @@ const products = [
 },
 
 {
-  id: 189,
+  id: 209,
   sku: "IC-020",
   category: "IC",
   name: "LM386",
@@ -2144,7 +2354,7 @@ const products = [
 },
 
 {
-  id: 190,
+  id: 210,
   sku: "IC-021",
   category: "IC",
   name: "MAX232",
@@ -2155,7 +2365,7 @@ const products = [
 },
 
 {
-  id: 191,
+  id: 211,
   sku: "IC-022",
   category: "IC",
   name: "MAX485",
@@ -2166,7 +2376,7 @@ const products = [
 },
 
 {
-  id: 192,
+  id: 212,
   sku: "IC-023",
   category: "IC",
   name: "AT24C02 EEPROM",
@@ -2177,7 +2387,7 @@ const products = [
 },
 
 {
-  id: 193,
+  id: 213,
   sku: "IC-024",
   category: "IC",
   name: "AT24C256 EEPROM",
@@ -2188,7 +2398,7 @@ const products = [
 },
 
 {
-  id: 194,
+  id: 214,
   sku: "MOS-001",
   category: "Transistor",
   name: "IRF520 MOSFET",
@@ -2199,7 +2409,7 @@ const products = [
 },
 
 {
-  id: 195,
+  id: 215,
   sku: "MOS-002",
   category: "Transistor",
   name: "IRF540N MOSFET",
@@ -2210,7 +2420,7 @@ const products = [
 },
 
 {
-  id: 196,
+  id: 216,
   sku: "MOS-003",
   category: "Transistor",
   name: "IRLZ44N MOSFET",
@@ -2221,7 +2431,7 @@ const products = [
 },
 
 {
-  id: 197,
+  id: 217,
   sku: "TRIAC-001",
   category: "Transistor",
   name: "BT136 TRIAC",
@@ -2232,7 +2442,7 @@ const products = [
 },
 
 {
-  id: 198,
+  id: 218,
   sku: "IC-025",
   category: "IC",
   name: "MOC3021",
@@ -2243,7 +2453,7 @@ const products = [
 },
 
 {
-  id: 199,
+  id: 219,
   sku: "MOD-005",
   category: "Module",
   name: "Module NRF24L01+",
@@ -2253,8 +2463,8 @@ const products = [
   image: "",
 },
 
-  {
-  id: 200,
+{
+  id: 220,
   sku: "MOD-006",
   category: "Module",
   name: "Module CC1101 433MHz",
@@ -2265,7 +2475,7 @@ const products = [
 },
 
 {
-  id: 201,
+  id: 221,
   sku: "ESP-001",
   category: "ESP32",
   name: "ESP-01S ESP8266",
@@ -2276,7 +2486,7 @@ const products = [
 },
 
 {
-  id: 202,
+  id: 222,
   sku: "ESP-002",
   category: "ESP32",
   name: "ESP-12F ESP8266",
@@ -2287,7 +2497,7 @@ const products = [
 },
 
 {
-  id: 203,
+  id: 223,
   sku: "MOD-007",
   category: "Module",
   name: "USB Type-C Breakout",
@@ -2298,7 +2508,7 @@ const products = [
 },
 
 {
-  id: 204,
+  id: 224,
   sku: "MOD-008",
   category: "Module",
   name: "Micro USB Breakout",
@@ -2309,7 +2519,7 @@ const products = [
 },
 
 {
-  id: 205,
+  id: 225,
   sku: "MOD-009",
   category: "Module",
   name: "ACS712 5A",
@@ -2320,7 +2530,7 @@ const products = [
 },
 
 {
-  id: 206,
+  id: 226,
   sku: "MOD-010",
   category: "Module",
   name: "INA219 Current Sensor",
@@ -2331,7 +2541,7 @@ const products = [
 },
 
 {
-  id: 207,
+  id: 227,
   sku: "MOD-011",
   category: "Module",
   name: "KY-040 Rotary Encoder",
@@ -2342,7 +2552,7 @@ const products = [
 },
 
 {
-  id: 208,
+  id: 228,
   sku: "MOD-012",
   category: "Module",
   name: "Joystick PS2 Module",
@@ -2353,18 +2563,17 @@ const products = [
 },
 
 {
-  id: 209,
+  id: 229,
   sku: "MOD-013",
   category: "Module",
   name: "Buzzer Active 5V",
   price: 5000,
-  stock: 0,
-  status: "Hết hàng",
+  stock: 10,
   image: "",
 },
 
 {
-  id: 210,
+  id: 230,
   sku: "MOD-014",
   category: "Module",
   name: "Buzzer Passive 5V",
@@ -2375,7 +2584,5 @@ const products = [
 }
 
 ];
-
-
 
 export default products;
