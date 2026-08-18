@@ -137,7 +137,6 @@ import resistor14w from "../assets/resistor-1-4w.jpg";
 import resistor3w from "../assets/resistor-3w.jpg";
 import resistorCeramic5w from "../assets/resistor-ceramic-5w.jpg";
 import bme280 from "../assets/bme280-5v.webp";
-import breadboardMb102 from "../assets/breadboard-mb102.jpg";
 import buzzer5v from "../assets/buzzer-5v.jpg";
 import denGiaoThongLed from "../assets/den-giao-thong-led-5v.jpg";
 import esp32Cam from "../assets/esp32-cam.webp";
