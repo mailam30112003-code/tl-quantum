@@ -252,6 +252,215 @@ const products = [
   // ===========================
 // LoRa
 // ===========================
+{
+  id: 150,
+  sku: "RF-002",
+  category: "Module",
+  name: "HC-12 SI4438 U6",
+  price: 88000,
+  stock: 3,
+  image: hc12u6,
+},
+
+{
+  id: 151,
+  sku: "RF-003",
+  category: "Module",
+  name: "HC-12 SI4438 P6",
+  price: 89000,
+  stock: 3,
+  image: hc12p6,
+},
+
+{
+  id: 152,
+  sku: "POWER-003",
+  category: "Nguồn",
+  name: "Mạch sạc/xả 5V 2A Type-C chưa hàn",
+  price: 15000,
+  stock: 3,
+  image: sacXa5v2aChuaHan,
+},
+
+{
+  id: 153,
+  sku: "LED-003",
+  category: "LED",
+  name: "Module đèn giao thông LED 5V",
+  price: 7500,
+  stock: 5,
+  image: denGiaoThongLed,
+},
+
+{
+  id: 154,
+  sku: "GPS-001",
+  category: "Cảm biến",
+  name: "GPS GY-NEO-6M",
+  price: 155000,
+  stock: 5,
+  image: gpsNeo6m,
+},
+
+{
+  id: 155,
+  sku: "MOD-015",
+  category: "Module",
+  name: "Module Micro SD SPI / TF",
+  price: 9000,
+  stock: 5,
+  image: microSdSpiTf,
+},
+
+{
+  id: 156,
+  sku: "AUDIO-001",
+  category: "Module",
+  name: "MAX9814 Microphone AGC",
+  price: 53000,
+  stock: 10,
+  image: max9814,
+},
+
+{
+  id: 157,
+  sku: "AUDIO-002",
+  category: "Module",
+  name: "MAX98357 I2S Audio Amp",
+  price: 73000,
+  stock: 3,
+  image: max98357ChuaHan,
+},
+
+{
+  id: 158,
+  sku: "LORA-002",
+  category: "LoRa",
+  name: "SX1278/SX1276 LoRa 433MHz",
+  price: 195000,
+  stock: 6,
+  image: sx1278Lora433mhz,
+},
+
+{
+  id: 159,
+  sku: "ESP32-004",
+  category: "ESP32",
+  name: "ESP32-CAM + Đế",
+  price: 220000,
+  stock: 5,
+  image: esp32Cam,
+},
+
+{
+  id: 160,
+  sku: "SEN-007",
+  category: "Cảm biến",
+  name: "MAX30100 Cảm biến nhịp tim SpO2",
+  price: 50000,
+  stock: 5,
+  image: max30100,
+},
+
+{
+  id: 161,
+  sku: "SEN-008",
+  category: "Cảm biến",
+  name: "MAX30102 Cảm biến nhịp tim SpO2",
+  price: 55000,
+  stock: 5,
+  image: max30102,
+},
+
+{
+  id: 162,
+  sku: "AUDIO-003",
+  category: "Module",
+  name: "INMP441 Microphone MEMS",
+  price: 58000,
+  stock: 5,
+  image: inmp441,
+},
+
+{
+  id: 163,
+  sku: "AUDIO-004",
+  category: "Module",
+  name: "MAX98357 I2S BGA",
+  price: 33000,
+  stock: 3,
+  image: max98357,
+},
+
+{
+  id: 164,
+  sku: "MOD-016",
+  category: "Module",
+  name: "RTL8720DN WiFi + Bluetooth BLE",
+  price: 165000,
+  stock: 5,
+  image: rtl8720dn,
+},
+
+{
+  id: 165,
+  sku: "POWER-004",
+  category: "Nguồn",
+  name: "Mạch sạc/xả 5V 2A Type-C đã hàn",
+  price: 15000,
+  stock: 3,
+  image: sacXa5v2aDaHan,
+},
+
+{
+  id: 166,
+  sku: "SEN-009",
+  category: "Cảm biến",
+  name: "GY-BME280-5V",
+  price: 230000,
+  stock: 5,
+  image: bme280,
+},
+
+{
+  id: 167,
+  sku: "MOD-017",
+  category: "Module",
+  name: "Còi Buzzer 5V",
+  price: 3000,
+  stock: 10,
+  image: buzzer5v,
+},
+
+{
+  id: 168,
+  sku: "BB-003",
+  category: "Phụ kiện",
+  name: "Breadboard MB-102",
+  price: 18000,
+  stock: 10,
+  image: breadboardMb102,
+},
+
+{
+  id: 169,
+  sku: "BT-002",
+  category: "Bluetooth",
+  name: "HC-05 V3.0 Bluetooth",
+  price: 103000,
+  stock: 10,
+  image: hc05v3,
+},
+
+{
+  id: 170,
+  sku: "RES-034",
+  category: "Điện trở",
+  name: "Điện trở sứ 5W 1KΩ",
+  price: 5000,
+  stock: 100,
+  image: resistorCeramic5w,
+},
 
 {
   id: 9,
@@ -1719,216 +1928,6 @@ const products = [
   sku: "RES-033",
   category: "Điện trở",
   name: "Điện trở sứ 5W 470Ω",
-  price: 5000,
-  stock: 100,
-  image: resistorCeramic5w,
-},
-
-{
-  id: 150,
-  sku: "RF-002",
-  category: "Module",
-  name: "HC-12 SI4438 U6",
-  price: 88000,
-  stock: 3,
-  image: hc12u6,
-},
-
-{
-  id: 151,
-  sku: "RF-003",
-  category: "Module",
-  name: "HC-12 SI4438 P6",
-  price: 89000,
-  stock: 3,
-  image: hc12p6,
-},
-
-{
-  id: 152,
-  sku: "POWER-003",
-  category: "Nguồn",
-  name: "Mạch sạc/xả 5V 2A Type-C chưa hàn",
-  price: 15000,
-  stock: 3,
-  image: sacXa5v2aChuaHan,
-},
-
-{
-  id: 153,
-  sku: "LED-003",
-  category: "LED",
-  name: "Module đèn giao thông LED 5V",
-  price: 7500,
-  stock: 5,
-  image: denGiaoThongLed,
-},
-
-{
-  id: 154,
-  sku: "GPS-001",
-  category: "Cảm biến",
-  name: "GPS GY-NEO-6M",
-  price: 155000,
-  stock: 5,
-  image: gpsNeo6m,
-},
-
-{
-  id: 155,
-  sku: "MOD-015",
-  category: "Module",
-  name: "Module Micro SD SPI / TF",
-  price: 9000,
-  stock: 5,
-  image: microSdSpiTf,
-},
-
-{
-  id: 156,
-  sku: "AUDIO-001",
-  category: "Module",
-  name: "MAX9814 Microphone AGC",
-  price: 53000,
-  stock: 10,
-  image: max9814,
-},
-
-{
-  id: 157,
-  sku: "AUDIO-002",
-  category: "Module",
-  name: "MAX98357 I2S Audio Amp chưa hàn",
-  price: 73000,
-  stock: 3,
-  image: max98357ChuaHan,
-},
-
-{
-  id: 158,
-  sku: "LORA-002",
-  category: "LoRa",
-  name: "SX1278/SX1276 LoRa 433MHz",
-  price: 195000,
-  stock: 6,
-  image: sx1278Lora433mhz,
-},
-
-{
-  id: 159,
-  sku: "ESP32-004",
-  category: "ESP32",
-  name: "ESP32-CAM + Đế",
-  price: 220000,
-  stock: 5,
-  image: esp32Cam,
-},
-
-{
-  id: 160,
-  sku: "SEN-007",
-  category: "Cảm biến",
-  name: "MAX30100 Cảm biến nhịp tim SpO2",
-  price: 50000,
-  stock: 5,
-  image: max30100,
-},
-
-{
-  id: 161,
-  sku: "SEN-008",
-  category: "Cảm biến",
-  name: "MAX30102 Cảm biến nhịp tim SpO2",
-  price: 55000,
-  stock: 5,
-  image: max30102,
-},
-
-{
-  id: 162,
-  sku: "AUDIO-003",
-  category: "Module",
-  name: "INMP441 Microphone MEMS",
-  price: 58000,
-  stock: 5,
-  image: inmp441,
-},
-
-{
-  id: 163,
-  sku: "AUDIO-004",
-  category: "Module",
-  name: "MAX98357 I2S BGA chưa hàn",
-  price: 33000,
-  stock: 3,
-  image: max98357,
-},
-
-{
-  id: 164,
-  sku: "MOD-016",
-  category: "Module",
-  name: "RTL8720DN WiFi + Bluetooth BLE",
-  price: 165000,
-  stock: 5,
-  image: rtl8720dn,
-},
-
-{
-  id: 165,
-  sku: "POWER-004",
-  category: "Nguồn",
-  name: "Mạch sạc/xả 5V 2A Type-C đã hàn",
-  price: 15000,
-  stock: 3,
-  image: sacXa5v2aDaHan,
-},
-
-{
-  id: 166,
-  sku: "SEN-009",
-  category: "Cảm biến",
-  name: "GY-BME280-5V",
-  price: 230000,
-  stock: 5,
-  image: bme280,
-},
-
-{
-  id: 167,
-  sku: "MOD-017",
-  category: "Module",
-  name: "Còi Buzzer 5V",
-  price: 3000,
-  stock: 10,
-  image: buzzer5v,
-},
-
-{
-  id: 168,
-  sku: "BB-003",
-  category: "Phụ kiện",
-  name: "Breadboard MB-102",
-  price: 18000,
-  stock: 10,
-  image: breadboardMb102,
-},
-
-{
-  id: 169,
-  sku: "BT-002",
-  category: "Bluetooth",
-  name: "HC-05 V3.0 Bluetooth",
-  price: 103000,
-  stock: 10,
-  image: hc05v3,
-},
-
-{
-  id: 170,
-  sku: "RES-034",
-  category: "Điện trở",
-  name: "Điện trở sứ 5W 1KΩ",
   price: 5000,
   stock: 100,
   image: resistorCeramic5w,
