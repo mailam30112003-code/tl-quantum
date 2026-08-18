@@ -136,6 +136,26 @@ import cap2200u50v from "../assets/electrolytic-2200uf-50v.jpg";
 import resistor14w from "../assets/resistor-1-4w.jpg";
 import resistor3w from "../assets/resistor-3w.jpg";
 import resistorCeramic5w from "../assets/resistor-ceramic-5w.jpg";
+import bme280 from "../assets/bme280-5v.webp";
+import breadboardMb102 from "../assets/breadboard-mb102.jpg";
+import buzzer5v from "../assets/buzzer-5v.jpg";
+import denGiaoThongLed from "../assets/den-giao-thong-led-5v.jpg";
+import esp32Cam from "../assets/esp32-cam.webp";
+import gpsNeo6m from "../assets/gps-neo-6m.jpg";
+import hc05v3 from "../assets/hc05-v3.jpg";
+import hc12p6 from "../assets/hc12-p6.jpg";
+import hc12u6 from "../assets/hc12-u6.jpg";
+import inmp441 from "../assets/inmp441.webp";
+import max9814 from "../assets/max9814.png";
+import max30100 from "../assets/max30100.jpg";
+import max30102 from "../assets/max30102.webp";
+import max98357 from "../assets/max98357.webp";
+import max98357ChuaHan from "../assets/max98357-chua-han.webp";
+import microSdSpiTf from "../assets/micro-sd-spi-tf.jpg";
+import rtl8720dn from "../assets/rtl8720dn.webp";
+import sacXa5v2aChuaHan from "../assets/sac-xa-5v-2a-chua-han.webp";
+import sacXa5v2aDaHan from "../assets/sac-xa-5v-2a-da-han.webp";
+import sx1278Lora433mhz from "../assets/sx1278-lora-433mhz.jpg";
 const products = [
 
   // ===========================
@@ -1707,21 +1727,12 @@ const products = [
 
 {
   id: 150,
-  sku: "RES-034",
-  category: "Điện trở",
-  name: "Điện trở sứ 5W 1KΩ",
-  price: 5000,
-  stock: 100,
-  image: resistorCeramic5w,
-},
-{
-  id: 150,
   sku: "RF-002",
   category: "Module",
   name: "HC-12 SI4438 U6",
   price: 88000,
   stock: 3,
-  image: "",
+  image: hc12u6,
 },
 
 {
@@ -1731,7 +1742,7 @@ const products = [
   name: "HC-12 SI4438 P6",
   price: 89000,
   stock: 3,
-  image: "",
+  image: hc12p6,
 },
 
 {
@@ -1741,7 +1752,7 @@ const products = [
   name: "Mạch sạc/xả 5V 2A Type-C chưa hàn",
   price: 15000,
   stock: 3,
-  image: "",
+  image: sacXa5v2aChuaHan,
 },
 
 {
@@ -1751,7 +1762,7 @@ const products = [
   name: "Module đèn giao thông LED 5V",
   price: 7500,
   stock: 5,
-  image: "",
+  image: denGiaoThongLed,
 },
 
 {
@@ -1761,7 +1772,7 @@ const products = [
   name: "GPS GY-NEO-6M",
   price: 155000,
   stock: 5,
-  image: "",
+  image: gpsNeo6m,
 },
 
 {
@@ -1771,7 +1782,7 @@ const products = [
   name: "Module Micro SD SPI / TF",
   price: 9000,
   stock: 5,
-  image: "",
+  image: microSdSpiTf,
 },
 
 {
@@ -1781,7 +1792,7 @@ const products = [
   name: "MAX9814 Microphone AGC",
   price: 53000,
   stock: 10,
-  image: "",
+  image: max9814,
 },
 
 {
@@ -1791,7 +1802,7 @@ const products = [
   name: "MAX98357 I2S Audio Amp chưa hàn",
   price: 73000,
   stock: 3,
-  image: "",
+  image: max98357ChuaHan,
 },
 
 {
@@ -1801,7 +1812,7 @@ const products = [
   name: "SX1278/SX1276 LoRa 433MHz",
   price: 195000,
   stock: 6,
-  image: "",
+  image: sx1278Lora433mhz,
 },
 
 {
@@ -1811,7 +1822,7 @@ const products = [
   name: "ESP32-CAM + Đế",
   price: 220000,
   stock: 5,
-  image: "",
+  image: esp32Cam,
 },
 
 {
@@ -1821,7 +1832,7 @@ const products = [
   name: "MAX30100 Cảm biến nhịp tim SpO2",
   price: 50000,
   stock: 5,
-  image: "",
+  image: max30100,
 },
 
 {
@@ -1831,7 +1842,7 @@ const products = [
   name: "MAX30102 Cảm biến nhịp tim SpO2",
   price: 55000,
   stock: 5,
-  image: "",
+  image: max30102,
 },
 
 {
@@ -1841,7 +1852,7 @@ const products = [
   name: "INMP441 Microphone MEMS",
   price: 58000,
   stock: 5,
-  image: "",
+  image: inmp441,
 },
 
 {
@@ -1851,7 +1862,7 @@ const products = [
   name: "MAX98357 I2S BGA chưa hàn",
   price: 33000,
   stock: 3,
-  image: "",
+  image: max98357,
 },
 
 {
@@ -1861,7 +1872,7 @@ const products = [
   name: "RTL8720DN WiFi + Bluetooth BLE",
   price: 165000,
   stock: 5,
-  image: "",
+  image: rtl8720dn,
 },
 
 {
@@ -1871,7 +1882,7 @@ const products = [
   name: "Mạch sạc/xả 5V 2A Type-C đã hàn",
   price: 15000,
   stock: 3,
-  image: "",
+  image: sacXa5v2aDaHan,
 },
 
 {
@@ -1881,7 +1892,7 @@ const products = [
   name: "GY-BME280-5V",
   price: 230000,
   stock: 5,
-  image: "",
+  image: bme280,
 },
 
 {
@@ -1891,7 +1902,7 @@ const products = [
   name: "Còi Buzzer 5V",
   price: 3000,
   stock: 10,
-  image: "",
+  image: buzzer5v,
 },
 
 {
@@ -1901,7 +1912,7 @@ const products = [
   name: "Breadboard MB-102",
   price: 18000,
   stock: 10,
-  image: "",
+  image: breadboardMb102,
 },
 
 {
@@ -1911,7 +1922,7 @@ const products = [
   name: "HC-05 V3.0 Bluetooth",
   price: 103000,
   stock: 10,
-  image: "",
+  image: hc05v3,
 },
 
 {
@@ -2581,6 +2592,15 @@ const products = [
   stock: 0,
   status: "Hết hàng",
   image: "",
+},
+{
+  id: 231,
+  sku: "RES-034",
+  category: "Điện trở",
+  name: "Điện trở sứ 5W 1KΩ",
+  price: 5000,
+  stock: 100,
+  image: resistorCeramic5w,
 }
 
 ];
