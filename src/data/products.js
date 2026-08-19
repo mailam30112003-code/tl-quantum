@@ -157,7 +157,7 @@ import sacXa5v2aDaHan from "../assets/sac-xa-5v-2a-da-han.webp";
 import sx1278Lora433mhz from "../assets/sx1278-lora-433mhz.jpg";
 import keoNenMap from "../assets/keo-nen-map.jpg";
 import keoNenOm from "../assets/keo-nen-om.jpg";
-import pinEve18650 from "../assets/pin-eve-18650-2000mah-20p.jpg";
+import pinEve18650 from "../assets/pin-eve-18650-2000mah-20p.jpeg";
 const products = [
 
   // ===========================
