@@ -2633,16 +2633,7 @@ const products = [
   stock: 100,
   image: resistorCeramic5w,
 }
-,
-{
-  id: 231,
-  sku: "RES-034",
-  category: "Điện trở",
-  name: "Điện trở sứ 5W 1KΩ",
-  price: 5000,
-  stock: 100,
-  image: resistorCeramic5w,
-}
+
 
 ];
 
