@@ -155,6 +155,9 @@ import rtl8720dn from "../assets/rtl8720dn.webp";
 import sacXa5v2aChuaHan from "../assets/sac-xa-5v-2a-chua-han.webp";
 import sacXa5v2aDaHan from "../assets/sac-xa-5v-2a-da-han.webp";
 import sx1278Lora433mhz from "../assets/sx1278-lora-433mhz.jpg";
+import keoNenMap from "../assets/keo-nen-map.jpg";
+import keoNenOm from "../assets/keo-nen-om.jpg";
+import pinEve18650 from "../assets/pin-eve-18650-2000mah-20p.jpg";
 const products = [
 
   // ===========================
@@ -831,6 +834,36 @@ const products = [
   price: 25000,
   stock: 10,
   image: cuttingPlier,
+},
+
+{
+  id: 232,
+  sku: "GLUE-001",
+  category: "Phụ kiện",
+  name: "Keo nến mập",
+  price: 3000,
+  stock: 50,
+  image: keoNenMap,
+},
+
+{
+  id: 233,
+  sku: "GLUE-002",
+  category: "Phụ kiện",
+  name: "Keo nến ốm",
+  price: 2000,
+  stock: 50,
+  image: keoNenOm,
+},
+
+{
+  id: 234,
+  sku: "BAT-002",
+  category: "Nguồn",
+  name: "Pin EVE 18650 2000mAh 20P",
+  price: 45000,
+  stock: 10,
+  image: pinEve18650,
 },
 
 {
@@ -2591,6 +2624,16 @@ const products = [
   status: "Hết hàng",
   image: "",
 },
+{
+  id: 231,
+  sku: "RES-034",
+  category: "Điện trở",
+  name: "Điện trở sứ 5W 1KΩ",
+  price: 5000,
+  stock: 100,
+  image: resistorCeramic5w,
+}
+,
 {
   id: 231,
   sku: "RES-034",
