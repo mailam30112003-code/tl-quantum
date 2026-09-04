@@ -1260,6 +1260,154 @@ const products = [
 
 // ===========================
 // RELAY
+  // ===========================
+  // CÔNG TẮC / NGUỒN / JACK
+  // ===========================
+
+  {
+    id: 312,
+    sku: "SW-001",
+    category: "Công tắc",
+    name: "Công tắc điện tử 3 chân",
+    price: 5000,
+    stock: 5,
+    image: "",
+  },
+
+  {
+    id: 313,
+    sku: "SW-002",
+    category: "Công tắc",
+    name: "Công tắc 3 vị trí 12/24V",
+    price: 7000,
+    stock: 5,
+    image: "",
+  },
+
+  {
+    id: 314,
+    sku: "MOD-020",
+    category: "Module",
+    name: "TP4056 Type-C",
+    price: 6000,
+    stock: 6,
+    image: "",
+  },
+
+  {
+    id: 315,
+    sku: "BAT-001",
+    category: "Nguồn",
+    name: "Đế 1 pin 18650 có dây",
+    price: 5000,
+    stock: 3,
+    image: "",
+  },
+
+  {
+    id: 316,
+    sku: "BAT-002",
+    category: "Nguồn",
+    name: "Đế pin 2 18650",
+    price: 7000,
+    stock: 5,
+    image: "",
+  },
+
+  {
+    id: 317,
+    sku: "BAT-003",
+    category: "Nguồn",
+    name: "Đế 2 pin 18650 có nắp + công tắc",
+    price: 15000,
+    stock: 3,
+    image: "",
+  },
+
+  {
+    id: 318,
+    sku: "BAT-004",
+    category: "Nguồn",
+    name: "Đế pin 3 18650",
+    price: 9000,
+    stock: 3,
+    image: "",
+  },
+
+  {
+    id: 319,
+    sku: "JACK-003",
+    category: "Phụ kiện",
+    name: "Jack AMASS XT60-F/M",
+    price: 40000,
+    stock: 5,
+    image: "",
+  },
+
+
+  // ===========================
+  // QUẠT
+  // ===========================
+
+  {
+    id: 320,
+    sku: "FAN-001",
+    category: "Quạt",
+    name: "Quạt 3010 – 12V",
+    price: 25000,
+    stock: 2,
+    image: "",
+  },
+
+  {
+    id: 321,
+    sku: "FAN-002",
+    category: "Quạt",
+    name: "Quạt 4010 – 12V",
+    price: 28000,
+    stock: 2,
+    image: "",
+  },
+
+  {
+    id: 322,
+    sku: "FAN-003",
+    category: "Quạt",
+    name: "Quạt 4010 – 5V",
+    price: 18000,
+    stock: 2,
+    image: "",
+  },
+
+  {
+    id: 323,
+    sku: "FAN-004",
+    category: "Quạt",
+    name: "Quạt 5010 – 12V",
+    price: 25000,
+    stock: 2,
+    image: "",
+  },
+
+  {
+    id: 324,
+    sku: "FAN-005",
+    category: "Quạt",
+    name: "Quạt 5010 – 5V",
+    price: 28000,
+    stock: 2,
+    image: "",
+  },
+
+  {
+    id: 325,
+    sku: "FAN-006",
+    category: "Quạt",
+    name: "Quạt 3010 – 12V",
+    price: 18000,
+    stock: 2,
+    image: "",
+  },
 // ===========================
 
 {
