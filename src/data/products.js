@@ -681,7 +681,559 @@ const products = [
   stock: 10,
   image: dht22,
 },
+  // ===========================
+  // CÁC SẢN PHẨM ĐÃ CÓ GIÁ BÁN
+  // ===========================
 
+  {
+    id: 242,
+    sku: "MOD-018",
+    category: "Module",
+    name: "Module Encoder xoay 360°",
+    price: 13000,
+    stock: 3,
+    image: "",
+  },
+
+  {
+    id: 243,
+    sku: "MOD-019",
+    category: "Module",
+    name: "PCA9685 16 kênh PWM",
+    price: 75000,
+    stock: 2,
+    image: "",
+  },
+
+  {
+    id: 244,
+    sku: "AMP-001",
+    category: "Module",
+    name: "XH-A232 Công suất 30W×2",
+    price: 40000,
+    stock: 3,
+    image: "",
+  },
+
+  {
+    id: 245,
+    sku: "AMP-002",
+    category: "Module",
+    name: "Mạch công suất TPA3118 60W",
+    price: 80000,
+    stock: 3,
+    image: "",
+  },
+
+  {
+    id: 246,
+    sku: "IR-001",
+    category: "Module",
+    name: "Module phát hồng ngoại 38KHz",
+    price: 18000,
+    stock: 10,
+    image: "",
+  },
+
+  {
+    id: 247,
+    sku: "IR-002",
+    category: "Module",
+    name: "Module thu hồng ngoại 38KHz",
+    price: 14000,
+    stock: 10,
+    image: "",
+  },
+
+  {
+    id: 248,
+    sku: "RF-004",
+    category: "Module",
+    name: "NRF24L01 + PA + anten",
+    price: 43000,
+    stock: 10,
+    image: "",
+  },
+
+  {
+    id: 249,
+    sku: "LCD-002",
+    category: "Hiển thị",
+    name: "LCD 1602A vàng xanh IIC",
+    price: 45000,
+    stock: 2,
+    image: "",
+  },
+
+  {
+    id: 250,
+    sku: "LCD-003",
+    category: "Hiển thị",
+    name: "LCD 1602A xanh IIC",
+    price: 45000,
+    stock: 2,
+    image: "",
+  },
+
+  {
+    id: 251,
+    sku: "DISPLAY-001",
+    category: "Hiển thị",
+    name: 'TFT 2.0" ST7789V 240×320',
+    price: 102000,
+    stock: 3,
+    image: "",
+  },
+
+  {
+    id: 252,
+    sku: "LED-004",
+    category: "LED",
+    name: 'LED 7 đoạn 2 số 0.56"',
+    price: 6000,
+    stock: 5,
+    image: "",
+  },
+
+  // ===========================
+  // MOTOR / SERVO
+  // ===========================
+
+  {
+    id: 253,
+    sku: "MOTOR-001",
+    category: "Motor",
+    name: "Motor giảm tốc N20 trục dài",
+    price: 48000,
+    stock: 3,
+    image: "",
+  },
+
+  {
+    id: 254,
+    sku: "MOTOR-002",
+    category: "Motor",
+    name: "Motor bơm nước 385 – 12V",
+    price: 43000,
+    stock: 3,
+    image: "",
+  },
+
+  {
+    id: 255,
+    sku: "SERVO-003",
+    category: "Motor",
+    name: "Servo MG996R kim loại",
+    price: 70000,
+    stock: 3,
+    image: "",
+  },
+
+  {
+    id: 256,
+    sku: "SERVO-004",
+    category: "Motor",
+    name: "Servo MG90S full kim loại 180°",
+    price: 49000,
+    stock: 3,
+    image: "",
+  },
+
+  // ===========================
+  // CẢM BIẾN
+  // ===========================
+
+  {
+    id: 237,
+    sku: "SEN-010",
+    category: "Cảm biến",
+    name: "MQ-2 cảm biến khói/khí gas",
+    price: 21000,
+    stock: 3,
+    image: "",
+  },
+
+  {
+    id: 238,
+    sku: "SEN-011",
+    category: "Cảm biến",
+    name: "HX711 + Loadcell 10KG",
+    price: 75000,
+    stock: 1,
+    image: "",
+  },
+
+  {
+    id: 239,
+    sku: "SEN-012",
+    category: "Cảm biến",
+    name: "Module cảm biến lửa",
+    price: 9000,
+    stock: 4,
+    image: "",
+  },
+
+  {
+    id: 240,
+    sku: "SEN-013",
+    category: "Cảm biến",
+    name: "Cảm biến lưu lượng YF-S201",
+    price: 58000,
+    stock: 3,
+    image: "",
+  },
+
+  {
+    id: 241,
+    sku: "SEN-014",
+    category: "Cảm biến",
+    name: "A3144E – 20 cái",
+    price: 8000,
+    stock: 20,
+    image: "",
+  },
+
+  // ===========================
+  // VĐK / BOARD
+  // ===========================
+
+  {
+    id: 235,
+    sku: "ESP32-005",
+    category: "ESP32",
+    name: "ESP32-C3 SuperMini 4M",
+    price: 65000,
+    stock: 3,
+    image: "",
+  },
+
+  {
+    id: 236,
+    sku: "ESP32-006",
+    category: "ESP32",
+    name: "ESP32-S3 N16R8 CAM + camera",
+    price: 180000,
+    stock: 2,
+    image: "",
+  },
+
+  // ===========================
+  // PHỤ KIỆN
+  // ===========================
+
+  {
+    id: 257,
+    sku: "TERMINAL-001",
+    category: "Phụ kiện",
+    name: "Terminal KF301 3P",
+    price: 3000,
+    stock: 5,
+    image: "",
+  },
+
+  {
+    id: 258,
+    sku: "TERMINAL-002",
+    category: "Phụ kiện",
+    name: "Terminal KF301 2P",
+    price: 3000,
+    stock: 5,
+    image: "",
+  },
+
+  {
+    id: 259,
+    sku: "JACK-002",
+    category: "Phụ kiện",
+    name: "Jack pin 9V chữ T",
+    price: 3000,
+    stock: 5,
+    image: "",
+  },
+
+  {
+    id: 260,
+    sku: "PCB-002",
+    category: "Phụ kiện",
+    name: "PCB FR-4 15×20cm",
+    price: 20000,
+    stock: 3,
+    image: "",
+  },
+
+  {
+    id: 261,
+    sku: "TOOL-009",
+    category: "Dụng cụ",
+    name: "Nhíp chống tĩnh điện ESD-15",
+    price: 18000,
+    stock: 5,
+    image: "",
+  },
+
+  {
+    id: 262,
+    sku: "TOOL-008",
+    category: "Dụng cụ",
+    name: "Dụng cụ hút thiếc bán nhôm",
+    price: 25000,
+    stock: 2,
+    image: "",
+  },
+
+  // ===========================
+  // BIẾN TRỞ
+  // ===========================
+
+  {
+    id: 289,
+    sku: "POT-001",
+    category: "Biến trở",
+    name: "Biến trở 3296W-104 100K",
+    price: 3000,
+    stock: 5,
+    image: "",
+  },
+
+  {
+    id: 290,
+    sku: "POT-002",
+    category: "Biến trở",
+    name: "Biến trở 3296W-103 10K",
+    price: 3000,
+    stock: 3,
+    image: "",
+  },
+
+  {
+    id: 291,
+    sku: "POT-003",
+    category: "Biến trở",
+    name: "Biến trở 3296W-105 1M",
+    price: 3000,
+    stock: 5,
+    image: "",
+  },
+
+  {
+    id: 292,
+    sku: "POT-004",
+    category: "Biến trở",
+    name: "WH148 10K – 10 cái",
+    price: 3000,
+    stock: 10,
+    image: "",
+  },
+
+  {
+    id: 293,
+    sku: "POT-005",
+    category: "Biến trở",
+    name: "WH148 100K – 10 cái",
+    price: 3000,
+    stock: 10,
+    image: "",
+  },
+
+  {
+    id: 294,
+    sku: "POT-006",
+    category: "Biến trở",
+    name: "Biến trở WH148 1M",
+    price: 3000,
+    stock: 3,
+    image: "",
+  },
+
+  // ===========================
+  // DIODE
+  // ===========================
+
+  {
+    id: 295,
+    sku: "DIODE-005",
+    category: "Diode",
+    name: "Cầu diode KBU1010 10A",
+    price: 10000,
+    stock: 3,
+    image: "",
+  },
+
+  {
+    id: 296,
+    sku: "DIODE-006",
+    category: "Diode",
+    name: "1N4742A 12V 1W – 100 cái",
+    price: 1000,
+    stock: 100,
+    image: "",
+  },
+
+  {
+    id: 297,
+    sku: "DIODE-007",
+    category: "Diode",
+    name: "1N4733A 5.1V 1W – 100 cái",
+    price: 1000,
+    stock: 100,
+    image: "",
+  },
+
+  {
+    id: 298,
+    sku: "DIODE-008",
+    category: "Diode",
+    name: "1N4728A 3.3V 1W – 100 cái",
+    price: 1000,
+    stock: 100,
+    image: "",
+  },
+
+  {
+    id: 299,
+    sku: "DIODE-009",
+    category: "Diode",
+    name: "1N5819 – 100 cái",
+    price: 1000,
+    stock: 100,
+    image: "",
+  },
+
+  {
+    id: 300,
+    sku: "DIODE-010",
+    category: "Diode",
+    name: "1N5817 – 100 cái",
+    price: 1000,
+    stock: 100,
+    image: "",
+  },
+
+  // ===========================
+  // TRANSISTOR
+  // ===========================
+
+  {
+    id: 301,
+    sku: "TR-019",
+    category: "Transistor",
+    name: "IRF520N – 10 cái",
+    price: 15000,
+    stock: 10,
+    image: "",
+  },
+
+  {
+    id: 302,
+    sku: "TR-020",
+    category: "Transistor",
+    name: "IRFZ44N – 10 cái",
+    price: 15000,
+    stock: 10,
+    image: "",
+  },
+
+  // ===========================
+  // IC
+  // ===========================
+
+  {
+    id: 303,
+    sku: "IC-003",
+    category: "IC",
+    name: "NE555 – 20 cái",
+    price: 2500,
+    stock: 20,
+    image: "",
+  },
+
+  {
+    id: 304,
+    sku: "IC-004",
+    category: "IC",
+    name: "SN74HC138N – 10 cái",
+    price: 15000,
+    stock: 10,
+    image: "",
+  },
+
+  {
+    id: 305,
+    sku: "IC-005",
+    category: "IC",
+    name: "ULN2003APG – 10 cái",
+    price: 9000,
+    stock: 10,
+    image: "",
+  },
+
+  {
+    id: 306,
+    sku: "IC-006",
+    category: "IC",
+    name: "SN74HC595N – 10 cái",
+    price: 7000,
+    stock: 10,
+    image: "",
+  },
+
+  // ===========================
+  // TỤ ĐIỆN
+  // ===========================
+
+  {
+    id: 307,
+    sku: "CAP-034",
+    category: "Tụ điện",
+    name: "CBB 1µF 250V – 10 cái",
+    price: 3000,
+    stock: 10,
+    image: "",
+  },
+
+  // ===========================
+  // ĐẾ IC / HEADER
+  // ===========================
+
+  {
+    id: 308,
+    sku: "HEADER-003",
+    category: "Phụ kiện",
+    name: "Pin header 2.0mm 1×40P – 10 cái",
+    price: 3500,
+    stock: 10,
+    image: "",
+  },
+
+  {
+    id: 309,
+    sku: "SOCKET-001",
+    category: "IC",
+    name: "Đế IC DIP-16 – 30 cái",
+    price: 750,
+    stock: 30,
+    image: "",
+  },
+
+  {
+    id: 310,
+    sku: "SOCKET-002",
+    category: "IC",
+    name: "Đế IC DIP-14 – 34 cái",
+    price: 750,
+    stock: 34,
+    image: "",
+  },
+
+  {
+    id: 311,
+    sku: "SOCKET-003",
+    category: "IC",
+    name: "Đế IC DIP-8 – 60 cái",
+    price: 500,
+    stock: 60,
+    image: "",
+  },
 // ===========================
 // SERVO & MOTOR
 // ===========================
