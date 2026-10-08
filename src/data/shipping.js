@@ -37,4 +37,4 @@ export const STORE = {
 // Nơi nhận đơn tự động (không bắt buộc). Để trống = đơn chỉ lưu trong trình duyệt của khách
 // và khách được hướng dẫn gửi nội dung đơn cho shop qua Zalo / hotline.
 // Điền địa chỉ Google Apps Script (Web app) hoặc Formspree... để đơn gửi thẳng về cho bạn.
-export const ORDER_ENDPOINT = "";
+export const ORDER_ENDPOINT = "/api/order"; // Vercel function gửi đơn vào Telegram (api/order.js)

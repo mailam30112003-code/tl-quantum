@@ -17,6 +17,7 @@ export function orderToText(o) {
     `Khách: ${o.customer.name} · ${o.customer.phone}`,
     `Địa chỉ: ${o.customer.address}`,
   ];
+  if (o.customer.email) lines.push(`Email: ${o.customer.email}`);
   if (o.customer.note) lines.push(`Ghi chú: ${o.customer.note}`);
   lines.push("", "Sản phẩm:");
   o.items.forEach((i) => lines.push(`- ${i.name} x${i.quantity} = ${fmt(i.price * i.quantity)}`));
@@ -41,12 +42,12 @@ export async function submitOrder(order) {
   }
   if (!ORDER_ENDPOINT) return { sent: null };
   try {
-    await fetch(ORDER_ENDPOINT, {
+    const r = await fetch(ORDER_ENDPOINT, {
       method: "POST",
-      headers: { "Content-Type": "text/plain;charset=utf-8" },
-      body: JSON.stringify({ ...order, text: orderToText(order) }),
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(order),
     });
-    return { sent: true };
+    return { sent: r.ok };
   } catch {
     return { sent: false };
   }

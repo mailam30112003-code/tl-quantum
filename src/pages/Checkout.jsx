@@ -12,7 +12,7 @@ export default function Checkout() {
   const navigate = useNavigate();
   const { cart, total: subtotal, clearCart } = useCart();
 
-  const [form, setForm] = useState({ name: "", phone: "", address: "", note: "" });
+  const [form, setForm] = useState({ name: "", phone: "", address: "", email: "", note: "" });
   const [shipId, setShipId] = useState(DEFAULT_SHIPPING);
   const [errors, setErrors] = useState({});
   const [busy, setBusy] = useState(false);
@@ -49,6 +49,7 @@ export default function Checkout() {
         name: form.name.trim(),
         phone: form.phone.replace(/[\s.-]/g, ""),
         address: form.address.trim(),
+        email: form.email.trim(),
         note: form.note.trim(),
       },
       shipping: { id: ship.id, name: ship.name, fee: ship.fee },
@@ -155,6 +156,11 @@ export default function Checkout() {
               <span>Địa chỉ nhận hàng *</span>
               <input name="address" value={form.address} onChange={onChange} autoComplete="street-address" placeholder="Số nhà, đường, phường/xã, quận/huyện, tỉnh/thành" />
               {errors.address && <em className="co-error">{errors.address}</em>}
+            </label>
+
+            <label className="co-field">
+              <span>Email (không bắt buộc)</span>
+              <input name="email" type="email" value={form.email} onChange={onChange} autoComplete="email" placeholder="ten@gmail.com" />
             </label>
 
             <label className="co-field">
