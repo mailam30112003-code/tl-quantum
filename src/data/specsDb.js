@@ -1,0 +1,80 @@
+// Thông số kỹ thuật theo datasheet / tài liệu nhà sản xuất của chip hoặc module.
+// Mỗi dòng: [regex khớp tên sản phẩm, [[tên thông số, giá trị], ...]]
+// Khớp dòng đầu tiên phù hợp. Lô hàng thực tế có thể khác nhẹ → bạn chỉnh lại nếu cần.
+const ESP32_COMMON = [
+  ["Vi điều khiển", "ESP32-WROOM-32, 2 nhân Xtensa LX6 tới 240MHz"],
+  ["Kết nối", "WiFi 802.11 b/g/n 2.4GHz + Bluetooth (Classic & BLE)"],
+  ["Điện áp logic", "3.3V (cấp nguồn 5V qua cổng USB)"],
+];
+
+export const SPECS_DB = [
+  [/ESP32 DEV KIT V1 30/i, [...ESP32_COMMON, ["Số chân", "30 chân"]]],
+  [/ESP32 DEV KIT V1 38/i, [...ESP32_COMMON, ["Số chân", "38 chân"]]],
+  [/ESP32-D DevKit/i, [...ESP32_COMMON, ["Cổng nạp", "Micro USB"]]],
+  [/ESP32-CAM/i, [["Vi điều khiển", "ESP32-S, 2 nhân"], ["Kết nối", "WiFi 2.4GHz + Bluetooth"], ["Camera", "OV2640 (2MP) thường đi kèm"], ["Lưu trữ", "Khe thẻ microSD"], ["Điện áp logic", "3.3V (cấp nguồn 5V)"]]],
+  [/ESP32-C3/i, [["Vi điều khiển", "ESP32-C3, 1 nhân RISC-V tới 160MHz"], ["Kết nối", "WiFi 2.4GHz + Bluetooth 5 (LE)"], ["Flash", "4MB"], ["Điện áp logic", "3.3V"], ["Cổng", "USB Type-C (USB gốc của chip)"]]],
+  [/ESP32-S3.*N16R8/i, [["Vi điều khiển", "ESP32-S3, 2 nhân Xtensa LX7 tới 240MHz"], ["Bộ nhớ", "Flash 16MB, PSRAM 8MB (N16R8)"], ["Kết nối", "WiFi 2.4GHz + Bluetooth 5 (LE)"], ["Điện áp logic", "3.3V"]]],
+  [/NodeMCU V3 ESP8266/i, [["Vi điều khiển", "ESP8266 (module ESP-12E), 80/160MHz"], ["Kết nối", "WiFi 802.11 b/g/n 2.4GHz"], ["Flash", "4MB"], ["Điện áp logic", "3.3V"]]],
+  [/ESP-01S/i, [["Chip", "ESP8266"], ["Flash", "1MB"], ["Kết nối", "WiFi 2.4GHz"], ["Giao tiếp", "UART (lệnh AT)"], ["Điện áp", "3.3V"]]],
+  [/ESP-12F/i, [["Chip", "ESP8266"], ["Flash", "4MB"], ["Kết nối", "WiFi 2.4GHz"], ["Điện áp", "3.3V"]]],
+  [/Arduino Nano/i, [["Vi điều khiển", "ATmega328P"], ["Xung nhịp", "16MHz"], ["Bộ nhớ", "Flash 32KB, SRAM 2KB, EEPROM 1KB"], ["Chân", "14 digital, 8 analog (A0–A7)"], ["Điện áp logic", "5V"]]],
+  [/Arduino Uno/i, [["Vi điều khiển", "ATmega328P"], ["Xung nhịp", "16MHz"], ["Bộ nhớ", "Flash 32KB, SRAM 2KB, EEPROM 1KB"], ["Chân", "14 digital (6 PWM), 6 analog"], ["Chip USB", "CH340"], ["Điện áp logic", "5V"], ["Nguồn vào khuyến nghị", "7–12V"]]],
+  [/STM32F103C8T6/i, [["Lõi", "ARM Cortex-M3, 72MHz"], ["Bộ nhớ", "Flash 64KB (datasheet), SRAM 20KB"], ["Điện áp", "3.3V"]]],
+  [/STM32F411/i, [["Lõi", "ARM Cortex-M4 có FPU, 100MHz"], ["Bộ nhớ", "Flash 512KB, SRAM 128KB"], ["Điện áp", "3.3V"]]],
+  [/Raspberry Pi Pico/i, [["Chip", "RP2040, 2 nhân ARM Cortex-M0+ 133MHz"], ["Bộ nhớ", "SRAM 264KB, Flash 2MB"], ["GPIO", "26 chân"], ["Điện áp logic", "3.3V"]]],
+
+  [/NEO-6M/i, [["Chip GPS", "u-blox NEO-6M"], ["Giao tiếp", "UART (mặc định 9600 baud)"], ["Điện áp", "3.3–5V (module có mạch hạ áp)"]]],
+  [/HC-SR04/i, [["Điện áp", "5V"], ["Tầm đo", "2–400cm"], ["Độ chính xác", "khoảng 3mm"], ["Chân", "VCC, Trig, Echo, GND"]]],
+  [/TCRT5000/i, [["Loại", "Cảm biến hồng ngoại phản xạ"], ["Ngõ ra", "Digital + Analog, chỉnh ngưỡng bằng biến trở"], ["Điện áp", "3.3–5V"]]],
+  [/MPU6050/i, [["Loại", "6 trục: gia tốc 3 trục + con quay 3 trục"], ["Giao tiếp", "I2C"], ["ADC", "16-bit"], ["Điện áp", "3.3–5V (module có mạch hạ áp)"]]],
+  [/DS18B20/i, [["Dải đo", "−55 đến +125°C"], ["Sai số", "±0.5°C (−10 đến +85°C)"], ["Giao tiếp", "1-Wire"], ["Điện áp", "3.0–5.5V"]]],
+  [/DHT11/i, [["Nhiệt độ", "0–50°C, sai số ±2°C"], ["Độ ẩm", "20–80%RH, sai số ±5%"], ["Điện áp", "3–5.5V"], ["Tốc độ đọc", "tối đa 1 lần/giây"]]],
+  [/DHT22|AM2302/i, [["Nhiệt độ", "−40 đến 80°C, sai số ±0.5°C"], ["Độ ẩm", "0–100%RH, sai số ±2–5%"], ["Điện áp", "3.3–6V"], ["Tốc độ đọc", "tối đa 1 lần/2 giây"]]],
+  [/MAX30100/i, [["Chức năng", "Đo nhịp tim và SpO2"], ["Giao tiếp", "I2C"]]],
+  [/MAX30102/i, [["Chức năng", "Đo nhịp tim và SpO2 (LED đỏ + hồng ngoại tích hợp)"], ["Giao tiếp", "I2C"]]],
+  [/BME280/i, [["Đo", "Nhiệt độ, độ ẩm, áp suất khí quyển"], ["Giao tiếp", "I2C / SPI"], ["Điện áp", "5V (bản có mạch hạ áp)"]]],
+  [/MQ-2/i, [["Phát hiện", "Khí gas (LPG), khói, metan, hydro..."], ["Ngõ ra", "Analog + Digital"], ["Điện áp", "5V"], ["Lưu ý", "Cần làm nóng cảm biến một lúc trước khi đọc ổn định"]]],
+  [/HX711/i, [["Bộ chuyển đổi", "HX711, ADC 24-bit"], ["Tải tối đa", "10kg (loadcell)"], ["Điện áp", "2.6–5.5V"]]],
+  [/cảm biến lửa/i, [["Phát hiện", "Ánh sáng/ngọn lửa (hồng ngoại gần)"], ["Ngõ ra", "Analog + Digital, chỉnh ngưỡng bằng biến trở"]]],
+  [/YF-S201/i, [["Lưu lượng", "1–30 lít/phút"], ["Điện áp", "5–18V"], ["Ngõ ra", "Xung (F ≈ 7.5 × Q, Q tính L/phút)"], ["Ren", "G1/2"]]],
+  [/A3144E/i, [["Loại", "Cảm biến Hall"], ["Điện áp", "4.5–24V"], ["Kiểu chân", "TO-92"]]],
+
+  [/HC-12/i, [["Chip", "SI4438"], ["Giao tiếp", "UART"], ["Dải tần", "433MHz (nhiều kênh)"], ["Điện áp", "3.2–5.5V"]]],
+  [/HC-05/i, [["Chuẩn", "Bluetooth 2.0 + EDR (SPP)"], ["Chế độ", "Master / Slave"], ["Giao tiếp", "UART (mặc định 9600 baud)"], ["Điện áp logic", "3.3V"]]],
+  [/RA-02|SX1278|SX1276/i, [["Chip", "SX1278 / SX1276 (LoRa)"], ["Dải tần", "433MHz"], ["Giao tiếp", "SPI"], ["Điện áp", "3.3V"]]],
+  [/RC522/i, [["Tần số", "13.56MHz"], ["Giao tiếp", "SPI"], ["Thẻ hỗ trợ", "MIFARE (S50, S70...)"], ["Điện áp", "3.3V"]]],
+  [/NRF24L01.*(PA|anten)/i, [["Dải tần", "2.4GHz"], ["Giao tiếp", "SPI"], ["Tốc độ", "tối đa 2Mbps"], ["Công suất", "Có PA + LNA, kèm anten ngoài"], ["Điện áp", "3.3V"]]],
+  [/NRF24L01/i, [["Dải tần", "2.4GHz"], ["Giao tiếp", "SPI"], ["Tốc độ", "tối đa 2Mbps"], ["Điện áp", "3.3V"]]],
+  [/CC1101/i, [["Chip", "CC1101"], ["Dải tần", "433MHz"], ["Giao tiếp", "SPI"], ["Điện áp", "3.3V"]]],
+  [/MAX9814/i, [["Chức năng", "Mic khuếch đại có AGC (tự điều chỉnh độ lợi)"], ["Độ lợi", "40 / 50 / 60dB"], ["Điện áp", "2.7–5.5V"]]],
+  [/MAX98357/i, [["Chức năng", "Ampli âm thanh Class-D, ngõ vào I2S"], ["Công suất", "tối đa 3.2W (loa 4Ω, 5V)"], ["Điện áp", "2.5–5.5V"]]],
+  [/INMP441/i, [["Loại", "Mic MEMS đa hướng, ngõ ra I2S"], ["Độ phân giải", "24-bit"], ["Điện áp", "1.8–3.3V"]]],
+  [/L298N/i, [["Chip", "L298N, 2 cầu H"], ["Điện áp motor", "5–35V"], ["Dòng", "2A mỗi kênh"], ["Điều khiển", "Logic 5V"]]],
+  [/Micro SD/i, [["Giao tiếp", "SPI"], ["Thẻ hỗ trợ", "microSD (TF)"]]],
+  [/RTL8720DN/i, [["Kết nối", "WiFi 2.4GHz + 5GHz, Bluetooth 5 (BLE)"], ["Vi điều khiển", "ARM Cortex-M4F + Cortex-M0"]]],
+  [/ST-Link/i, [["Chức năng", "Nạp và gỡ lỗi cho STM32 / STM8"], ["Giao thức", "SWD / SWIM"]]],
+  [/CP2102/i, [["Chip", "CP2102"], ["Mức logic", "3.3V / 5V"], ["Giao tiếp", "USB sang UART"]]],
+  [/hồng ngoại 38KHz/i, [["Tần số sóng mang", "38kHz"]]],
+  [/Buzzer Active/i, [["Loại", "Buzzer chủ động (có mạch dao động, cấp điện là kêu)"], ["Điện áp", "5V"]]],
+  [/Buzzer Passive/i, [["Loại", "Buzzer thụ động (cần xung PWM để phát âm)"], ["Điện áp", "5V"]]],
+  [/Còi Buzzer/i, [["Điện áp", "5V"]]],
+  [/KY-040/i, [["Loại", "Encoder xoay có nút nhấn"], ["Điện áp", "5V"]]],
+  [/Joystick/i, [["Loại", "Joystick 2 trục analog + nút nhấn"]]],
+  [/TP4056/i, [["Chức năng", "Sạc pin Li-ion 1 cell (4.2V)"], ["Dòng sạc", "tối đa 1A"], ["Nguồn vào", "5V qua Type-C"]]],
+  [/LCD1602/i, [["Hiển thị", "16 ký tự × 2 dòng"], ["Giao tiếp", "I2C"], ["Điện áp", "5V"]]],
+  [/OLED/i, [["Kích thước", "0.96 inch"], ["Độ phân giải", "128×64"], ["Chip điều khiển", "SSD1306"], ["Giao tiếp", "I2C"]]],
+  [/DS3231/i, [["Chức năng", "Đồng hồ thời gian thực"], ["Độ chính xác", "±2ppm (có TCXO)"], ["Giao tiếp", "I2C"], ["Nguồn dự phòng", "Pin lưu giờ"]]],
+  [/SG90/i, [["Góc quay", "180°"], ["Điện áp", "4.8–6V"], ["Lực xoắn", "khoảng 1.8kg·cm (4.8V)"], ["Bánh răng", "Nhựa"]]],
+  [/MG90S/i, [["Góc quay", "180°"], ["Điện áp", "4.8–6V"], ["Lực xoắn", "khoảng 2.2kg·cm (4.8V)"], ["Bánh răng", "Kim loại"]]],
+  [/MG996R/i, [["Điện áp", "4.8–7.2V"], ["Lực xoắn", "khoảng 9.4kg·cm (4.8V), 11kg·cm (6V)"], ["Bánh răng", "Kim loại"]]],
+  [/Relay (\d) Kênh/i, [["Cuộn hút", "5V"], ["Tiếp điểm", "10A 250VAC / 30VDC (relay thông dụng)"], ["Kích", "Mức thấp hoặc cao tùy mạch"]]],
+  [/LM2596/i, [["Loại", "Hạ áp DC-DC (Buck)"], ["Vào", "4–35V"], ["Ra", "1.25–30V chỉnh được"], ["Dòng", "tối đa 3A"]]],
+  [/XL6009/i, [["Loại", "Tăng áp DC-DC (Boost)"], ["Vào", "3–32V"], ["Ra", "5–35V chỉnh được"]]],
+  [/ACS712/i, [["Dải đo", "±5A"], ["Độ nhạy", "185mV/A"], ["Điện áp", "5V"]]],
+  [/INA219/i, [["Giao tiếp", "I2C"], ["Đo", "Dòng và điện áp (ADC 12-bit)"], ["Điện áp bus", "tối đa 26V"]]],
+];
+
+export function lookupSpecs(name) {
+  const hit = SPECS_DB.find(([re]) => re.test(name));
+  return hit ? hit[1] : null;
+}

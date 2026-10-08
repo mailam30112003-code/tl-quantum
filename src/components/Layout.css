@@ -1,0 +1,464 @@
+/* ===========================
+   LAYOUT: header / footer / toast / mobile nav
+=========================== */
+
+.tq-container {
+  width: 100%;
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 0 var(--gutter);
+}
+
+.tq-app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+.tq-content {
+  flex: 1;
+}
+
+/* ---------- HEADER (dính trên cùng) ---------- */
+.tq-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: var(--surface);
+  box-shadow: 0 2px 14px rgba(16, 24, 40, 0.08);
+}
+
+.tq-topbar {
+  background: var(--brand-deep);
+  color: #dbe6ff;
+  font-size: 12.5px;
+}
+.tq-topbar-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 34px;
+}
+.tq-topbar a:hover {
+  color: #fff;
+}
+
+.tq-mainbar-inner {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  height: 76px;
+}
+
+.tq-logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-shrink: 0;
+}
+.tq-logo img {
+  width: 52px;
+  height: 52px;
+  object-fit: contain;
+  border-radius: 12px;
+}
+.tq-logo-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.2;
+}
+.tq-logo-text strong {
+  font-size: 21px;
+  color: var(--brand);
+  letter-spacing: -0.3px;
+}
+.tq-logo-text small {
+  font-size: 11.5px;
+  color: var(--muted);
+}
+
+/* Tìm kiếm */
+.tq-search {
+  flex: 1;
+  max-width: 640px;
+  display: flex;
+  height: 46px;
+  border: 2px solid var(--brand);
+  border-radius: 12px;
+  overflow: hidden;
+  background: #fff;
+  transition: box-shadow 0.25s;
+}
+.tq-search:focus-within {
+  box-shadow: 0 0 0 4px rgba(25, 80, 209, 0.14);
+}
+.tq-search input {
+  flex: 1;
+  min-width: 0;
+  border: none;
+  outline: none;
+  padding: 0 16px;
+  font-size: 14.5px;
+  background: transparent;
+}
+.tq-search button {
+  width: 56px;
+  border: none;
+  background: var(--brand);
+  color: #fff;
+  display: grid;
+  place-items: center;
+  transition: background 0.2s;
+}
+.tq-search button:hover {
+  background: var(--brand-dark);
+}
+
+/* Nút giỏ hàng + badge */
+.tq-cart-btn {
+  position: relative;
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 16px;
+  border-radius: 12px;
+  background: var(--brand-soft);
+  color: var(--brand);
+  font-weight: 700;
+  white-space: nowrap;
+  transition: background 0.2s, transform 0.2s;
+}
+.tq-cart-btn:hover {
+  background: #dfe9ff;
+  transform: translateY(-1px);
+}
+.tq-badge {
+  position: absolute;
+  top: -7px;
+  right: -7px;
+  min-width: 22px;
+  height: 22px;
+  padding: 0 6px;
+  border-radius: 11px;
+  background: var(--accent);
+  color: #fff;
+  font-size: 12px;
+  font-weight: 800;
+  display: grid;
+  place-items: center;
+  border: 2px solid #fff;
+}
+
+/* Menu */
+.tq-nav {
+  background: var(--brand);
+}
+.tq-nav-inner {
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+}
+.tq-nav a {
+  position: relative;
+  padding: 13px 20px;
+  color: #e6edff;
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+  transition: color 0.2s, background 0.2s;
+}
+.tq-nav a:hover {
+  color: #fff;
+  background: rgba(255, 255, 255, 0.1);
+}
+.tq-nav a.active {
+  color: #fff;
+}
+.tq-nav a.active::after {
+  content: "";
+  position: absolute;
+  left: 20px;
+  right: 20px;
+  bottom: 0;
+  height: 3px;
+  border-radius: 3px 3px 0 0;
+  background: #ffd24a;
+}
+
+/* ---------- FOOTER ---------- */
+.tq-footer {
+  margin-top: 56px;
+  background: var(--brand-deep);
+  color: #c9d6f5;
+  font-size: 14px;
+}
+.tq-footer-grid {
+  display: grid;
+  grid-template-columns: 1.6fr 1fr 1fr 1.2fr;
+  gap: 36px;
+  padding-top: 46px;
+  padding-bottom: 34px;
+}
+.tq-logo-light .tq-logo-text strong {
+  color: #fff;
+}
+.tq-logo-light .tq-logo-text small {
+  color: #a9bce6;
+}
+.tq-footer-about {
+  margin-top: 14px;
+  line-height: 1.7;
+  max-width: 340px;
+}
+.tq-footer h4 {
+  color: #fff;
+  font-size: 15px;
+  margin-bottom: 14px;
+}
+.tq-footer-grid > div > a,
+.tq-footer-grid > div > span {
+  display: block;
+  padding: 5px 0;
+  transition: color 0.2s, transform 0.2s;
+}
+.tq-footer-grid > div > a:hover {
+  color: #fff;
+  transform: translateX(3px);
+}
+.tq-footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  padding: 16px 0;
+  font-size: 13px;
+  color: #93a8d8;
+}
+
+/* ---------- TOAST ---------- */
+.tq-toast {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  z-index: 300;
+  width: 360px;
+  max-width: calc(100vw - 32px);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 12px 12px 14px;
+  background: #fff;
+  border-radius: var(--radius);
+  border-left: 5px solid var(--ok);
+  box-shadow: var(--shadow-lg);
+  animation: tq-toast-in 0.35s var(--ease);
+}
+.tq-toast.warn {
+  border-left-color: var(--warn);
+}
+.tq-toast img,
+.tq-toast-ph {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+}
+.tq-toast-body {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  font-size: 13.5px;
+}
+.tq-toast-body b {
+  color: var(--ok);
+}
+.tq-toast.warn .tq-toast-body b {
+  color: var(--warn);
+}
+.tq-toast-body span {
+  color: var(--muted);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.tq-toast-go {
+  border: none;
+  background: var(--brand);
+  color: #fff;
+  font-weight: 700;
+  font-size: 13px;
+  padding: 9px 14px;
+  border-radius: 9px;
+}
+.tq-toast-go:hover {
+  background: var(--brand-dark);
+}
+.tq-toast-x {
+  border: none;
+  background: none;
+  font-size: 22px;
+  line-height: 1;
+  color: #9aa3b5;
+  padding: 0 4px;
+}
+@keyframes tq-toast-in {
+  from {
+    opacity: 0;
+    transform: translateY(16px) scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* ---------- MOBILE NAV (ẩn trên desktop) ---------- */
+.tq-mnav {
+  display: none;
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+@media (max-width: 992px) {
+  .tq-footer-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .tq-nav-inner {
+    justify-content: flex-start;
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+  .tq-nav-inner::-webkit-scrollbar {
+    display: none;
+  }
+  .tq-nav a {
+    white-space: nowrap;
+    padding: 12px 14px;
+  }
+}
+
+@media (max-width: 768px) {
+  .tq-topbar-inner {
+    justify-content: center;
+    gap: 14px;
+    font-size: 11.5px;
+  }
+  .tq-mainbar-inner {
+    flex-wrap: wrap;
+    height: auto;
+    gap: 10px 12px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  .tq-logo img {
+    width: 42px;
+    height: 42px;
+  }
+  .tq-logo-text strong {
+    font-size: 18px;
+  }
+  .tq-search {
+    order: 3;
+    flex: 1 1 100%;
+    max-width: none;
+    height: 42px;
+  }
+  .tq-cart-label {
+    display: none;
+  }
+  .tq-cart-btn {
+    padding: 9px 12px;
+  }
+
+  /* Có thanh điều hướng đáy thì ẩn menu ngang */
+  .tq-nav {
+    display: none;
+  }
+  .tq-content {
+    padding-bottom: 64px;
+  }
+  .tq-footer {
+    margin-bottom: 60px;
+  }
+  .tq-footer-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .tq-mnav {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 200;
+    height: 60px;
+    display: flex;
+    background: #fff;
+    border-top: 1px solid var(--line);
+    box-shadow: 0 -4px 16px rgba(16, 24, 40, 0.08);
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+  .tq-mnav-item {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1px;
+    font-size: 20px;
+    color: var(--muted);
+  }
+  .tq-mnav-item small {
+    font-size: 11px;
+    font-weight: 600;
+  }
+  .tq-mnav-item.active {
+    color: var(--brand);
+  }
+  .tq-mnav-cart {
+    position: relative;
+  }
+  .tq-mnav-cart i {
+    position: absolute;
+    top: -4px;
+    right: -12px;
+    min-width: 18px;
+    height: 18px;
+    padding: 0 5px;
+    border-radius: 9px;
+    background: var(--accent);
+    color: #fff;
+    font-size: 11px;
+    font-style: normal;
+    font-weight: 800;
+    display: grid;
+    place-items: center;
+  }
+
+  .tq-toast {
+    left: 16px;
+    right: 16px;
+    bottom: 74px;
+    width: auto;
+  }
+}
+
+/* Màn hình rộng: logo | ô tìm kiếm (luôn ở chính giữa trang) | giỏ hàng */
+@media (min-width: 1001px) {
+  .tq-mainbar-inner {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(320px, 640px) minmax(0, 1fr);
+  }
+  .tq-search {
+    max-width: none;
+    width: 100%;
+  }
+  .tq-cart-btn {
+    justify-self: end;
+    margin-left: 0;
+  }
+}
