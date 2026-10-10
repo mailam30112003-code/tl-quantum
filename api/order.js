@@ -12,8 +12,10 @@ export default async function handler(req, res) {
     return res.status(405).json({ ok: false, error: "method" });
   }
 
-  const token = process.env.TELEGRAM_BOT_TOKEN;
-  const chatId = process.env.TELEGRAM_CHAT_ID;
+  // TẠM THỜI để test: nếu Vercel chưa có biến môi trường thì dùng giá trị dự phòng bên dưới.
+  // Khi chạy thật: tạo token mới ở BotFather, đặt vào Vercel rồi XÓA 2 giá trị dự phòng này.
+  const token = process.env.TELEGRAM_BOT_TOKEN || "8745745396:AAEP_zDmtP7q9IFDi_C4XSXIUqCP7vw9fcU";
+  const chatId = process.env.TELEGRAM_CHAT_ID || "8229119606";
   if (!token || !chatId) return res.status(500).json({ ok: false, error: "chưa cấu hình Telegram" });
 
   let o = req.body;
