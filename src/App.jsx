@@ -10,7 +10,7 @@ import Checkout from "./pages/Checkout";
 import Products from "./pages/Products";
 import Projects from "./pages/Projects";
 import Blog from "./pages/Blog";
-import Guide from "./pages/Guide";ụ
+import Guide from "./pages/Guide";
 import Contact from "./pages/Contact";
 
 // Cart và Checkout hiện vẫn nhận props `cart` / `setCart`,
