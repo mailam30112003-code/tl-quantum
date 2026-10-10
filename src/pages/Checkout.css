@@ -95,3 +95,6 @@
   .ship-fee { grid-column: 2; }
   .co-card, .checkout-right { padding: 16px; }
 }
+
+.place-order-btn.zalo { background: #0068ff; }
+.place-order-btn.zalo:hover:not(:disabled) { background: #0054d1; }

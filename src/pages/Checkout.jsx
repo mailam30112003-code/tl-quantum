@@ -74,6 +74,18 @@ export default function Checkout() {
     }
   };
 
+  // Sao chép nội dung đơn rồi mở khung chat Zalo của shop, khách chỉ cần dán và gửi
+  const sendViaZalo = async () => {
+    try {
+      await navigator.clipboard.writeText(orderToText(done.order));
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2500);
+    } catch {
+      /* không sao chép được thì vẫn mở Zalo */
+    }
+    window.open(`https://zalo.me/${STORE.zalo}`, "_blank", "noopener");
+  };
+
   /* ---------- Đặt xong ---------- */
   if (done) {
     const { order, sent } = done;
@@ -105,7 +117,10 @@ export default function Checkout() {
           <pre className="co-text">{orderToText(order)}</pre>
 
           <div className="co-done-actions">
-            <button className="place-order-btn" onClick={copyOrder}>
+            <button className="place-order-btn zalo" onClick={sendViaZalo}>
+              {copied ? "✔ Đã sao chép, hãy dán vào Zalo" : "Gửi đơn qua Zalo"}
+            </button>
+            <button className="back-cart-btn" onClick={copyOrder}>
               {copied ? "✔ Đã sao chép" : "Sao chép đơn"}
             </button>
             <a className="back-cart-btn" href={`tel:${STORE.tel}`}>📞 Gọi {STORE.hotline}</a>
