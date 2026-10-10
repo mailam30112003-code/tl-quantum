@@ -4,6 +4,7 @@ import Header from "./Header";
 import Footer from "./Footer";
 import MobileNav from "./MobileNav";
 import Toast from "./Toast";
+import ZaloButton from "./ZaloButton";
 import "./Layout.css";
 
 export default function Layout({ children }) {
@@ -27,6 +28,7 @@ export default function Layout({ children }) {
       <main className="tq-content">{children}</main>
       <Footer />
       <MobileNav />
+      <ZaloButton />
       <Toast />
     </div>
   );

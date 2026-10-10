@@ -31,6 +31,7 @@ export const DEFAULT_SHIPPING = "standard";
 
 export const STORE = {
   hotline: "0845 089 876",
+  zalo: "0845089876", // số điện thoại Zalo của shop (bấm nút Zalo sẽ mở khung chat tới số này)
   tel: "0845089876",
 };
 
