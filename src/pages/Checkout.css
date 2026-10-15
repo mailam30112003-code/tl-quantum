@@ -98,3 +98,16 @@
 
 .place-order-btn.zalo { background: #0068ff; }
 .place-order-btn.zalo:hover:not(:disabled) { background: #0054d1; }
+
+/* Chọn tỉnh / quận / phường */
+.co-field select {
+  width: 100%; padding: 12px 14px; border: 1.5px solid var(--line); border-radius: 11px;
+  font: inherit; background: #fff; outline: none; transition: border-color .2s, box-shadow .2s;
+}
+.co-field select:focus { border-color: var(--brand); box-shadow: 0 0 0 3px var(--brand-soft); }
+.co-field select:disabled { background: #f3f5fa; color: var(--muted); cursor: not-allowed; }
+.co-field.bad select { border-color: #e5484d; }
+.co-grid3 { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0 14px; }
+.co-pickup { line-height: 1.7; background: var(--brand-soft); border-radius: 12px; padding: 14px 16px; margin-bottom: 14px; }
+.co-pickup a { color: var(--brand); font-weight: 700; }
+@media (max-width: 700px) { .co-grid3 { grid-template-columns: 1fr; } }

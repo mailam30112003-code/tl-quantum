@@ -1,8 +1,9 @@
-import { useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { useCart } from "../context/CartContext";
 import ProductImage from "../components/ProductImage";
-import { SHIPPING_OPTIONS, DEFAULT_SHIPPING, STORE } from "../data/shipping";
+import { SHIPPING_OPTIONS, DEFAULT_SHIPPING, STORE, HCM_CODE, quoteShipping } from "../data/shipping";
+import { fetchProvinces, fetchDistricts, fetchWards } from "../utils/vnLocations";
 import { fmt, makeOrderCode, orderToText, submitOrder } from "../utils/order";
 import "./Checkout.css";
 
@@ -19,9 +20,78 @@ export default function Checkout() {
   const [done, setDone] = useState(null); // { order, sent }
   const [copied, setCopied] = useState(false);
 
+  // Tỉnh / quận / phường chọn từ danh sách; nếu tải danh sách lỗi thì chuyển sang nhập tay
+  const [provinces, setProvinces] = useState([]);
+  const [districts, setDistricts] = useState([]);
+  const [wards, setWards] = useState([]);
+  const [provinceCode, setProvinceCode] = useState("");
+  const [districtCode, setDistrictCode] = useState("");
+  const [wardCode, setWardCode] = useState("");
+  const [locFailed, setLocFailed] = useState(false);
+  const [region, setRegion] = useState(""); // chỉ dùng khi locFailed: inner | outer | other
+
+  const isPickup = shipId === "pickup";
+
+  useEffect(() => {
+    let off = false;
+    fetchProvinces()
+      .then((list) => {
+        if (off) return;
+        const sorted = [...list].sort((x, y) =>
+          x.code === HCM_CODE ? -1 : y.code === HCM_CODE ? 1 : x.name.localeCompare(y.name, "vi")
+        );
+        setProvinces(sorted);
+        setProvinceCode(String(HCM_CODE)); // shop ở TP.HCM nên chọn sẵn
+      })
+      .catch(() => !off && setLocFailed(true));
+    return () => {
+      off = true;
+    };
+  }, []);
+
+  useEffect(() => {
+    setDistricts([]);
+    setDistrictCode("");
+    if (!provinceCode) return;
+    let off = false;
+    fetchDistricts(provinceCode)
+      .then((l) => !off && setDistricts(l))
+      .catch(() => !off && setLocFailed(true));
+    return () => {
+      off = true;
+    };
+  }, [provinceCode]);
+
+  useEffect(() => {
+    setWards([]);
+    setWardCode("");
+    if (!districtCode) return;
+    let off = false;
+    fetchWards(districtCode)
+      .then((l) => !off && setWards(l))
+      .catch(() => !off && setLocFailed(true));
+    return () => {
+      off = true;
+    };
+  }, [districtCode]);
+
+  const province = provinces.find((p) => String(p.code) === provinceCode);
+  const district = districts.find((d) => String(d.code) === districtCode);
+  const ward = wards.find((w) => String(w.code) === wardCode);
+
+  const quote = useMemo(
+    () =>
+      quoteShipping(shipId, {
+        provinceCode,
+        districtName: district?.name,
+        region: locFailed ? region : "",
+      }),
+    [shipId, provinceCode, district, locFailed, region]
+  );
   const ship = SHIPPING_OPTIONS.find((s) => s.id === shipId) || SHIPPING_OPTIONS[0];
-  const feeLater = ship.fee == null;
-  const total = subtotal + (feeLater ? 0 : ship.fee);
+  const fee = quote.fee; // số tiền | null
+  const feeLater = fee == null; // shop báo sau, hoặc chưa chọn khu vực
+  const total = subtotal + (feeLater ? 0 : fee);
 
   const onChange = (e) => {
     const { name, value } = e.target;
@@ -33,10 +103,27 @@ export default function Checkout() {
     const er = {};
     if (form.name.trim().length < 2) er.name = "Vui lòng nhập họ tên";
     if (!PHONE_RE.test(form.phone.replace(/[\s.-]/g, ""))) er.phone = "Số điện thoại chưa đúng";
-    if (form.address.trim().length < 8) er.address = "Vui lòng nhập địa chỉ nhận hàng đầy đủ";
+    if (!isPickup) {
+      if (locFailed) {
+        if (!region) er.region = "Vui lòng chọn khu vực giao hàng";
+        if (form.address.trim().length < 8) er.address = "Vui lòng nhập địa chỉ nhận hàng đầy đủ";
+      } else {
+        if (!provinceCode) er.province = "Vui lòng chọn tỉnh/thành phố";
+        else if (!districtCode) er.district = "Vui lòng chọn quận/huyện";
+        else if (wards.length > 0 && !wardCode) er.ward = "Vui lòng chọn phường/xã";
+        if (form.address.trim().length < 3) er.address = "Vui lòng nhập số nhà, tên đường";
+      }
+    }
     setErrors(er);
     return Object.keys(er).length === 0;
   };
+
+  const fullAddress = () =>
+    isPickup
+      ? "Nhận tại cửa hàng"
+      : locFailed
+        ? form.address.trim()
+        : [form.address.trim(), ward?.name, district?.name, province?.name].filter(Boolean).join(", ");
 
   const placeOrder = async (e) => {
     e.preventDefault();
@@ -48,11 +135,11 @@ export default function Checkout() {
       customer: {
         name: form.name.trim(),
         phone: form.phone.replace(/[\s.-]/g, ""),
-        address: form.address.trim(),
+        address: fullAddress(),
         email: form.email.trim(),
         note: form.note.trim(),
       },
-      shipping: { id: ship.id, name: ship.name, fee: ship.fee },
+      shipping: { id: ship.id, name: ship.name, fee },
       items: cart.map((i) => ({ id: i.id, name: i.name, price: i.price, quantity: i.quantity })),
       subtotal,
       total,
@@ -153,7 +240,7 @@ export default function Checkout() {
       <form className="checkout-container" onSubmit={placeOrder} noValidate>
         <div className="checkout-left">
           <section className="co-card">
-            <h2>Thông tin nhận hàng</h2>
+            <h2>Thông tin liên hệ</h2>
 
             <label className={`co-field ${errors.name ? "bad" : ""}`}>
               <span>Họ và tên *</span>
@@ -167,26 +254,15 @@ export default function Checkout() {
               {errors.phone && <em className="co-error">{errors.phone}</em>}
             </label>
 
-            <label className={`co-field ${errors.address ? "bad" : ""}`}>
-              <span>Địa chỉ nhận hàng *</span>
-              <input name="address" value={form.address} onChange={onChange} autoComplete="street-address" placeholder="Số nhà, đường, phường/xã, quận/huyện, tỉnh/thành" />
-              {errors.address && <em className="co-error">{errors.address}</em>}
-            </label>
-
             <label className="co-field">
               <span>Email (không bắt buộc)</span>
               <input name="email" type="email" value={form.email} onChange={onChange} autoComplete="email" placeholder="ten@gmail.com" />
             </label>
-
-            <label className="co-field">
-              <span>Ghi chú (không bắt buộc)</span>
-              <textarea name="note" rows="3" value={form.note} onChange={onChange} placeholder="Ví dụ: gọi trước khi giao" />
-            </label>
           </section>
 
           <section className="co-card">
-            <h2>Hình thức giao hàng</h2>
-            <div className="ship-list" role="radiogroup" aria-label="Hình thức giao hàng">
+            <h2>Hình thức nhận hàng</h2>
+            <div className="ship-list" role="radiogroup" aria-label="Hình thức nhận hàng">
               {SHIPPING_OPTIONS.map((s) => (
                 <label key={s.id} className={`ship-opt ${s.id === shipId ? "on" : ""}`}>
                   <input type="radio" name="shipping" value={s.id} checked={s.id === shipId} onChange={() => setShipId(s.id)} />
@@ -195,12 +271,87 @@ export default function Checkout() {
                     <b className="ship-name">{s.name}</b>
                     <small>{s.desc}</small>
                   </span>
-                  <span className={`ship-fee ${s.fee == null ? "later" : ""}`}>
-                    {s.fee == null ? "Shop báo sau" : fmt(s.fee)}
-                  </span>
+                  <span className={`ship-fee ${s.id === "grab" || s.id === "be" ? "later" : ""}`}>{s.label}</span>
                 </label>
               ))}
             </div>
+          </section>
+
+          <section className="co-card">
+            <h2>{isPickup ? "Địa chỉ cửa hàng" : "Địa chỉ nhận hàng"}</h2>
+
+            {isPickup ? (
+              <p className="co-pickup">
+                {STORE.address ? (
+                  <>📍 <b>{STORE.address}</b></>
+                ) : (
+                  <>Shop sẽ báo địa chỉ cửa hàng và giờ nhận hàng khi xác nhận đơn.</>
+                )}
+                <br />
+                Bạn chờ shop xác nhận qua điện thoại rồi hãy đến lấy nhé. Hotline: <a href={`tel:${STORE.tel}`}>{STORE.hotline}</a>
+              </p>
+            ) : (
+              <>
+                {locFailed ? (
+                  <label className={`co-field ${errors.region ? "bad" : ""}`}>
+                    <span>Khu vực giao hàng *</span>
+                    <select value={region} onChange={(e) => { setRegion(e.target.value); setErrors((er) => ({ ...er, region: "" })); }}>
+                      <option value="">-- Chọn khu vực --</option>
+                      <option value="inner">Nội thành TP.HCM</option>
+                      <option value="outer">Ngoại thành TP.HCM</option>
+                      <option value="other">Tỉnh/thành khác</option>
+                    </select>
+                    {errors.region && <em className="co-error">{errors.region}</em>}
+                  </label>
+                ) : (
+                  <div className="co-grid3">
+                    <label className={`co-field ${errors.province ? "bad" : ""}`}>
+                      <span>Tỉnh / Thành phố *</span>
+                      <select value={provinceCode} onChange={(e) => { setProvinceCode(e.target.value); setErrors((er) => ({ ...er, province: "", district: "", ward: "" })); }} disabled={provinces.length === 0}>
+                        <option value="">{provinces.length === 0 ? "Đang tải..." : "-- Chọn tỉnh/thành --"}</option>
+                        {provinces.map((p) => <option key={p.code} value={p.code}>{p.name}</option>)}
+                      </select>
+                      {errors.province && <em className="co-error">{errors.province}</em>}
+                    </label>
+
+                    <label className={`co-field ${errors.district ? "bad" : ""}`}>
+                      <span>Quận / Huyện *</span>
+                      <select value={districtCode} onChange={(e) => { setDistrictCode(e.target.value); setErrors((er) => ({ ...er, district: "", ward: "" })); }} disabled={!provinceCode || districts.length === 0}>
+                        <option value="">{provinceCode && districts.length === 0 ? "Đang tải..." : "-- Chọn quận/huyện --"}</option>
+                        {districts.map((d) => <option key={d.code} value={d.code}>{d.name}</option>)}
+                      </select>
+                      {errors.district && <em className="co-error">{errors.district}</em>}
+                    </label>
+
+                    <label className={`co-field ${errors.ward ? "bad" : ""}`}>
+                      <span>Phường / Xã *</span>
+                      <select value={wardCode} onChange={(e) => { setWardCode(e.target.value); setErrors((er) => ({ ...er, ward: "" })); }} disabled={!districtCode || wards.length === 0}>
+                        <option value="">{districtCode && wards.length === 0 ? "Đang tải..." : "-- Chọn phường/xã --"}</option>
+                        {wards.map((w) => <option key={w.code} value={w.code}>{w.name}</option>)}
+                      </select>
+                      {errors.ward && <em className="co-error">{errors.ward}</em>}
+                    </label>
+                  </div>
+                )}
+
+                <label className={`co-field ${errors.address ? "bad" : ""}`}>
+                  <span>{locFailed ? "Địa chỉ đầy đủ *" : "Số nhà, tên đường *"}</span>
+                  <input
+                    name="address"
+                    value={form.address}
+                    onChange={onChange}
+                    autoComplete="street-address"
+                    placeholder={locFailed ? "Số nhà, đường, phường/xã, quận/huyện, tỉnh/thành" : "Ví dụ: 12 Nguyễn Trãi"}
+                  />
+                  {errors.address && <em className="co-error">{errors.address}</em>}
+                </label>
+              </>
+            )}
+
+            <label className="co-field">
+              <span>Ghi chú (không bắt buộc)</span>
+              <textarea name="note" rows="3" value={form.note} onChange={onChange} placeholder="Ví dụ: gọi trước khi giao" />
+            </label>
           </section>
 
           <button type="button" className="back-cart-btn" onClick={() => navigate("/cart")}>← Quay lại giỏ hàng</button>
@@ -225,14 +376,17 @@ export default function Checkout() {
           <div className="co-line"><span>Tạm tính</span><b>{fmt(subtotal)}</b></div>
           <div className="co-line">
             <span>Phí ship ({ship.name})</span>
-            <b className={feeLater ? "later" : ""}>{feeLater ? "Shop báo sau" : fmt(ship.fee)}</b>
+            <b className={feeLater ? "later" : ""}>
+              {quote.pending ? "Chọn khu vực" : fee == null ? "Shop báo sau" : fee === 0 ? "Miễn phí" : fmt(fee)}
+            </b>
           </div>
 
           <div className="checkout-total">
             <span>Tổng cộng</span>
             <strong className="checkout-final">{fmt(total)}</strong>
           </div>
-          {feeLater && <p className="co-hint">Chưa gồm phí ship. Shop sẽ báo phí qua điện thoại sau khi xác nhận đơn.</p>}
+          {quote.pending && <p className="co-hint">Chọn tỉnh/thành và quận/huyện để tính phí ship.</p>}
+          {!quote.pending && feeLater && <p className="co-hint">Chưa gồm phí ship. Shop sẽ báo phí qua điện thoại sau khi xác nhận đơn.</p>}
 
           <button type="submit" className="place-order-btn" disabled={busy}>
             {busy ? "Đang gửi..." : "Đặt hàng"}
